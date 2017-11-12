@@ -14,11 +14,11 @@ authors = ["Annie Robitaille", "Ardo van den Hout", "Robson J.M. Machado", "Davi
 # 4 = Technical report
 # 5 = Book
 # 6 = Book chapter
-publication_types = ["1"]
+publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
-publication = "Alzheimer's & Dementia"
-publication_short = "Alzheimer's & Dementia"
+publication = "Alzheimers & Dementia"
+publication_short = "Alzheimers & Dementia"
 
 # Abstract and optional shortened version.
 abstract = "INTRODUCTION: This study examines the role of educational attainment, an indicator of cognitive reserve, on transitions in later life between cognitive states (normal MMSE, mild MMSE impairment, severe MMSE impairment) and death. METHODS: Analysis of six international longitudinal studies was performed using a coordinated approach. Multistate survival models were used to estimate the transition patterns via different cognitive states. Life expectancies were estimated. RESULTS: Across most studies, a higher level of education was associated with a lower risk of transitioning from normal MMSE to mild MMSE impairment but was not associated with other transitions. Those with higher levels of education and socioeconomic status had longer non-impaired life expectancies. DISCUSSION: This study highlights the importance of education in later life and that early life experiences can delay later compromised cognitive health. This study also demonstrates the feasibility and benefit in conducting coordinated analysis across multiple studies to validate findings."
@@ -32,11 +32,11 @@ selected = false
 # Projects (optional).
 #   Associate this publication with one or more of your projects.
 #   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
-projects = ["example-external-project"]
+#projects = ["example-external-project"]
 
 # Links (optional).
-url_pdf = ""
-url_preprint = ""
+url_pdf = "#"
+url_preprint = "#"
 url_code = "#"
 url_dataset = "#"
 url_project = "#"
