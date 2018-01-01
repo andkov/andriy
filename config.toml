@@ -49,7 +49,7 @@ defaultContentLanguageInSubdir = false
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "/Portrait-2017-09-28-touchup-1-sqaure.png"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "andriy dot koval at bccdc dot ca"
-  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
+  address = "655 W 12th Ave, Vancouver, BC V5Z 4R4"
   
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""
