@@ -5,3 +5,6 @@
 blogdown
 .DS_Store # if a windows user, Thumbs.db instead
 public/ # if using Netlify
+
+# pictures for generating icons
+static/img/photos/*
