@@ -13,7 +13,7 @@ image_preview = "ialsa-portland.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["replication", "bivariate-growth-curve-model", "longitudinal-modeling", "cognitive-decline", "physical-decline"]`
-tags = ["cognitive-ageing","physical-ageing", "bivariate-growth-curve-model"]
+tags = ["cognitive-ageing","physical-ageing", "bivariate-growth-curve-model", "Portland"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

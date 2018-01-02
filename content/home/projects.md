@@ -27,14 +27,19 @@ filter_default = 0
 [[filter]]
   name = "All"
   tag = "*"
-  
-[[filter]]
-  name = "Deep Learning"
-  tag = ".deep-learning"
 
 [[filter]]
-  name = "Other"
-  tag = ".demo"
+  name = "Portland"
+  tag = ".Portland"
+  
+[[filter]]
+  name = "Amsterdam"
+  tag = ".Amsterdam"
+
+[[filter]]
+  name = "Groningen"
+  tag = ".Groningen"  
+
 
 +++
 
