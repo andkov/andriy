@@ -45,7 +45,7 @@ In August of 2017 I was [awarded][award] a [CIHR](cihr) Health System Impact [Fe
 
 My program of work proposes to develop a system for population health surveillance that would focus on chronic diseases, with particular focus on mental health and substance use (MHSU) conditions, which tend to have high comorbidity rates, polysubstance use patterns, and slowly progressing pace of development. 
 
-See my work on github at [/andkov][github_andkov] and [/ialsa][github_ialsa].
+See my work on github at [/andkov][github_andkov] and on [/ialsa][github_ialsa].
 
 
 [github_andkov]:https://github.com/andkov
