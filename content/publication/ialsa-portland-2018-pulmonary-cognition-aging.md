@@ -31,7 +31,7 @@ image_preview = ""
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["replication", "bivariate-growth-curve-model", "longitudinal-modeling", "cognitive-decline", "physical-decline"]`
-tags = ["Portland","pulmonary", "cognition","aging", "longitudinal"]
+tags = ["Portland","pulmonary", "cognition","aging", "longitudinal", "ialsa"]
 
 
 # Is this a selected publication? (true/false)
@@ -43,7 +43,7 @@ selected = false
 projects = ["ialsa-portland"]
 
 # Links (optional).
-url_pdf = "http://arxiv.org/pdf/1512.04133v1"
+url_pdf = ""
 url_preprint = ""
 url_code = ""
 url_dataset = ""
