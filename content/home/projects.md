@@ -29,6 +29,14 @@ filter_default = 0
   tag = "*"
 
 [[filter]]
+  name = "DSS"
+  tag = ".DSS"
+
+[[filter]]
+  name = "HSIF"
+  tag = ".HSIF"  
+  
+[[filter]]
   name = "Portland"
   tag = ".Portland"
   

@@ -15,14 +15,7 @@ weight = 60
 
 +++
 
-This is an example of using the *custom* widget to create your own homepage section.
+- [Introduction to Statistical Modeling for Social Sciences][psy532]. Graduate. Fall, 2015. Course developer and Instructor. 
 
-I am a teaching instructor for the following courses at University X:
 
-- CS101: An intro to computer science
-- CS102: An intro to computer science
-- CS103: An intro to computer science
-- CS104: An intro to computer science
-- CS105: An intro to computer science
-- CS106: An intro to computer science
-- CS107: An intro to computer science
+[psy532]:https://github.com/andkov/psy532/blob/master/README.md

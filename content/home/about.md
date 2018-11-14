@@ -10,9 +10,9 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
-    "Longitudinal modeling",
+    "Longitudinal Modeling",
     "Design of Information Displays",
-    "Reproducible analytics"
+    "Reproducible Analytics"
   ]
 
 # List your qualifications (such as academic degrees).
@@ -47,6 +47,7 @@ My program of work proposes to develop a system for population health surveillan
 
 See my work on github at [/andkov][github_andkov] and on [/ialsa][github_ialsa].
 
+{{% staticref "files/cv.pdf" %}}Download my CV{{% /staticref %}}
 
 [github_andkov]:https://github.com/andkov
 [rodgers]:https://www.vanderbilt.edu/psychological_sciences/bio/joe-rodgers
