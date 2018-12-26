@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Andriy V. Koval</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2017 Andriy Koval</copyright>
+    <copyright>&amp;copy; 2018 Andriy Koval</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -112,11 +112,29 @@
     </item>
     
     <item>
+      <title>cognitive decline</title>
+      <link>/tags/cognitive-decline/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cognitive-decline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>cognitive-ageing</title>
       <link>/tags/cognitive-ageing/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/cognitive-ageing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comorbidity</title>
+      <link>/tags/comorbidity/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/comorbidity/</guid>
       <description></description>
     </item>
     

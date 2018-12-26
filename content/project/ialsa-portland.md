@@ -16,7 +16,7 @@ image_preview = "ialsa-portland.png"
 tags = ["cognitive-ageing","physical-ageing", "bivariate-growth-curve-model", "Portland"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://github.com/IALSA/ialsa-2017-portland"
+external_link = ""
 
 # Does the project detail page use math formatting?
 math = false

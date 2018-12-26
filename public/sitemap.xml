@@ -113,6 +113,15 @@
     
     <url>
     
+      <loc>/publication/kelly-2016-hypertension-diabetes-memory/</loc>
+      <lastmod>2016-09-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/post/getting-started/</loc>
       <lastmod>2017-09-03T00:00:00-04:00</lastmod>
     </url>
@@ -345,8 +354,28 @@
     
     <url>
     
+      <loc>/tags/cognitive-decline/</loc>
+      <lastmod>2016-09-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/tags/cognitive-ageing/</loc>
       <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/comorbidity/</loc>
+      <lastmod>2016-09-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

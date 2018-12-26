@@ -16,7 +16,7 @@ image_preview = "ialsa-amsterdam.png"
 tags = ["cognitive-ageing","physical-ageing", "bivariate-growth-curve-model", "Amsterdam"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://github.com/IALSA/ialsa-2017-amsterdam"
+external_link = ""
 
 # Does the project detail page use math formatting?
 math = false
@@ -31,3 +31,5 @@ caption = "Original workshop in Apr 2015"
 Coordinated analysis with replication (CAwR): A multi-study evaluation of healthy life expectancies (HLE) using multistate models.
 
 Research Question = What are the effect of social and cognitive engagement on transitions between cognitive states in later life?
+
+

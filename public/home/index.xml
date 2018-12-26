@@ -6,7 +6,7 @@
     <description>Recent content in Homes on Andriy V. Koval</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2017 Andriy Koval</copyright>
+    <copyright>&amp;copy; 2018 Andriy Koval</copyright>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
@@ -29,7 +29,7 @@
       
       <guid>/home/about/</guid>
       <description>Bio I am a data scientist with background in quantitative methods and interest in data-driven models of human aging.
-I received my Ph.D. in Quantitative Methods in 2014 from Dr. Joe Rodgers at Vanderbilt University, with whom I studied statistical modeling, design of graphical displays of information, and reproducible research. In August of the same year I joined the Integrative Analysis of Longitudinal Studies of Aging (IALSA) network at the University of Victoria (UVic), directed by Dr.</description>
+I received my Ph.D. in Quantitative Methods in 2014 from Vanderbilt University, where I studied under Dr. Joe Rodgers, specializing in statistical modeling, design of graphical displays of information, and reproducible research. In August of the same year I joined the Integrative Analysis of Longitudinal Studies of Aging (IALSA) network (NIH/NIA P01AG043362) at the University of Victoria (UVic), directed by Dr.</description>
     </item>
     
     <item>
@@ -83,7 +83,7 @@ I received my Ph.D. in Quantitative Methods in 2014 from Dr. Joe Rodgers at Vand
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>/home/teaching/</guid>
-      <description> Introduction to Statistical Modeling for Social Sciences. Graduate. Fall, 2015. Course developer and Instructor.  </description>
+      <description>My research practice is tightly intertwined with my teaching philosophy: I am a strong proponent of open science, reproducible research, and programming literacy among scientists. While at University of Victoria, Dr. Andrea Piccinin and I received a teaching grant ($10,000) to develop an Introduction to Statistical Modeling for Social Sciences for graduate students that emphasized these skills and allowed students to develop practical, hands-on data science skills, while retaining the focus and rigor of an introductory statistical course.</description>
     </item>
     
     <item>

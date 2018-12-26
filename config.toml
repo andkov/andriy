@@ -1,6 +1,6 @@
 baseurl = "https://andriy.rbind.io/"  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 title = "Andriy V. Koval"
-copyright = "&copy; 2017 Andriy Koval"
+copyright = "&copy; 2018 Andriy Koval"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
@@ -40,16 +40,16 @@ defaultContentLanguageInSubdir = false
 
   # Your details.
   name = "Andriy Koval"
-  role = "Health System Impact Fellow "
+  role = "Assistant Professor "
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "BC Centre for Disease Control", url = "http://www.bccdc.ca/" },  { name = "School of Population and Public Health, University of British Columbia ", url = "http://www.spph.ubc.ca/" } ]
+  organizations = [ { name = "University of Central Florida", url = "https://ccie.ucf.edu/hmi/" },  { name = "Department of Health Management and Informatics ", url = "https://ccie.ucf.edu/hmi/" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "/Portrait-2017-09-28-touchup-1-sqaure.png"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "andkov at uvic dot ca"
-  address = "655 W 12th Ave, Vancouver, BC V5Z 4R4"
+  email = "andriy.v.koval at ucf dot edu"
+  address = "4364 Scorpius Street, HPA II, Room 207, Orlando, FL 32816-2205"
   
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""
@@ -159,7 +159,7 @@ defaultContentLanguageInSubdir = false
     #   1 = Detailed
     #   2 = APA
     #   3 = MLA
-    publication_format = 3
+    publication_format = 1
 
   # Social/Academic Networking
   #
@@ -182,7 +182,7 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:koval.andrey@gmail.com"
+    link = "mailto:andriy.v.koval@gmail.com"
 
   [[params.social]]
     icon = "twitter"
