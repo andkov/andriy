@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cognitive-ageing on Andriy V. Koval</title>
+    <link>/tags/cognitive-ageing/</link>
+    <description>Recent content in cognitive-ageing on Andriy V. Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Andriy Koval</copyright>
+    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/cognitive-ageing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IALSA: Amsterdam</title>
+      <link>/project/ialsa-amsterdam/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/ialsa-amsterdam/</guid>
+      <description>Coordinated analysis with replication (CAwR): A multi-study evaluation of healthy life expectancies (HLE) using multistate models.
+Research Question = What are the effect of social and cognitive engagement on transitions between cognitive states in later life?</description>
+    </item>
+    
+    <item>
+      <title>IALSA: Groningen</title>
+      <link>/project/ialsa-groningen/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/ialsa-groningen/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus.</description>
+    </item>
+    
+    <item>
+      <title>IALSA: Portland</title>
+      <link>/project/ialsa-portland/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/ialsa-portland/</guid>
+      <description>IALSA Analysis Workshop was held in Portland, Oregon from Monday February 23rd (8:30am) to Wednesday February 25th (12:30pm), 2015.
+The primary aim of the workshop was to examine associations between changes in physical functioning (i.e., grip strength, pulmonary function, chair stands, walking speed) and cognitive functioning (i.e., measures of speed, memory, reasoning, executive functioning) in multiple-study comparative framework. Bivariate growth processes were estimated to evaluate dynamic associations in change and variation within and across these domains and in relation to sample and individual differences in age, lifestyle, and health outcomes.</description>
+    </item>
+    
+  </channel>
+</rss>

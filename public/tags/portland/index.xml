@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portland on Andriy V. Koval</title>
+    <link>/tags/portland/</link>
+    <description>Recent content in Portland on Andriy V. Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Andriy Koval</copyright>
+    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/portland/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Multi-Study Coordinated Meta-Analysis of Pulmonary Function and Cognition in Aging</title>
+      <link>/publication/ialsa-portland-2018-pulmonary-cognition-aging/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/ialsa-portland-2018-pulmonary-cognition-aging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IALSA: Portland</title>
+      <link>/project/ialsa-portland/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/ialsa-portland/</guid>
+      <description>IALSA Analysis Workshop was held in Portland, Oregon from Monday February 23rd (8:30am) to Wednesday February 25th (12:30pm), 2015.
+The primary aim of the workshop was to examine associations between changes in physical functioning (i.e., grip strength, pulmonary function, chair stands, walking speed) and cognitive functioning (i.e., measures of speed, memory, reasoning, executive functioning) in multiple-study comparative framework. Bivariate growth processes were estimated to evaluate dynamic associations in change and variation within and across these domains and in relation to sample and individual differences in age, lifestyle, and health outcomes.</description>
+    </item>
+    
+  </channel>
+</rss>

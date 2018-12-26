@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Alison Presmanes Hill</title>
+    <title>Tags on Andriy V. Koval</title>
     <link>/tags/</link>
-    <description>Recent content in Tags on Alison Presmanes Hill</description>
+    <description>Recent content in Tags on Andriy V. Koval</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2017 Alison Presmanes Hill</copyright>
+    <copyright>&amp;copy; 2017 Andriy Koval</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Content tagged as &#39;Academic&#39;</title>
@@ -16,52 +18,60 @@
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/academic/</guid>
-      <description>&lt;p&gt;Here is a list of all the content that has been tagged as &lt;em&gt;academic&lt;/em&gt;.&lt;/p&gt;
-</description>
+      <description>Here is a list of all the content that has been tagged as academic.</description>
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>/tags/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Amsterdam</title>
+      <link>/tags/amsterdam/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/deep-learning/</guid>
+      <guid>/tags/amsterdam/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Demo</title>
-      <link>/tags/demo/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>CIHR</title>
+      <link>/tags/cihr/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/demo/</guid>
+      <guid>/tags/cihr/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Hugo</title>
-      <link>/tags/hugo/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      <title>Groningen</title>
+      <link>/tags/groningen/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/hugo/</guid>
+      <guid>/tags/groningen/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Jekyll</title>
-      <link>/tags/jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 -0700</pubDate>
+      <title>IALH</title>
+      <link>/tags/ialh/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/jekyll/</guid>
+      <guid>/tags/ialh/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Plot</title>
-      <link>/tags/plot/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>IHACRU</title>
+      <link>/tags/ihacru/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/plot/</guid>
+      <guid>/tags/ihacru/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Portland</title>
+      <link>/tags/portland/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/portland/</guid>
       <description></description>
     </item>
     
@@ -75,11 +85,173 @@
     </item>
     
     <item>
-      <title>Regression</title>
+      <title>aging</title>
+      <link>/tags/aging/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/aging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bivariate-growth-curve-model</title>
+      <link>/tags/bivariate-growth-curve-model/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bivariate-growth-curve-model/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cognition</title>
+      <link>/tags/cognition/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cognition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cognitive-ageing</title>
+      <link>/tags/cognitive-ageing/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cognitive-ageing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dss</title>
+      <link>/tags/dss/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/dss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>embedded fellowship</title>
+      <link>/tags/embedded-fellowship/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/embedded-fellowship/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graph-making</title>
+      <link>/tags/graph-making/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/graph-making/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>health</title>
+      <link>/tags/health/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/health/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ialsa</title>
+      <link>/tags/ialsa/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ialsa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jekyll</title>
+      <link>/tags/jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 -0400</pubDate>
+      
+      <guid>/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>learning health systems</title>
+      <link>/tags/learning-health-systems/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/learning-health-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>longitudinal</title>
+      <link>/tags/longitudinal/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/longitudinal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multistate modeling</title>
+      <link>/tags/multistate-modeling/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/multistate-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>physical-ageing</title>
+      <link>/tags/physical-ageing/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/physical-ageing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plot</title>
+      <link>/tags/plot/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/plot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pulmonary</title>
+      <link>/tags/pulmonary/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/pulmonary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regression</title>
       <link>/tags/regression/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>/tags/regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reproducible research</title>
+      <link>/tags/reproducible-research/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/reproducible-research/</guid>
       <description></description>
     </item>
     

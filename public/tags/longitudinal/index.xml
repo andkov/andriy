@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>longitudinal on Andriy V. Koval</title>
+    <link>/tags/longitudinal/</link>
+    <description>Recent content in longitudinal on Andriy V. Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Andriy Koval</copyright>
+    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/longitudinal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Multi-Study Coordinated Meta-Analysis of Pulmonary Function and Cognition in Aging</title>
+      <link>/publication/ialsa-portland-2018-pulmonary-cognition-aging/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/ialsa-portland-2018-pulmonary-cognition-aging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transitions across cognitive states and death among older adults in relation to education: A multistate survival model using data from six longitudinal studies</title>
+      <link>/publication/ialsa-amsterdam-2018-transitions-education-cognition/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/ialsa-amsterdam-2018-transitions-education-cognition/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

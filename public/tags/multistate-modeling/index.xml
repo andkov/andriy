@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>multistate modeling on Andriy V. Koval</title>
+    <link>/tags/multistate-modeling/</link>
+    <description>Recent content in multistate modeling on Andriy V. Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Andriy Koval</copyright>
+    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/multistate-modeling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Transitions across cognitive states and death among older adults in relation to education: A multistate survival model using data from six longitudinal studies</title>
+      <link>/publication/ialsa-amsterdam-2018-transitions-education-cognition/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/ialsa-amsterdam-2018-transitions-education-cognition/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

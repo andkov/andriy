@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reproducible research on Andriy V. Koval</title>
+    <link>/tags/reproducible-research/</link>
+    <description>Recent content in reproducible research on Andriy V. Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Andriy Koval</copyright>
+    <lastBuildDate>Tue, 13 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/reproducible-research/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data Science Studio</title>
+      <link>/project/data-science-studio/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/data-science-studio/</guid>
+      <description>DSS is a learning community for applied researchers in the areas of health and aging. Based at the Institute for Aging and Lifelong Health (IALH) at the University of Victoria, DSS provides a learning space and a platform for cross-disciplinary dialog between UVic researchers and Vancouver Island Health Authority.</description>
+    </item>
+    
+  </channel>
+</rss>
