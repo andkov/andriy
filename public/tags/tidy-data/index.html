@@ -13,7 +13,7 @@
   <meta name="description" content="Assistant Professor ">
 
   
-  <link rel="alternate" hreflang="en-us" href="/tags/">
+  <link rel="alternate" hreflang="en-us" href="/tags/tidy-data/">
 
   
   
@@ -51,15 +51,15 @@
   
 
   
-  <link rel="alternate" href="/tags/index.xml" type="application/rss+xml" title="Andriy V. Koval">
-  <link rel="feed" href="/tags/index.xml" type="application/rss+xml" title="Andriy V. Koval">
+  <link rel="alternate" href="/tags/tidy-data/index.xml" type="application/rss+xml" title="Andriy V. Koval">
+  <link rel="feed" href="/tags/tidy-data/index.xml" type="application/rss+xml" title="Andriy V. Koval">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/tags/">
+  <link rel="canonical" href="/tags/tidy-data/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -67,17 +67,17 @@
   <meta property="twitter:creator" content="@andkovpro">
   
   <meta property="og:site_name" content="Andriy V. Koval">
-  <meta property="og:url" content="/tags/">
-  <meta property="og:title" content="Tags | Andriy V. Koval">
+  <meta property="og:url" content="/tags/tidy-data/">
+  <meta property="og:title" content="tidy data | Andriy V. Koval">
   <meta property="og:description" content="Assistant Professor ">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2014-03-10T00:00:00-04:00">
+  <meta property="og:updated_time" content="2019-01-10T00:00:00&#43;00:00">
   
 
   
 
-  <title>Tags | Andriy V. Koval</title>
+  <title>tidy data | Andriy V. Koval</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
@@ -191,93 +191,41 @@
 
 <div class="universal-wrapper">
 
-  <h1>Tags</h1>
+  <h1>tidy data</h1>
 
   
 
   
   
   <div>
-    <h2><a href="/tags/jekyll/">jekyll</a></h2>
+    <h2><a href="/post/2019-01-10-gather-spread-1/elonongation-practice-1/">Time to gather, time to spread. Part 1.</a></h2>
     <div class="article-style">
       
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/learning-health-systems/">learning health systems</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/longitudinal/">longitudinal</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/multistate-modeling/">multistate modeling</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/physical-ageing/">physical-ageing</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/plot/">plot</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/pulmonary/">pulmonary</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/regression/">regression</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/reproducible-research/">reproducible research</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/tidy-data/">tidy data</a></h2>
-    <div class="article-style">
+      <p>TL;DR
+A quick demonstration of transforming data from wide to long format usingtidyr::gather() and tidyr::spread() functions. Fully reproducible example with a simple dataset.
+Packages used in this demonstration: library(magrittr) # pipes
+requireNamespace(&quot;dplyr&quot;)
+requireNamespace(&quot;readr&quot;)</p>
+
+<p>I. Exposition
+Consider the following dataset that captures bullying measure for three respondents over several waves of observation: ds_wide %&gt;% dplyr::glimpse()
+Observations: 3
+Variables: 11
+$ SUBNO &lt;dbl&gt; 1001, 1002, 1003
+$ FEMALE &lt;dbl&gt; 0, 1, 0
+$ RACE &lt;dbl&gt; 2, 3, 1
+$ AGE_0 &lt;dbl&gt; 15, 13, 12
+$ AGE_1 &lt;dbl&gt; NA, 14, 13
+$ AGE_2 &lt;dbl&gt; NA, 15, 14
+$ AGE_3 &lt;dbl&gt; NA, 16, 15
+$ BULLYING_0 &lt;dbl&gt; 3.</p>
+
       
     </div>
   </div>
   
 
   
-<nav>
-  <ul class="pager">
-    
-    <li><a href="/tags/page/2/">&lt;</a></li>
-    
-    
-  </ul>
-</nav>
-
 
 
 </div>

@@ -1,0 +1,193 @@
+---
+title: 'Time to gather, time to spread. Part 1.'
+author: Andriy Koval
+date: '2019-01-10'
+slug: elonongation-practice-1
+categories:
+  - R
+  - data manipulation
+tags:
+  - tidy data
+header:
+  caption: 'Gather a single variable'
+  image: ''
+  preview: yes
+---
+
+
+
+<!-- These two chunks should be added in the beginning of every .Rmd that you want to source an .R script -->
+<!--  The 1st mandatory chunck  -->
+<!--  Set the working directory to the repository's base directory -->
+<!--  The 2nd mandatory chunck  -->
+<!-- Set the report-wide options, and point to the external code file. -->
+<div id="tldr" class="section level2">
+<h2>TL;DR</h2>
+<p>A quick demonstration of transforming data from wide to long format using<code>tidyr::gather()</code> and <code>tidyr::spread()</code> functions. Fully reproducible example with a simple dataset.</p>
+<p>Packages used in this demonstration: <!-- Load 'sourced' R files.  Suppress the output when loading packages. --></p>
+<pre class="r"><code>library(magrittr) # pipes
+requireNamespace(&quot;dplyr&quot;)
+requireNamespace(&quot;readr&quot;)</code></pre>
+<!-- Load the datasets.   -->
+</div>
+<div id="i.-exposition" class="section level1">
+<h1>I. Exposition</h1>
+<p>Consider the following dataset that captures bullying measure for three respondents over several waves of observation: <!-- Inspect the datasets.   --></p>
+<pre class="r"><code>ds_wide %&gt;% dplyr::glimpse()</code></pre>
+<pre><code>Observations: 3
+Variables: 11
+$ SUBNO      &lt;dbl&gt; 1001, 1002, 1003
+$ FEMALE     &lt;dbl&gt; 0, 1, 0
+$ RACE       &lt;dbl&gt; 2, 3, 1
+$ AGE_0      &lt;dbl&gt; 15, 13, 12
+$ AGE_1      &lt;dbl&gt; NA, 14, 13
+$ AGE_2      &lt;dbl&gt; NA, 15, 14
+$ AGE_3      &lt;dbl&gt; NA, 16, 15
+$ BULLYING_0 &lt;dbl&gt; 3.8, 2.3, 0.6
+$ BULLYING_1 &lt;dbl&gt; NA, 4.6, 1.6
+$ BULLYING_2 &lt;dbl&gt; NA, NA, 3
+$ BULLYING_4 &lt;dbl&gt; NA, 0.66, 1.80</code></pre>
+<pre class="r"><code>ds_wide %&gt;% as.data.frame %&gt;%  print()</code></pre>
+<pre><code>  SUBNO FEMALE RACE AGE_0 AGE_1 AGE_2 AGE_3 BULLYING_0 BULLYING_1 BULLYING_2 BULLYING_4
+1  1001      0    2    15    NA    NA    NA        3.8         NA         NA         NA
+2  1002      1    3    13    14    15    16        2.3        4.6         NA       0.66
+3  1003      0    1    12    13    14    15        0.6        1.6          3       1.80</code></pre>
+<p>Notice that the data set is said to be <em>wide with respect to wave</em>. The names of certain columns (e.g. <code>AGE_2</code>, <code>BULLYING_4</code>) store information both about the <em>name</em> of the measure (<code>AGE</code>,<code>BULLYING</code>) and the <em>wave</em> at which these measures were taken (<code>2</code>,<code>4</code>). This violates the (1) of tidy data definition (see <a href="https://r4ds.had.co.nz/tidy-data.html">R for Data Science, 12.2</a>)</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>Each variable must have its own column.</li>
+<li>Each observation must have its own row.</li>
+<li>Each value must have its own cell.</li>
+</ol>
+</blockquote>
+<p><strong>GOAL</strong> This post will demonstrate how to transform this data set into <em>long form with respect to wave</em>, creating three separate variables: <code>age</code>, <code>bullying</code>, and <code>wave</code>.<br />
+Let’s beging!</p>
+</div>
+<div id="ii.-gather-a-single-variable" class="section level1">
+<h1>II. Gather a single variable</h1>
+<p>To demonstrate the essential logic of <code>tidyr::gather()</code>, let’s simplify the data even further, leaving only what is necessary to understand the mechanics of the tranformations:</p>
+<pre class="r"><code>ds_wide %&gt;% 
+  dplyr::select_(.dots = c(&quot;SUBNO&quot;,paste0(&quot;AGE_&quot;,0:3)))</code></pre>
+<pre><code># A tibble: 3 x 5
+  SUBNO AGE_0 AGE_1 AGE_2 AGE_3
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1  1001    15    NA    NA    NA
+2  1002    13    14    15    16
+3  1003    12    13    14    15</code></pre>
+<p>The <code>tidyr::gather()</code> always does the same thing: it takes <em>many columns</em> and gathers it into <em>two</em> columns. It will always be only <strong>TWO</strong> columns. We call one column a <code>value</code> column, because it stores the <em>value</em> of the new variables (often numeric). We call another column a <code>key</code> column because it stores the <em>key</em> to understanding what those values represent.</p>
+<p>Let’s inspect this operation:</p>
+<pre class="r"><code>ds_long_1 &lt;- ds_wide %&gt;% 
+  dplyr::select_(.dots = c(&quot;SUBNO&quot;,paste0(&quot;AGE_&quot;,0:3))) %&gt;%
+  # new lines:
+  tidyr::gather(
+    key    = &quot;key&quot;   # name of new variable to store the key
+    ,value = &quot;value&quot; # name of new variable to store the values
+    ,AGE_0, AGE_1, AGE_2, AGE_3 # selection of columns to gather
+  ) %&gt;% 
+  dplyr::arrange(SUBNO)
+ds_long_1 %&gt;% print()</code></pre>
+<pre><code># A tibble: 12 x 3
+   SUBNO key   value
+   &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;
+ 1  1001 AGE_0    15
+ 2  1001 AGE_1    NA
+ 3  1001 AGE_2    NA
+ 4  1001 AGE_3    NA
+ 5  1002 AGE_0    13
+ 6  1002 AGE_1    14
+ 7  1002 AGE_2    15
+ 8  1002 AGE_3    16
+ 9  1003 AGE_0    12
+10  1003 AGE_1    13
+11  1003 AGE_2    14
+12  1003 AGE_3    15</code></pre>
+<p>This data is still NOT tidy, because the column <code>key</code> stores the values for both the names of the measure (<code>AGE</code>) and the indicator of the wave at which the measure was taken (<code>0</code>, <code>1</code>, <code>2</code>, and <code>3</code>). However, now we can separate these measures by splitting these character values where they are united by an underscore (<code>_</code>).</p>
+<pre class="r"><code>ds_long_2 &lt;- ds_long_1 %&gt;% 
+  dplyr::mutate(
+    age  = value, # the variable the will store the value of age
+    wave = gsub(pattern = &quot;AGE_(\\d+)&quot;,replacement = &quot;\\1&quot;, x = key)
+  ) 
+ds_long_2 %&gt;% print()</code></pre>
+<pre><code># A tibble: 12 x 5
+   SUBNO key   value   age wave 
+   &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;
+ 1  1001 AGE_0    15    15 0    
+ 2  1001 AGE_1    NA    NA 1    
+ 3  1001 AGE_2    NA    NA 2    
+ 4  1001 AGE_3    NA    NA 3    
+ 5  1002 AGE_0    13    13 0    
+ 6  1002 AGE_1    14    14 1    
+ 7  1002 AGE_2    15    15 2    
+ 8  1002 AGE_3    16    16 3    
+ 9  1003 AGE_0    12    12 0    
+10  1003 AGE_1    13    13 1    
+11  1003 AGE_2    14    14 2    
+12  1003 AGE_3    15    15 3    </code></pre>
+<p>Notice that we use a regular expression <code>AGE_(\\d+)</code> with the <code>gsub</code> function to match <code>AGE_</code> literally and replace the value from the column <code>key</code> with the first capturing group (<code>\\1</code>) and store however many digits (<code>\\d+</code>) representing the wave in the new variable <code>wave</code>. There are many ways to accomplish this operation and, yes, resorting to <a href="https://www.regular-expressions.info/">regular expressions</a> may be an overkill in this particular instance. But we do it nonetheless for demonstration purposes (there are many reason <a href="https://blog.patricktriest.com/you-should-learn-regex/">why you should learn regular expressions</a>)</p>
+<pre class="r"><code>ds_long_3 &lt;- ds_long_2 %&gt;% 
+  dplyr::select(-key, -value) # because no need in technical variables anymore
+ds_long_3 %&gt;% print()</code></pre>
+<pre><code># A tibble: 12 x 3
+   SUBNO   age wave 
+   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;
+ 1  1001    15 0    
+ 2  1001    NA 1    
+ 3  1001    NA 2    
+ 4  1001    NA 3    
+ 5  1002    13 0    
+ 6  1002    14 1    
+ 7  1002    15 2    
+ 8  1002    16 3    
+ 9  1003    12 0    
+10  1003    13 1    
+11  1003    14 2    
+12  1003    15 3    </code></pre>
+<p>Finally, we can assemble these steps into a single call:</p>
+<pre class="r"><code>ds_long &lt;- ds_wide %&gt;% 
+  dplyr::select_(.dots = c(&quot;SUBNO&quot;,paste0(&quot;AGE_&quot;,0:3))) %&gt;% 
+  tidyr::gather(
+    key    = &quot;key&quot;   # name of new variable to store the key
+    ,value = &quot;value&quot; # name of new variable to store the values
+    ,AGE_0, AGE_1, AGE_2, AGE_3 # selection of columns to gather
+  ) %&gt;% 
+  dplyr::mutate(
+    age  = value, # the variable the will store the value of age
+    wave = gsub(pattern = &quot;AGE_(\\d+)&quot;,replacement = &quot;\\1&quot;, x = key)
+  ) %&gt;% 
+  dplyr::select(-key, -value) %&gt;% 
+  dplyr::arrange(SUBNO)
+ds_long %&gt;% print()</code></pre>
+<pre><code># A tibble: 12 x 3
+   SUBNO   age wave 
+   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;
+ 1  1001    15 0    
+ 2  1001    NA 1    
+ 3  1001    NA 2    
+ 4  1001    NA 3    
+ 5  1002    13 0    
+ 6  1002    14 1    
+ 7  1002    15 2    
+ 8  1002    16 3    
+ 9  1003    12 0    
+10  1003    13 1    
+11  1003    14 2    
+12  1003    15 3    </code></pre>
+<p>This script still have some room for improvement. For example, notice that we have spelled out the names of the “wide” variables in the <code>tidyr::gather()</code> call: &gt; AGE_0, AGE_1, AGE_2, AGE_3</p>
+<p>We can replace it with a more elegant &gt; paste0(“AGE_”,0:3)</p>
+<p>However, this will not work if we were to “gather” the <code>BULLYING</code> variables, because they miss the index <code>3</code>.</p>
+<pre class="r"><code>ds_wide %&gt;% dplyr::glimpse()</code></pre>
+<pre><code>Observations: 3
+Variables: 11
+$ SUBNO      &lt;dbl&gt; 1001, 1002, 1003
+$ FEMALE     &lt;dbl&gt; 0, 1, 0
+$ RACE       &lt;dbl&gt; 2, 3, 1
+$ AGE_0      &lt;dbl&gt; 15, 13, 12
+$ AGE_1      &lt;dbl&gt; NA, 14, 13
+$ AGE_2      &lt;dbl&gt; NA, 15, 14
+$ AGE_3      &lt;dbl&gt; NA, 16, 15
+$ BULLYING_0 &lt;dbl&gt; 3.8, 2.3, 0.6
+$ BULLYING_1 &lt;dbl&gt; NA, 4.6, 1.6
+$ BULLYING_2 &lt;dbl&gt; NA, NA, 3
+$ BULLYING_4 &lt;dbl&gt; NA, 0.66, 1.80</code></pre>
+<p>We will discuss a better strategy for selecting variables for “gathering” in the subsequent post.</p>
+</div>

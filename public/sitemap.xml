@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/post/2019-01-10-gather-spread-1/elonongation-practice-1/</loc>
+      <lastmod>2019-01-10T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/project/data-science-studio/</loc>
       <lastmod>2018-11-13T00:00:00+00:00</lastmod>
     </url>
@@ -295,7 +304,7 @@
     <url>
     
       <loc>/categories/r/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+      <lastmod>2019-01-10T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -376,6 +385,16 @@
     
       <loc>/tags/comorbidity/</loc>
       <lastmod>2016-09-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/data-manipulation/</loc>
+      <lastmod>2019-01-10T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -526,6 +545,16 @@
     
       <loc>/tags/reproducible-research/</loc>
       <lastmod>2018-11-13T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/tidy-data/</loc>
+      <lastmod>2019-01-10T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

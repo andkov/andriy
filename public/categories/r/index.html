@@ -72,7 +72,7 @@
   <meta property="og:description" content="Assistant Professor ">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2015-07-23T21:13:14-05:00">
+  <meta property="og:updated_time" content="2019-01-10T00:00:00&#43;00:00">
   
 
   
@@ -196,6 +196,33 @@
   
 
   
+  
+  <div>
+    <h2><a href="/post/2019-01-10-gather-spread-1/elonongation-practice-1/">Time to gather, time to spread. Part 1.</a></h2>
+    <div class="article-style">
+      
+      <p>TL;DR
+A quick demonstration of transforming data from wide to long format usingtidyr::gather() and tidyr::spread() functions. Fully reproducible example with a simple dataset.
+Packages used in this demonstration: library(magrittr) # pipes
+requireNamespace(&quot;dplyr&quot;)
+requireNamespace(&quot;readr&quot;)</p>
+
+<p>I. Exposition
+Consider the following dataset that captures bullying measure for three respondents over several waves of observation: ds_wide %&gt;% dplyr::glimpse()
+Observations: 3
+Variables: 11
+$ SUBNO &lt;dbl&gt; 1001, 1002, 1003
+$ FEMALE &lt;dbl&gt; 0, 1, 0
+$ RACE &lt;dbl&gt; 2, 3, 1
+$ AGE_0 &lt;dbl&gt; 15, 13, 12
+$ AGE_1 &lt;dbl&gt; NA, 14, 13
+$ AGE_2 &lt;dbl&gt; NA, 15, 14
+$ AGE_3 &lt;dbl&gt; NA, 16, 15
+$ BULLYING_0 &lt;dbl&gt; 3.</p>
+
+      
+    </div>
+  </div>
   
   <div>
     <h2><a href="/post/2015-07-23-r-rmarkdown/">Hello R Markdown</a></h2>

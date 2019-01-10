@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Andriy V. Koval</title>
-    <link>/categories/r/</link>
-    <description>Recent content in R on Andriy V. Koval</description>
+    <title>data manipulation on Andriy V. Koval</title>
+    <link>/categories/data-manipulation/</link>
+    <description>Recent content in data manipulation on Andriy V. Koval</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Andriy Koval</copyright>
     <lastBuildDate>Thu, 10 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/data-manipulation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,17 +20,6 @@
       <guid>/post/2019-01-10-gather-spread-1/elonongation-practice-1/</guid>
       <description>TL;DRA quick demonstration of transforming data from wide to long format usingtidyr::gather() and tidyr::spread() functions. Fully reproducible example with a simple dataset.
 Packages used in this demonstration: library(magrittr) # pipesrequireNamespace(&amp;quot;dplyr&amp;quot;)requireNamespace(&amp;quot;readr&amp;quot;)I. ExpositionConsider the following dataset that captures bullying measure for three respondents over several waves of observation: ds_wide %&amp;gt;% dplyr::glimpse()Observations: 3Variables: 11$ SUBNO &amp;lt;dbl&amp;gt; 1001, 1002, 1003$ FEMALE &amp;lt;dbl&amp;gt; 0, 1, 0$ RACE &amp;lt;dbl&amp;gt; 2, 3, 1$ AGE_0 &amp;lt;dbl&amp;gt; 15, 13, 12$ AGE_1 &amp;lt;dbl&amp;gt; NA, 14, 13$ AGE_2 &amp;lt;dbl&amp;gt; NA, 15, 14$ AGE_3 &amp;lt;dbl&amp;gt; NA, 16, 15$ BULLYING_0 &amp;lt;dbl&amp;gt; 3.</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
     </item>
     
   </channel>
