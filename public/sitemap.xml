@@ -95,6 +95,15 @@
     
     <url>
     
+      <loc>/talk/2019-10-31-notebooks-not-enough/</loc>
+      <lastmod>2017-01-01T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
@@ -187,6 +196,14 @@
     
       <loc>/post/migrate-from-jekyll/</loc>
       <lastmod>2014-03-10T00:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/data-wrangling/2019-01-12-gather-spread-2/</loc>
     </url>
     
   

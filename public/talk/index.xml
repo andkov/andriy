@@ -21,5 +21,14 @@
       <description>Embed your slides or video here using shortcodes. Further details can easily be added using Markdown and $\rm \LaTeX$ math code.</description>
     </item>
     
+    <item>
+      <title>When Notebooks are not Enough: Constructing Workflows for Reproducible Analytics</title>
+      <link>/talk/2019-10-31-notebooks-not-enough/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/2019-10-31-notebooks-not-enough/</guid>
+      <description>I will use a concrete analytical example to demonstrate how constructing workflows for reproducible analyses can serve as the next step from computational notebooks towards creating an analytical software. First, I will demonstrate a reproducible graphing system designed for the IPDLN-2018 hackathon , organized by Statistics Canada. The system evaluates synthetic socioeconomic and mortality data with logistic regression. Then I will discuss the workflow of the project that implements this graphing system ( github.</description>
+    </item>
+    
   </channel>
 </rss>
