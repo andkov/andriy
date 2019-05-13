@@ -46,4 +46,4 @@ creating an analytical software. First, I will demonstrate a reproducible graphi
 designed for the IPDLN-2018 hackathon , organized by Statistics Canada. The system evaluates synthetic socioeconomic and mortality data with logistic regression. Then I will discuss the workflow of the project that implements this graphing system
 ( github.com/andkov/ipdln-2018-hackathon ) and the RStudio + GitHub setup that hosts it. I will conclude by building the case to prefer reproducible workflows with version control over computational notebooks (e.g. Jupyter, R Notebook).
 
-Embed your slides or video here using [shortcodes](https://sourcethemes.com/academic/post/writing-markdown-latex/). Further details can easily be added using *Markdown* and $\rm \LaTeX$ math code.
+Embed your slides or video here using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/). Further details can easily be added using *Markdown* and $\rm \LaTeX$ math code.
