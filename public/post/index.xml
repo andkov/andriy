@@ -1,106 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Andriy V. Koval</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on Andriy V. Koval</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018 Andriy Koval</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate>
-    
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Time to gather, time to spread. Part 1.</title>
-      <link>/post/2019-01-10-gather-spread-1/elonongation-practice-1/</link>
-      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019-01-10-gather-spread-1/elonongation-practice-1/</guid>
-      <description>TL;DRA quick demonstration of transforming data from wide to long format usingtidyr::gather() and tidyr::spread() functions. Fully reproducible example with a simple dataset.
-Packages used in this demonstration: library(magrittr) # pipesrequireNamespace(&amp;quot;dplyr&amp;quot;)requireNamespace(&amp;quot;readr&amp;quot;)I. ExpositionConsider the following dataset that captures bullying measure for three respondents over several waves of observation: ds_wide %&amp;gt;% dplyr::glimpse()Observations: 3Variables: 11$ SUBNO &amp;lt;dbl&amp;gt; 1001, 1002, 1003$ FEMALE &amp;lt;dbl&amp;gt; 0, 1, 0$ RACE &amp;lt;dbl&amp;gt; 2, 3, 1$ AGE_0 &amp;lt;dbl&amp;gt; 15, 13, 12$ AGE_1 &amp;lt;dbl&amp;gt; NA, 14, 13$ AGE_2 &amp;lt;dbl&amp;gt; NA, 15, 14$ AGE_3 &amp;lt;dbl&amp;gt; NA, 16, 15$ BULLYING_0 &amp;lt;dbl&amp;gt; 3.</description>
-    </item>
-    
-    <item>
-      <title>Getting started with the Academic framework for Hugo</title>
-      <link>/post/getting-started/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/post/getting-started/</guid>
-      <description>The Academic framework enables you to easily create a beautifully simple personal or academic website using the Hugo static site generator.
-Key features:
- Easily manage your homepage, blog posts, publications, talks, and projects Configurable widgets available for Biography, Publications, Projects, News/Blog, Talks, and Contact Need a different section? Just use the Custom widget! Write in Markdown for easy formatting and code highlighting, with LaTeX for mathematical expressions Social/academic network linking, Google Analytics, and Disqus comments Responsive and mobile friendly Simple and refreshing one page design Multilingual and easy to customize  Table of Contents    Installation Getting Started  Core parameters Introduce yourself Customize the homepage Add your content Remove unused widgets and pages Themes Customization &amp;amp; updating  Advanced customization  Navigation menu Website icon Analytics Third party and local scripts (JS) Language and translation Permalinks Advanced style customization (CSS)  Updating Feedback &amp;amp; Contributing License    Installation  Install Hugo and create a new website by typing the following commands in your Terminal or Command Prompt app:</description>
-    </item>
-    
-    <item>
-      <title>Customizing the homepage with widgets</title>
-      <link>/post/widgets/</link>
-      <pubDate>Tue, 19 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/post/widgets/</guid>
-      <description>Homepage widgets display as sections on the homepage. They can be enabled/disabled and configured as desired. Academic has the following widgets available to use:
- About/biography Selected publications Recent publications Recent news/blog posts Projects Selected talks Recent talks Contact Tag cloud Hero (introduction) Custom widget (demonstrated with the teaching example)  The example site that you copied to create your site uses all the different types of widget (except talks), so you can generally just delete the widgets you don&amp;rsquo;t need and customize the parameters of the widgets you wish to keep.</description>
-    </item>
-    
-    <item>
-      <title>Managing content</title>
-      <link>/post/managing-content/</link>
-      <pubDate>Mon, 18 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/post/managing-content/</guid>
-      <description>&lt;p&gt;This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, news/blog articles, and widget pages. After you have read this guide about creating and managing content, you may also be interested to learn about &lt;a href=&#34;/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;writing content with Markdown, LaTeX, and Shortcodes&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Writing content with Markdown, LaTeX, and Shortcodes</title>
-      <link>/post/writing-markdown-latex/</link>
-      <pubDate>Sun, 17 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/post/writing-markdown-latex/</guid>
-      <description>&lt;p&gt;Content can be written using &lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34; target=&#34;_blank&#34;&gt;Markdown&lt;/a&gt;, &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34;&gt;LaTeX math&lt;/a&gt;, and &lt;a href=&#34;http://gohugo.io/extras/shortcodes/&#34; target=&#34;_blank&#34;&gt;Hugo Shortcodes&lt;/a&gt;. Additionally, HTML may be used for advanced formatting.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Frequently Asked Questions (FAQ)</title>
-      <link>/post/faq/</link>
-      <pubDate>Sun, 10 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/post/faq/</guid>
-      <description>Common questions and answers will be listed here.
-I cloned/downloaded Academic but Hugo produces errors when using it with my existing Hugo site
-Academic is a website framework rather than just a theme. Therefore, you must follow the full installation guide found on the Demo/Documentation website or in the Github Readme. If you still have problems, first try running Hugo on the Academic Example Site found in the themes/academic/exampleSite folder and then compare the configuration parameters in the Example Site&amp;rsquo;s config.</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
-    <item>
-      <title>Migrate from Jekyll to Hugo</title>
-      <link>/post/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 -0700</pubDate>
-      
-      <guid>/post/migrate-from-jekyll/</guid>
-      <description>Here are a few tips for migrating an existing website from Jekyll to Hugo. These tips can be applied in conjunction with following Hugo Academic&amp;rsquo;s getting started guide.
-Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/post/data-wrangling/2019-01-12-gather-spread-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/post/data-wrangling/2019-01-12-gather-spread-2/</guid>
-      <description>Time to gather, time to spread. Part 2.code{white-space: pre;}pre:not([class]) {background-color: white;}if (window.hljs) {hljs.configure({languages: []});hljs.initHighlightingOnLoad();if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) {window.setTimeout(function() { hljs.initHighlighting(); }, 0);}}h1 {font-size: 34px;}h1.title {font-size: 38px;}h2 {font-size: 30px;}h3 {font-size: 24px;}h4 {font-size: 18px;}h5 {font-size: 16px;}h6 {font-size: 12px;}.</description>
-    </item>
-    
-  </channel>
-</rss>

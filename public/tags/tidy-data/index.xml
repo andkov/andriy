@@ -1,26 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>tidy data on Andriy V. Koval</title>
-    <link>/tags/tidy-data/</link>
-    <description>Recent content in tidy data on Andriy V. Koval</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018 Andriy Koval</copyright>
-    <lastBuildDate>Thu, 10 Jan 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/tidy-data/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Time to gather, time to spread. Part 1.</title>
-      <link>/post/2019-01-10-gather-spread-1/elonongation-practice-1/</link>
-      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019-01-10-gather-spread-1/elonongation-practice-1/</guid>
-      <description>TL;DRA quick demonstration of transforming data from wide to long format usingtidyr::gather() and tidyr::spread() functions. Fully reproducible example with a simple dataset.
-Packages used in this demonstration: library(magrittr) # pipesrequireNamespace(&amp;quot;dplyr&amp;quot;)requireNamespace(&amp;quot;readr&amp;quot;)I. ExpositionConsider the following dataset that captures bullying measure for three respondents over several waves of observation: ds_wide %&amp;gt;% dplyr::glimpse()Observations: 3Variables: 11$ SUBNO &amp;lt;dbl&amp;gt; 1001, 1002, 1003$ FEMALE &amp;lt;dbl&amp;gt; 0, 1, 0$ RACE &amp;lt;dbl&amp;gt; 2, 3, 1$ AGE_0 &amp;lt;dbl&amp;gt; 15, 13, 12$ AGE_1 &amp;lt;dbl&amp;gt; NA, 14, 13$ AGE_2 &amp;lt;dbl&amp;gt; NA, 15, 14$ AGE_3 &amp;lt;dbl&amp;gt; NA, 16, 15$ BULLYING_0 &amp;lt;dbl&amp;gt; 3.</description>
-    </item>
-    
-  </channel>
-</rss>

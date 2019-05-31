@@ -1,0 +1,10 @@
+{
+    "dialog-state" : {
+        "caseSensitive" : false,
+        "filePatterns" : [
+        ],
+        "path" : "C:/Users/an499583/OneDrive - University of Central Florida/GitHub",
+        "query" : "/academic",
+        "regex" : false
+    }
+}
