@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on Andriy Koval</title>
+    <link>/authors/</link>
+    <description>Recent content in Authors on Andriy Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Andriy Koval</copyright>
+    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/authors/admin/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/admin/</guid>
+      <description>I am a data scientist with background in quantitative methods and interest in data-driven models of human aging.
+I received my Ph.D. in Quantitative Methods in 2014 from Vanderbilt University, where I studied under Dr. Joe Rodgers, specializing in statistical modeling, design of graphical displays of information, and reproducible research. In August of the same year I joined the Integrative Analysis of Longitudinal Studies of Aging (IALSA) network (NIH/NIA P01AG043362) at the University of Victoria (UVic), directed by Dr.</description>
+    </item>
+    
+    <item>
+      <title>Amanda Kelly</title>
+      <link>/authors/amanda-kelly/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/amanda-kelly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Andrea M.Piccinin</title>
+      <link>/authors/andrea-m.piccinin/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/andrea-m.piccinin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Boo Johansson</title>
+      <link>/authors/boo-johansson/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/boo-johansson/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>David A. Bennett</title>
+      <link>/authors/david-a.-bennett/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/david-a.-bennett/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graciela Muniz-Terrera</title>
+      <link>/authors/graciela-muniz-terrera/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/graciela-muniz-terrera/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linda B.Hassing</title>
+      <link>/authors/linda-b.hassing/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/linda-b.hassing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matthew Calamia</title>
+      <link>/authors/matthew-calamia/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/matthew-calamia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scott M.Hofer</title>
+      <link>/authors/scott-m.hofer/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/scott-m.hofer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sean Clouston</title>
+      <link>/authors/sean-clouston/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/sean-clouston/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Robert Ford</title>
+      <link>/authors/robert-ford/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/robert-ford/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
