@@ -6,13 +6,14 @@ active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
 title = "Skills"
-subtitle = "Where I spent my time"
+subtitle = "Where I spend my time"
 
 # Showcase personal skills or business features.
 # 
 # Add/remove as many `[[feature]]` blocks below as you like.
 # 
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
+# https://fontawesome.com/icons?d=gallery&s=brands
 
 [[feature]]
   icon = "r-project"
@@ -23,9 +24,19 @@ subtitle = "Where I spent my time"
 [[feature]]
   icon = "chart-line"
   icon_pack = "fas"
+  name = "Graph making"
+  description = "100%"  
+  
+[[feature]]
+  icon = "code-branch"
+  icon_pack = "fas"
   name = "Reproducible Research"
   description = "100%"  
   
-
+[[feature]]
+  icon = "keyboard"
+  icon_pack = "fas"
+  name = "Statistical Learning"
+  description = "80%"  
 
 +++
