@@ -35,7 +35,7 @@
   
   <url>
     <loc>/authors/admin/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -52,13 +52,13 @@
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -70,13 +70,13 @@
   
   <url>
     <loc>/publication_types/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/publication/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -86,43 +86,222 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/aging/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <loc>/tags/chronic-disease-surveillance/</loc>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ggplot2/</loc>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/public-health/</loc>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/reproducible-research/</loc>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/small-cell-suppression/</loc>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/suppress-for-release/</loc>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication_types/2/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/duggan-2018-pulmonary-cognition-aging/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/andrea-m-piccinin/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/andrea-r-zammit/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/annie-robitalle/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/avron-spiro-ii/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/boo-johansson/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/cassandra-l-brown/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/chenkai-wu/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/david-a-bennett/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/deborah-finkel/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/dorly-deeg/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/emily-c-duggan/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/graciela-muniz-terrera/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/ialsa-portland/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/jeffrey-kaye/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/jennifer-weuve/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/lewina-o-lee/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/marcus-praetorius-bj%C3%B6rk/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/mindy-katz/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/richard-b-lipton/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/scott-m-hofer/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/sean-clouston/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/william-h.-beasley/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/cognition/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/cognitive-aging/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/coordinated-analysis/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/diabetes/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <loc>/tags/longitudinal-analysis/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/hypertension/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <loc>/tags/normative-aging/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/longitudinal-modeling/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <loc>/tags/pulmonary/</loc>
+    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -192,67 +371,55 @@
   </url>
   
   <url>
-    <loc>/publication_types/2/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/authors/amanda-kelly/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/andrea-m.piccinin/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/boo-johansson/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/david-a.-bennett/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/graciela-muniz-terrera/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/publication/kelly-2016-hypertension-diabetes-memory/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/authors/linda-b.hassing/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/matthew-calamia/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/scott-m.hofer/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/sean-clouston/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <loc>/tags/diabetes/</loc>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hypertension/</loc>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

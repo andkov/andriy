@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chronic disease surveillance on Andriy Koval</title>
+    <link>/tags/chronic-disease-surveillance/</link>
+    <description>Recent content in chronic disease surveillance on Andriy Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Andriy Koval</copyright>
+    <lastBuildDate>Wed, 29 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/chronic-disease-surveillance/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Suppressing Small Counts for Public Release</title>
+      <link>/publication/koval-2019-suppress-for-release/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/koval-2019-suppress-for-release/</guid>
+      <description>Demonstrates the methods of suppressing small counts in a provincial surveillance system in preparation of data for public release.</description>
+    </item>
+    
+  </channel>
+</rss>

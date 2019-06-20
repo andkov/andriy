@@ -149,6 +149,43 @@
     </item>
     
     <item>
+      <title>A Multi-Study Coordinated Meta-Analysis of Pulmonary Function and Cognition in Aging</title>
+      <link>/publication/duggan-2018-pulmonary-cognition-aging/</link>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/duggan-2018-pulmonary-cognition-aging/</guid>
+      <description>
+
+
+&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Background&lt;/h1&gt;
+&lt;p&gt;Substantial research is dedicated to understanding the aging-related dynamics among individual differences in level, change, and variation across physical and cognitive abilities. Evaluating replicability and synthesizing these findings has been limited by differences in measurements and samples, and by study design and statistical analyses confounding between-person differences with within-person changes. In this article, we conducted a coordinated analysis and summary meta-analysis of new results on the aging-related dynamics linking pulmonary function and cognitive performance.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;methods&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Methods&lt;/h1&gt;
+&lt;p&gt;We performed coordinated analysis of bivariate growth models in data from 20,586 participants across eight longitudinal studies to examine individual differences in baseline level, rate of change, and occasion-specific variability in pulmonary and cognitive functioning. Results were summarized using meta-analysis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;results&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Results&lt;/h1&gt;
+&lt;p&gt;We found consistent but weak baseline and longitudinal associations in levels of pulmonary and cognitive functioning, but no associations in occasion-specific variability.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Conclusions&lt;/h1&gt;
+&lt;p&gt;Results provide limited evidence for a consistent link between simultaneous changes in pulmonary and cognitive function in a normal aging population. Further research is required to understand patterns of onset of decline and differences in rates of change within and across physical and cognitive functioning domains, both within-individuals and across countries and birth cohorts. Coordinated analysis provides an efficient and rigorous approach for replicating and comparing results across independent longitudinal studies.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/IALSA/ialsa-2017-portland/blob/master/libs/materials/pulmonary/README.md&#34;&gt;See more&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Figure-1-Mental-Status.jpg&#34; /&gt;
+&lt;img src=&#34;Figure-2-Processing-Speed.jpg&#34; /&gt;
+&lt;img src=&#34;Figure-3-Attention-and-Working-Memory.jpg&#34; /&gt;
+&lt;img src=&#34;Figure-4-Perceptual-Reasoning.jpg&#34; /&gt;
+&lt;img src=&#34;Figure-5-Verbal-Abilities.jpg&#34; /&gt;
+&lt;img src=&#34;Figure-6-Learning-and-Memory.jpg&#34; /&gt;
+&lt;img src=&#34;Figure-7-Total-Slope.jpg&#34; /&gt;
+&lt;img src=&#34;Figure-8-ISR-Aggregate.jpg&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Display Jupyter Notebooks with Academic</title>
       <link>/post/jupyter/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>

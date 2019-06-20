@@ -13,47 +13,92 @@
     
     
     <item>
-      <title>aging</title>
-      <link>/tags/aging/</link>
+      <title>chronic disease surveillance</title>
+      <link>/tags/chronic-disease-surveillance/</link>
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/aging/</guid>
+      <guid>/tags/chronic-disease-surveillance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ggplot2</title>
+      <link>/tags/ggplot2/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ggplot2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>public health</title>
+      <link>/tags/public-health/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/public-health/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reproducible research</title>
+      <link>/tags/reproducible-research/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/reproducible-research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>small cell suppression</title>
+      <link>/tags/small-cell-suppression/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/small-cell-suppression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cognition</title>
       <link>/tags/cognition/</link>
-      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/cognition/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>diabetes</title>
-      <link>/tags/diabetes/</link>
-      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      <title>cognitive aging</title>
+      <link>/tags/cognitive-aging/</link>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/diabetes/</guid>
+      <guid>/tags/cognitive-aging/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>hypertension</title>
-      <link>/tags/hypertension/</link>
-      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      <title>longitudinal analysis</title>
+      <link>/tags/longitudinal-analysis/</link>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/hypertension/</guid>
+      <guid>/tags/longitudinal-analysis/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>longitudinal modeling</title>
-      <link>/tags/longitudinal-modeling/</link>
-      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      <title>normative aging</title>
+      <link>/tags/normative-aging/</link>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/longitudinal-modeling/</guid>
+      <guid>/tags/normative-aging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pulmonary</title>
+      <link>/tags/pulmonary/</link>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/pulmonary/</guid>
       <description></description>
     </item>
     
@@ -81,6 +126,24 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>/tags/academic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diabetes</title>
+      <link>/tags/diabetes/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/diabetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hypertension</title>
+      <link>/tags/hypertension/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/hypertension/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cognitive aging on Andriy Koval</title>
+    <link>/tags/cognitive-aging/</link>
+    <description>Recent content in cognitive aging on Andriy Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Andriy Koval</copyright>
+    <lastBuildDate>Sat, 02 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/cognitive-aging/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Multi-Study Coordinated Meta-Analysis of Pulmonary Function and Cognition in Aging</title>
+      <link>/publication/duggan-2018-pulmonary-cognition-aging/</link>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/duggan-2018-pulmonary-cognition-aging/</guid>
+      <description>In this second paper of a two-paper series, we conducted a coordinated analysis and summary meta-analysis of new results on the aging-related dynamics linking pulmonary function and cognitive performance.</description>
+    </item>
+    
+    <item>
+      <title>Independent and Interactive Impacts of Hypertension and Diabetes Mellitus on Verbal Memory</title>
+      <link>/publication/kelly-2016-hypertension-diabetes-memory/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/kelly-2016-hypertension-diabetes-memory/</guid>
+      <description>The study explored the effects of living with Hypertension and Diabetes Mellitus on declarative memory performace using data from longitudinal studies from England, Sweden, and the United States.</description>
+    </item>
+    
+  </channel>
+</rss>
