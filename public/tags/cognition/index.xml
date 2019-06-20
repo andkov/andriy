@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Thu, 25 Feb 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/cognition/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Suppressing Small Counts for Public Release</title>
+      <link>/publication/koval-2019-suppress-for-release/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/koval-2019-suppress-for-release/</guid>
+      <description>Demonstrates the methods of suppressing small counts in a provincial surveillance system in preparation of data for public release.</description>
+    </item>
     
     <item>
       <title>Independent and Interactive Impacts of Hypertension and Diabetes Mellitus on Verbal Memory</title>

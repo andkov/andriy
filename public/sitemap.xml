@@ -39,19 +39,32 @@
   </url>
   
   <url>
-    <loc>/publication_types/3/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <loc>/publication_types/1/</loc>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/publication/preprint/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <loc>/authors/anthony-leamon/</loc>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/</loc>
     <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/kate-smolina/</loc>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -67,13 +80,48 @@
   </url>
   
   <url>
-    <loc>/tags/source-themes/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/publication/koval-2019-suppress-for-release/</loc>
+    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
+    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/aging/</loc>
+    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/cognition/</loc>
+    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/coordinated-analysis/</loc>
+    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/diabetes/</loc>
+    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hypertension/</loc>
+    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/longitudinal-modeling/</loc>
     <lastmod>2019-06-17T10:50:12-07:00</lastmod>
     <priority>0</priority>
   </url>
@@ -168,12 +216,6 @@
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/authors/david-a.-bennett/</loc>
     <lastmod>2019-06-17T10:50:12-07:00</lastmod>
     <priority>0</priority>
@@ -215,53 +257,6 @@
   </url>
   
   <url>
-    <loc>/tags/aging/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/cognition/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/coordinated-analysis/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/diabetes/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/hypertension/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/longitudinal-modeling/</loc>
-    <lastmod>2019-06-17T10:50:12-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication/journal-article/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/robert-ford/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/post/2015-07-23-r-rmarkdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
@@ -288,17 +283,6 @@
     <loc>/tags/regression/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication_types/1/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication/conference-paper/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>

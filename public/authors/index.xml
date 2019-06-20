@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,11 +15,29 @@
     <item>
       <title></title>
       <link>/authors/admin/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/authors/admin/</guid>
       <description>I am a data scientist with background in quantitative methods and interest in data-driven models of human aging.
 I received my Ph.D. in Quantitative Methods in 2014 from Vanderbilt University, where I studied under Dr. Joe Rodgers, specializing in statistical modeling, design of graphical displays of information, and reproducible research. In August of the same year I joined the Integrative Analysis of Longitudinal Studies of Aging (IALSA) network (NIH/NIA P01AG043362) at the University of Victoria (UVic), directed by Dr.</description>
+    </item>
+    
+    <item>
+      <title>Anthony Leamon</title>
+      <link>/authors/anthony-leamon/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/anthony-leamon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kate Smolina</title>
+      <link>/authors/kate-smolina/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/kate-smolina/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -100,15 +118,6 @@ I received my Ph.D. in Quantitative Methods in 2014 from Vanderbilt University, 
       <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>/authors/sean-clouston/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Robert Ford</title>
-      <link>/authors/robert-ford/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/robert-ford/</guid>
       <description></description>
     </item>
     

@@ -7,17 +7,53 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Source Themes</title>
-      <link>/tags/source-themes/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <title>aging</title>
+      <link>/tags/aging/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/source-themes/</guid>
+      <guid>/tags/aging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cognition</title>
+      <link>/tags/cognition/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cognition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diabetes</title>
+      <link>/tags/diabetes/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/diabetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hypertension</title>
+      <link>/tags/hypertension/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/hypertension/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>longitudinal modeling</title>
+      <link>/tags/longitudinal-modeling/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/longitudinal-modeling/</guid>
       <description></description>
     </item>
     
@@ -45,51 +81,6 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>/tags/academic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aging</title>
-      <link>/tags/aging/</link>
-      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/aging/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cognition</title>
-      <link>/tags/cognition/</link>
-      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/cognition/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>diabetes</title>
-      <link>/tags/diabetes/</link>
-      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/diabetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hypertension</title>
-      <link>/tags/hypertension/</link>
-      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/hypertension/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>longitudinal modeling</title>
-      <link>/tags/longitudinal-modeling/</link>
-      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/longitudinal-modeling/</guid>
       <description></description>
     </item>
     
