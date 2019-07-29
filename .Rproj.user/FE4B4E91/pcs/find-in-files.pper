@@ -2,9 +2,25 @@
     "dialog-state" : {
         "caseSensitive" : false,
         "filePatterns" : [
+            "*.r",
+            "*.R",
+            "*.rnw",
+            "*.Rnw",
+            "*.rmd",
+            "*.Rmd",
+            "*.rmarkdown",
+            "*.Rmarkdown",
+            "*.rhtml",
+            "*.Rhtml",
+            "*.rd",
+            "*.Rd",
+            "*.h",
+            "*.hpp",
+            "*.c",
+            "*.cpp"
         ],
         "path" : "C:/Users/an499583/OneDrive - University of Central Florida/GitHub",
-        "query" : "/academic",
+        "query" : "pdf:",
         "regex" : false
     }
 }

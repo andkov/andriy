@@ -39,5 +39,32 @@
       <description></description>
     </item>
     
+    <item>
+      <title>functional graphing</title>
+      <link>/categories/functional-graphing/</link>
+      <pubDate>Thu, 01 Nov 2018 16:00:00 -0700</pubDate>
+      
+      <guid>/categories/functional-graphing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reproducible research</title>
+      <link>/categories/reproducible-research/</link>
+      <pubDate>Thu, 01 Nov 2018 16:00:00 -0700</pubDate>
+      
+      <guid>/categories/reproducible-research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>statistical learning</title>
+      <link>/categories/statistical-learning/</link>
+      <pubDate>Thu, 01 Nov 2018 16:00:00 -0700</pubDate>
+      
+      <guid>/categories/statistical-learning/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

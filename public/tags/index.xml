@@ -103,20 +103,65 @@
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>/tags/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>IDPLN</title>
+      <link>/tags/idpln/</link>
+      <pubDate>Thu, 01 Nov 2018 16:00:00 -0700</pubDate>
       
-      <guid>/tags/deep-learning/</guid>
+      <guid>/tags/idpln/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Demo</title>
-      <link>/tags/demo/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>coloring book</title>
+      <link>/tags/coloring-book/</link>
+      <pubDate>Thu, 01 Nov 2018 16:00:00 -0700</pubDate>
       
-      <guid>/tags/demo/</guid>
+      <guid>/tags/coloring-book/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graphing techniques</title>
+      <link>/tags/graphing-techniques/</link>
+      <pubDate>Thu, 01 Nov 2018 16:00:00 -0700</pubDate>
+      
+      <guid>/tags/graphing-techniques/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hackathon</title>
+      <link>/tags/hackathon/</link>
+      <pubDate>Thu, 01 Nov 2018 16:00:00 -0700</pubDate>
+      
+      <guid>/tags/hackathon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logistic regression</title>
+      <link>/tags/logistic-regression/</link>
+      <pubDate>Thu, 01 Nov 2018 16:00:00 -0700</pubDate>
+      
+      <guid>/tags/logistic-regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computational essays</title>
+      <link>/tags/computational-essays/</link>
+      <pubDate>Wed, 31 Oct 2018 15:00:00 -0700</pubDate>
+      
+      <guid>/tags/computational-essays/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>literate programming</title>
+      <link>/tags/literate-programming/</link>
+      <pubDate>Wed, 31 Oct 2018 15:00:00 -0700</pubDate>
+      
+      <guid>/tags/literate-programming/</guid>
       <description></description>
     </item>
     
