@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What Lies Beyond Acute Care Data</title>
+      <link>/post/2019-08-01-what-lies-beyond-acute-care/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019-08-01-what-lies-beyond-acute-care/</guid>
+      <description>Using service utilization data of 4,067 residents of Vancouver Island with sever alcohol addiction we demonstrate the cross-continuum terrain of health services in Vancouver Island Health Authority.</description>
+    </item>
     
     <item>
       <title>Academic Biography</title>

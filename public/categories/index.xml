@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Wed, 29 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Health Informatics</title>
+      <link>/categories/health-informatics/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/health-informatics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mental Health &amp; Substance Use</title>
+      <link>/categories/mental-health-substance-use/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/mental-health-substance-use/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reproducible research</title>
+      <link>/categories/reproducible-research/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/reproducible-research/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>suppress-for-release</title>
@@ -45,15 +72,6 @@
       <pubDate>Thu, 01 Nov 2018 16:00:00 -0700</pubDate>
       
       <guid>/categories/functional-graphing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>reproducible research</title>
-      <link>/categories/reproducible-research/</link>
-      <pubDate>Thu, 01 Nov 2018 16:00:00 -0700</pubDate>
-      
-      <guid>/categories/reproducible-research/</guid>
       <description></description>
     </item>
     

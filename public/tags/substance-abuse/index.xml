@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>substance abuse on Andriy Koval</title>
+    <link>/tags/substance-abuse/</link>
+    <description>Recent content in substance abuse on Andriy Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Andriy Koval</copyright>
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/substance-abuse/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What Lies Beyond Acute Care Data</title>
+      <link>/post/2019-08-01-what-lies-beyond-acute-care/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019-08-01-what-lies-beyond-acute-care/</guid>
+      <description>Using service utilization data of 4,067 residents of Vancouver Island with sever alcohol addiction we demonstrate the cross-continuum terrain of health services in Vancouver Island Health Authority.</description>
+    </item>
+    
+  </channel>
+</rss>

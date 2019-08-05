@@ -3,18 +3,113 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/academic-biography/</loc>
-    <lastmod>2019-06-20T12:21:35-07:00</lastmod>
+    <loc>/publication_types/3/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/andriy-koval/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-07-25T15:27:25-07:00</lastmod>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/health-informatics/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/ken-moselle/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/mental-health-substance-use/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/2019-08-01-what-lies-beyond-acute-care/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/alcohol/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/electronic-health-records/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/health-service-utilization/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/heavy-addiction/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/reproducible-research/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/substance-abuse/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/academic-biography/</loc>
     <lastmod>2019-06-20T12:21:35-07:00</lastmod>
   </url>
   
@@ -36,25 +131,7 @@
   </url>
   
   <url>
-    <loc>/authors/</loc>
-    <lastmod>2019-07-25T15:27:25-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2019-07-25T15:27:25-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/authors/kate-smolina/</loc>
-    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
     <lastmod>2019-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -67,12 +144,6 @@
   <url>
     <loc>/publication/koval-2019-suppress-for-release/</loc>
     <lastmod>2019-05-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-07-25T15:27:25-07:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -291,12 +362,6 @@
   </url>
   
   <url>
-    <loc>/authors/andriy-koval/</loc>
-    <lastmod>2019-07-25T15:27:25-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/idpln/</loc>
     <lastmod>2019-07-25T15:27:25-07:00</lastmod>
     <priority>0</priority>
@@ -338,12 +403,6 @@
   
   <url>
     <loc>/tags/logistic-regression/</loc>
-    <lastmod>2019-07-25T15:27:25-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/reproducible-research/</loc>
     <lastmod>2019-07-25T15:27:25-07:00</lastmod>
     <priority>0</priority>
   </url>
@@ -426,6 +485,35 @@
   <url>
     <loc>/tags/hypertension/</loc>
     <lastmod>2016-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication_types/0/</loc>
+    <lastmod>2014-10-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/talk/2014-10-10-toolbox-toolset-reproducible-research/</loc>
+    <lastmod>2014-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/analytic-workflow/</loc>
+    <lastmod>2014-10-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/data-science/</loc>
+    <lastmod>2014-10-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/dynamic-documentation/</loc>
+    <lastmod>2014-10-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

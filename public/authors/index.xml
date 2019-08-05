@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Wed, 29 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Andriy Koval</title>
+      <link>/authors/andriy-koval/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/andriy-koval/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ken Moselle</title>
+      <link>/authors/ken-moselle/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/ken-moselle/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title></title>
@@ -228,15 +246,6 @@ Download my CV</description>
       <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/authors/william-h.-beasley/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Andriy Koval</title>
-      <link>/authors/andriy-koval/</link>
-      <pubDate>Thu, 01 Nov 2018 16:00:00 -0700</pubDate>
-      
-      <guid>/authors/andriy-koval/</guid>
       <description></description>
     </item>
     

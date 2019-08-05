@@ -7,10 +7,39 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What Lies Beyond Acute Care Data</title>
+      <link>/post/2019-08-01-what-lies-beyond-acute-care/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019-08-01-what-lies-beyond-acute-care/</guid>
+      <description>
+
+
+&lt;!-- # Publication type. --&gt;
+&lt;!-- # Legend: --&gt;
+&lt;!-- # 0 = Uncategorized --&gt;
+&lt;!-- # 1 = Conference proceedings --&gt;
+&lt;!-- # 2 = Journal --&gt;
+&lt;!-- # 3 = Work in progress --&gt;
+&lt;!-- # 4 = Technical report --&gt;
+&lt;!-- # 5 = Book --&gt;
+&lt;!-- # 6 = Book chapter --&gt;
+&lt;p&gt;This report demonstrate what disappears from the view of service utilization analysts when only Emergency and Acute Care data are mined from the EHR, a common practice in health services research. We study the cohort of 4,067 residents of Vancouver Island with severe alcohol addiction. Engagement with the cross-continuum terrain of services is aggraged over 10 years (2007 - 2017) and reported via categories of the Clinical Context Coding Scheme of the Vancouver Island Health Authority.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;post/2019-08-01-what-lies-beyond-acute-care/what-lies-beyond.html&#34;&gt;Read the full report&lt;/a&gt;
+&lt;a href=&#34;what-lies-beyond-pivot.html&#34;&gt;Play with the pivot of results&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;table1-cccs-summary.jpg&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;terrain-0-service-class.png&#34; alt=&#34;Figure 1: Aggregate cohort engagement of service classes: acute (red) and community (grey)&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Figure 1: Aggregate cohort engagement of service classes: acute (red) and community (grey)&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Academic Biography</title>
@@ -191,6 +220,31 @@
 &lt;p&gt;&lt;img src=&#34;figure2.jpg&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;figure3.jpg&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;figure1.png&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Toolbox and Toolsets of Reproducible Research</title>
+      <link>/talk/2014-10-10-toolbox-toolset-reproducible-research/</link>
+      <pubDate>Fri, 10 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2014-10-10-toolbox-toolset-reproducible-research/</guid>
+      <description>
+
+
+&lt;!-- # Publication type. --&gt;
+&lt;!-- # Legend: --&gt;
+&lt;!-- # 0 = Uncategorized --&gt;
+&lt;!-- # 1 = Conference proceedings --&gt;
+&lt;!-- # 2 = Journal --&gt;
+&lt;!-- # 3 = Work in progress --&gt;
+&lt;!-- # 4 = Technical report --&gt;
+&lt;!-- # 5 = Book --&gt;
+&lt;!-- # 6 = Book chapter --&gt;
+&lt;p&gt;The lecture introduces reproducible research and demonstrates digital self-publishing with RStudio and Git (Hub). The skills described and emphasized in this workflow include data manipulation, graph production, statistical modeling, and dynamic reporting. A series of four talks discusses each skill and gives examples of possible implementations in R.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;traditional-vs-reproducible.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Of specific importance is the data grooming stage, which enables a productive exploration of the data and establishes custody chains to support research conclusions based on the analytic products.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;reproducible-data-prep.png&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

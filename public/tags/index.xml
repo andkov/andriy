@@ -7,10 +7,55 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Wed, 29 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>alcohol</title>
+      <link>/tags/alcohol/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/alcohol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>electronic health records</title>
+      <link>/tags/electronic-health-records/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/electronic-health-records/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>health service utilization</title>
+      <link>/tags/health-service-utilization/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/health-service-utilization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>heavy addiction</title>
+      <link>/tags/heavy-addiction/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/heavy-addiction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>substance abuse</title>
+      <link>/tags/substance-abuse/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/substance-abuse/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>chronic disease surveillance</title>
@@ -180,6 +225,33 @@
       <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>/tags/hypertension/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>analytic workflow</title>
+      <link>/tags/analytic-workflow/</link>
+      <pubDate>Fri, 10 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/analytic-workflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data science</title>
+      <link>/tags/data-science/</link>
+      <pubDate>Fri, 10 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dynamic documentation</title>
+      <link>/tags/dynamic-documentation/</link>
+      <pubDate>Fri, 10 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/dynamic-documentation/</guid>
       <description></description>
     </item>
     

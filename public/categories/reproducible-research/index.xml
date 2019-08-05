@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Thu, 01 Nov 2018 16:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/reproducible-research/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What Lies Beyond Acute Care Data</title>
+      <link>/post/2019-08-01-what-lies-beyond-acute-care/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019-08-01-what-lies-beyond-acute-care/</guid>
+      <description>Using service utilization data of 4,067 residents of Vancouver Island with sever alcohol addiction we demonstrate the cross-continuum terrain of health services in Vancouver Island Health Authority.</description>
+    </item>
     
     <item>
       <title>Visualizing Logistic Regression</title>
@@ -29,6 +38,15 @@
       <guid>/talk/2018-10-31-when-notebooks-are-not-enough/</guid>
       <description>AbstractWhile computational notebooks offer scientists and engineers many helpful features, the limitations of this medium make it but a starting point in creating software - the practical goal of data science. Where do we go from computational notebooks if our projects require multiple interconnected scripts and dynamic documents? How do we ensure reproducibility amidst growing complexity of analyses and operations?
 I will use a concrete analytical example to demonstrate how constructing workflows for reproducible analyses can serve as the next step from computational notebooks towards creating an analytical software.</description>
+    </item>
+    
+    <item>
+      <title>Toolbox and Toolsets of Reproducible Research</title>
+      <link>/talk/2014-10-10-toolbox-toolset-reproducible-research/</link>
+      <pubDate>Fri, 10 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2014-10-10-toolbox-toolset-reproducible-research/</guid>
+      <description>The lecture introduces reproducible research and demonstrates digital self-publishing with RStudio and Git (Hub). The skills described and emphasized in this workflow include data manipulation, graph production, statistical modeling, and dynamic reporting. A series of four talks discusses each skill and gives examples of possible implementations in R.</description>
     </item>
     
   </channel>
