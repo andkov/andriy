@@ -31,8 +31,8 @@
 &lt;!-- # 5 = Book --&gt;
 &lt;!-- # 6 = Book chapter --&gt;
 &lt;p&gt;This report demonstrate what disappears from the view of service utilization analysts when only Emergency and Acute Care data are mined from the EHR, a common practice in health services research. We study the cohort of 4,067 residents of Vancouver Island with severe alcohol addiction. Engagement with the cross-continuum terrain of services is aggraged over 10 years (2007 - 2017) and reported via categories of the Clinical Context Coding Scheme of the Vancouver Island Health Authority.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;post/2019-08-01-what-lies-beyond-acute-care/what-lies-beyond.html&#34;&gt;Read the full report&lt;/a&gt;
-&lt;a href=&#34;what-lies-beyond-pivot.html&#34;&gt;Play with the pivot of results&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://raw.githack.com/rbind/andriy/master/content/post/2019-08-01-what-lies-beyond-acute-care/what-lies-beyond.html&#34;&gt;Read the full report&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://raw.githack.com/rbind/andriy/master/content/post/2019-08-01-what-lies-beyond-acute-care/what-lies-beyond-pivot.html&#34;&gt;Play with the pivot of results&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;table1-cccs-summary.jpg&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;terrain-0-service-class.png&#34; alt=&#34;Figure 1: Aggregate cohort engagement of service classes: acute (red) and community (grey)&#34; /&gt;

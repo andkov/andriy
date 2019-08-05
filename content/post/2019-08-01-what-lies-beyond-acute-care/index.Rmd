@@ -59,8 +59,9 @@ publication_types:
 <!-- # 6 = Book chapter -->
 This report demonstrate what disappears from the view of service utilization analysts when only Emergency and Acute Care data are mined from the EHR, a common practice in health services research. We study the cohort of 4,067 residents of Vancouver Island with severe alcohol addiction. Engagement with the cross-continuum terrain of services is aggraged over 10 years (2007 - 2017) and reported via categories of the Clinical Context Coding Scheme of the Vancouver Island Health Authority. 
 
-[Read the full report](post/2019-08-01-what-lies-beyond-acute-care/what-lies-beyond.html)
-[Play with the pivot of results](what-lies-beyond-pivot.html)
+[Read the full report](https://raw.githack.com/rbind/andriy/master/content/post/2019-08-01-what-lies-beyond-acute-care/what-lies-beyond.html)  
+
+[Play with the pivot of results](https://raw.githack.com/rbind/andriy/master/content/post/2019-08-01-what-lies-beyond-acute-care/what-lies-beyond-pivot.html)
 
 
 
