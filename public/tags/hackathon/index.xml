@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Thu, 01 Nov 2018 16:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/hackathon/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Implementing Reproducible Visualizations</title>
+      <link>/talk/2019-11-08-visualizing-logistic-regression/</link>
+      <pubDate>Wed, 06 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2019-11-08-visualizing-logistic-regression/</guid>
+      <description>Visualising results of statistical modeling is a key component of data science workflow. Statistical graphs often is the best means to explain and promote research findings. However,in order to find that one graph that tells the story worth sharing, we sometimes have to try out and sift through many data visualizations. How should we approach such a task? What can we do to make it easier from both production and evaluation perspectives?</description>
+    </item>
     
     <item>
       <title>Visualizing Logistic Regression</title>
