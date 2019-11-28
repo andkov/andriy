@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Wed, 06 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>reproducible research</title>
+      <link>/categories/reproducible-research/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/reproducible-research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tidyverse</title>
+      <link>/categories/tidyverse/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/tidyverse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workflow</title>
+      <link>/categories/workflow/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/workflow/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>functional graphing</title>
@@ -18,15 +45,6 @@
       <pubDate>Wed, 06 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/functional-graphing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>reproducible research</title>
-      <link>/categories/reproducible-research/</link>
-      <pubDate>Wed, 06 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/reproducible-research/</guid>
       <description></description>
     </item>
     

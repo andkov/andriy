@@ -7,10 +7,34 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Wed, 06 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Managing Data Analysis with RStudio</title>
+      <link>/talk/2019-11-26-hsif-toronto-workshop/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2019-11-26-hsif-toronto-workshop/</guid>
+      <description>
+
+
+&lt;div id=&#34;materials&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://raw.githack.com/andkov/hsif-2019-data-analysis/master/analysis/titanic-notebook-only/titanic-notebook.html&#34;&gt;notebook-only&lt;/a&gt; - analytic report as a notebook (combines code and annotation in the same &lt;code&gt;.Rmd&lt;/code&gt; file)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://raw.githack.com/andkov/hsif-2019-data-analysis/master/analysis/titanic-separate-layers/titanic.html&#34;&gt;separate-layers&lt;/a&gt; - analytic report separating the analytic layer (&lt;code&gt;.R&lt;/code&gt;) from the annotation layer (&lt;code&gt;.Rmd&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://raw.githack.com/andkov/hsif-2019-data-analysis/master/libs/materials/HSIF-Toronto-2019-11-26-data-analysis-workshop.pdf&#34;&gt;presentation slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;abstract&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;The workshop will review best practices of reproducible research including folder architecture, data preparation, graph making, statistical modeling, and script documentation. The workshop is targeted at researchers who are expected to conduct their own analysis of data and prepare reports that deliver the findings to both technical and executive audiences within health systems. Using logistic regression as an example, the participants will learn to communicate statistical findings more effectively, and will evaluate the advantages of using computational notebooks in RStudio to disseminate the results.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Implementing Reproducible Visualizations</title>
