@@ -1,0 +1,101 @@
+---
+title: Managing Data Analysis with RStudio 
+subtitle: "Scripts, Notebook, Projects"
+authors: 
+- Andriy Koval
+date: '2020-01-07'
+slug: [graphing-models-of-titanic-data]
+categories:
+  - reproducible research
+  - analytic workflow
+  - graph making
+tags:
+  - logistic regression
+  - ggplot2
+summary: 'Recent example of 1) interpreting models through graphs rather than parameters 2) using self-contains RMarkdown notebook vs .R + .Rmd split  '
+lastmod: '2020-01-26'
+featured: no
+image:
+  caption: ''
+  focal_point: 'Center'
+  preview_only: no
+projects: []
+url_code: "https://github.com/andkov/hsif-2019-data-analysis"
+url_dataset: ""
+url_pdf: ""
+url_poster: ""
+url_project: ""
+url_slides: ""
+url_source: ""
+url_video: ""
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>Recently I was invited to give a workshop on data analysis with R at the training retreat for Health System Impact Fellowship by Canadian Institutes of Health Research.</p>
+{{% tweet "1199435489897517059" %}}
+<p>The workshop was hosted at the picturesque Hart House of the University of Toronto:</p>
+<p><img src="university-toronto-courtyard.jpg" alt="courtyard" />
+The workshop involved</p>
+<div id="audience" class="section level1">
+<h1>Audience</h1>
+<p>My audience constisted of postdoctoral researchers and Ph.D. students, few of whom had experience with R, however majority have taken 3 or more courses in statistics and applied analysis. To gain better understanding of their background, I have asked them to fill out a brief survey (see results in my <a href="https://raw.githack.com/andkov/hsif-2019-data-analysis/master/libs/materials/HSIF-Toronto-2019-11-26-data-analysis-workshop.pdf">slides</a>)</p>
+<p>I had about 90 minutes, so I reasoned that instead of overwhelming them with technical information, which would leave little trace in their fatigued minds ( workshop was at the end of the day), I should create a resource that they would be able to use in the future. The time in workshop, then, should spent on gentle introduction to data analysis with R using the examples from this resource. This also gave my workshop the flexibility to accomodate learners of various skill levels: more advanced participants will have the material to study on their own if the talk leaves them underchallenged in any given point in time.</p>
+</div>
+<div id="learning-objectives" class="section level1">
+<h1>Learning Objectives</h1>
+<p>I wanted the audience to be exposed to examples of performing the following tasks:</p>
+<ol style="list-style-type: decimal">
+<li>Organizing data analysis in a RMarkdown document<br />
+</li>
+<li>Graphing the predictions of a statistical model (logistic regression)<br />
+</li>
+<li>Jump-starting an analytic project using a project template</li>
+</ol>
+</div>
+<div id="deliverables" class="section level1">
+<h1>Deliverables</h1>
+<div id="organizing-data-analysis-in-a-rmarkdown-document" class="section level3">
+<h3>1. Organizing data analysis in a RMarkdown document</h3>
+<p>I have created two reports, containing identidcal code that implemented basic exploration of Titanic data with logistic regression:
+- <a href="https://raw.githack.com/andkov/hsif-2019-data-analysis/master/analysis/titanic-notebook-only/titanic-notebook.html">notebook-only</a> - a notebook combining code and annotation in the same <code>.Rmd</code> file
+- <a href="https://raw.githack.com/andkov/hsif-2019-data-analysis/master/analysis/titanic-separate-layers/titanic.html">separate-layers</a> - a report separating the analytic layer (<code>.R</code>) from the annotation layer (<code>.Rmd</code>)</p>
+<ul>
+<li><a href="https://raw.githack.com/andkov/hsif-2019-data-analysis/master/libs/materials/HSIF-Toronto-2019-11-26-data-analysis-workshop.pdf">presentation slides</a></li>
+</ul>
+</div>
+<div id="graphing-a-model" class="section level2">
+<h2>Graphing a model</h2>
+<p>Carefull not to overwhelm with details, I chose to focus on a basic logistic regression model predicting survival in the Titanic data.</p>
+<pre><code># Model 0
+survived ~ sex
+
+# Model 1
+survived ~ sex + age
+
+# Model 2
+survived ~ sex + age + passenger_class
+
+# Model 3
+survived ~ sex + age + passenger_class + port_embarked
+</code></pre>
+<p>However, instead of focusing on interpreting the estimated parameters, I opted to generate predicted values and then to graph them to examine the effect respective variables would have on the binary outcome. We converted the log-odds into probabilities of the outcome (y-axis) and then mapped predictors on other visual dimension. To illustrate, the prediction for Model 2 <code>survived ~ sex + age + passenger_class</code> looked like this:</p>
+<div class="figure">
+<img src="model2.png" alt="" />
+<p class="caption">model_2</p>
+</div>
+</div>
+<div id="materials" class="section level2">
+<h2>Materials</h2>
+<ul>
+<li><a href="https://raw.githack.com/andkov/hsif-2019-data-analysis/master/analysis/titanic-notebook-only/titanic-notebook.html">notebook-only</a> - analytic report as a notebook (combines code and annotation in the same <code>.Rmd</code> file)</li>
+<li><a href="https://raw.githack.com/andkov/hsif-2019-data-analysis/master/analysis/titanic-separate-layers/titanic.html">separate-layers</a> - analytic report separating the analytic layer (<code>.R</code>) from the annotation layer (<code>.Rmd</code>)</li>
+<li><a href="https://raw.githack.com/andkov/hsif-2019-data-analysis/master/libs/materials/HSIF-Toronto-2019-11-26-data-analysis-workshop.pdf">presentation slides</a></li>
+</ul>
+</div>
+<div id="abstract" class="section level2">
+<h2>Abstract</h2>
+<p>The workshop will review best practices of reproducible research including folder architecture, data preparation, graph making, statistical modeling, and script documentation. The workshop is targeted at researchers who are expected to conduct their own analysis of data and prepare reports that deliver the findings to both technical and executive audiences within health systems. Using logistic regression as an example, the participants will learn to communicate statistical findings more effectively, and will evaluate the advantages of using computational notebooks in RStudio to disseminate the results.</p>
+</div>
+</div>

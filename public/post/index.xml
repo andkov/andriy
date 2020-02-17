@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Managing Data Analysis with RStudio</title>
+      <link>/post/2020-01-07-graphing-models-with-titanic-data/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-01-07-graphing-models-with-titanic-data/</guid>
+      <description>Recent example of 1) interpreting models through graphs rather than parameters 2) using self-contains RMarkdown notebook vs .R + .Rmd split</description>
+    </item>
     
     <item>
       <title>What Lies Beyond Acute Care Data</title>
