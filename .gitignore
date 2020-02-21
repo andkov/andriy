@@ -1,3 +1,4 @@
+.Rproj.user\*
 .Rproj.user
 .Rhistory
 .RData
@@ -19,3 +20,12 @@ public/img/photos/*
 .Rproj.user/FE4B4E91/sources/prop/INDEX
 .Rproj.user/FE4B4E91/sources/prop/INDEX
 *.pper
+*.pper
+.Rproj.user/FE4B4E91/pcs/files-pane.pper
+.Rproj.user/FE4B4E91/pcs/source-pane.pper
+.Rproj.user/FE4B4E91/pcs/windowlayoutstate.pper
+.Rproj.user/FE4B4E91/pcs/workbench-pane.pper
+.Rproj.user/FE4B4E91/rmd-outputs
+.Rproj.user/FE4B4E91/sources/prop/INDEX
+.Rproj.user/shared/notebooks/paths
+.Rhistory
