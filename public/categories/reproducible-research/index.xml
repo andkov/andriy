@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Tue, 07 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/reproducible-research/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Florida Demographic Growth</title>
+      <link>/post/2020-03-27-florida-demographic-growth/</link>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-03-27-florida-demographic-growth/</guid>
+      <description>This blogposts shows how to extract population estimates data reported by the Florida Department of Health, prepare them for analysis, and conduct basic exploration of the demographic growth</description>
+    </item>
     
     <item>
       <title>Managing Data Analysis with RStudio</title>

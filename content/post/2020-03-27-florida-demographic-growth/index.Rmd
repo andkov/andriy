@@ -1,0 +1,223 @@
+---
+title: Florida Demographic Growth 
+subtitle: "Working with Florida Health Charts data"
+authors: 
+- Andriy Koval
+date: '2020-03-27'
+slug: [florida-demographic-growth-2006-2020]
+categories:
+  - reproducible research
+  - analytic workflow
+  - graph making
+tags:
+  - demography
+  - Florida
+summary: 'This blogposts shows how to extract population estimates data reported by the Florida Department of Health, prepare them for analysis, and conduct basic exploration of the demographic growth'
+lastmod: '2020-03-27'
+featured: no
+image:
+  caption: ''
+  focal_point: 'Center'
+  preview_only: no
+projects: []
+url_code: "https://github.com/dss-hmi/suicide-prevention-2019"
+url_dataset: ""
+url_pdf: ""
+url_poster: ""
+url_project: ""
+url_slides: ""
+url_source: ""
+url_video: ""
+output:
+  html_document:
+    theme: simplex
+    toc: true
+    toc_depth: 3
+    keep_md: true
+    toc_float: true
+    code_folding: show
+---
+
+
+<!-- These two chunks should be added in the beginning of every .Rmd that you want to source an .R script -->
+<!--  The 1st mandatory chunck  -->
+<!--  Set the working directory to the repository's base directory -->
+```{r, echo=F, message=F} 
+#Don't combine this call with any other chunk 
+# cat("Working directory: ", getwd()) # check where you are
+  library(knitr)
+# Rmd is in "./reports/reportA/reportA.Rmd", but now the root is "./"
+  knitr::opts_knit$set(root.dir='../../../') # "go up" from the folder where this .Rmd is save until you arrive at the root/working directory
+```
+
+<!--  The 2nd mandatory chunck  -->
+<!-- Set the report-wide options, and point to the external code file. -->
+```{r set_options, echo=F}
+# set options shared by all chunks
+opts_chunk$set(
+  results='show', 
+  attr.source = ".numberLines",
+  message = TRUE,
+  comment = NA, 
+  tidy = FALSE,
+  fig.height = 4, 
+  fig.width = 5.5, 
+  out.width = "550px",
+  fig.path = 'figure_rmd/',     
+  dev = "png",
+  dpi = 400
+  # fig.path = 'figure_pdf/',     
+  # dev = "pdf"#,
+  # dev.args=list(pdf = list(colormodel = 'cmyk'))
+)
+echoChunks <- TRUE
+options(width=120) #So the output is 50% wider than the default.
+# connect to the file with the underlying R script  
+read_chunk("./content/post/2020-03-27-florida-demographic-growth/fl-demo-growth.R") # path from the root to the R script.
+# read_chunk("../../../content/post/2020-03-27-florida-demographic-growth/fl-demo-growth.R") # path from the root to the R script. 
+```
+# Abstract
+
+This blogposts shows how to extract population estimates data reported by the Florida Department of Health, prepare them for analysis, and conduct basic exploration of the demographic growth.
+
+See the report in its native environment of [suicide-prevention-2019](https://github.com/dss-hmi/suicide-prevention-2019) repository [here](https://raw.githack.com/dss-hmi/suicide-prevention-2019/3ff78365931214e342640523f2096c2eac443b2f/analysis/blogposts/florida-demographic-growth/fl-demo-growth.html)
+
+# Environment
+<!-- Load 'sourced' R files.  Suppress the output when loading packages. --> 
+```{r load-packages, echo=echoChunks, message=FALSE}
+```
+
+# Data Wrangling
+
+## Data Origin
+The initial extract of the data was obtained from [www.flhealthcharts.com](http://www.flhealthcharts.com/FLQUERY/Population/PopulationRpt.aspx) a reporting tool for population counts estimated by the Florida Department of Health. The figure below shows the modifications to the default query the produces the data product used in this demonstration:  
+
+
+![View of the reporting tool](data/FloridaPopulation-2006-2020.PNG)
+
+The tool gives the option to save the product of the query as an Excel book (`.xls`), however, the import of this extension into R has been problematic, so I have converted ("save as") the file manually into a more modern Excel format, `.xlsx`. This file is the raw source for the current report and can be dowloaded for closer inspection [here](https://github.com/dss-hmi/suicide-prevention-2019/raw/3ff78365931214e342640523f2096c2eac443b2f/analysis/blogposts/florida-demographic-growth/data/FloridaPopulation.xlsx). 
+
+
+## Data import 
+
+The structure of the Excel file requires some tidying to enable a nimble analytic flow
+
+![View of the extracted data](data/extracted-data.PNG)
+
+<!-- Load any Global functions and variables declared in the R file.  Suppress the output. -->
+ ```{r declare-globals, echo=echoChunks, results='show', message=FALSE}
+ ```
+<!-- Declare any global functions specific to a Rmd output.  Suppress the output. -->
+<!-- # ```{r, echo=echoChunks, message=FALSE} -->
+<!-- # #Put code in here.  It doesn't call a chunk in the codebehind file. -->
+<!-- # ``` -->
+<!-- Load the datasets.   -->
+```{r load-data, echo=echoChunks, results='show', message=FALSE}
+ds0 %>% dplyr::glimpse(90)
+```
+
+## Data Tweaking
+We can identify several problems to address:  
+1. Not all columns have names  
+2. `race`, `ethnicity`, `sex`, and `age_group` are stored in merged spreadsheet cells     
+3. Sums for categories are recorded in rows as observations (e.g `Total`)   
+4. Some values of `age_group` are misinterpreted as dates (e.g. `1-4` becomes `4-Jan`)     
+5. `age_group` does not bin the population evenly (e.g. `20-24` vs `25-34`)       
+
+### Tweak 1
+To address (1) we  skipped the first 3 lines during import, and now need to assign the name of the columns manually:
+```{r tweak-data-1, echo=echoChunks, results='show', message=FALSE}
+```
+### Tweak 2 and 3
+To address (2) we apply `tidyr::fill()` which carries the observation forward until it encounters a non-empty cell.  `dplyr::filter` addresses (3),  removing observations that store total counts, while `stringr::str_replace` recodes values that got misinterpreted as dates.
+```{r tweak-data-2, echo=echoChunks, results='show', message=FALSE}
+```
+
+### Tweak 4 
+We need to do some investigation to address (4) and recode values that got misinterpreted as dates during the import
+```{r tweak-data-4, echo=echoChunks, results='show', message=FALSE}
+```
+### Tweak 5 
+Now we need to recode the values of `age` into a new grouping variable `age_group5`, which will correct the unevennes of the original grouping in `age_group`
+```{r tweak-data-5, echo=echoChunks, results='show', message=FALSE}
+```
+
+### Pivot Long 
+To enable a more seemless graph making, as well as to provide a more convenient shape for subsequent aggregation over age groups, we need to `tidyr:pivot_long` (formely known as `tidyr::gather`) the columns storing population estimates for each year. 
+```{r tweak-data-6, echo=echoChunks, results='show', message=FALSE}
+```
+### Factors 
+Before aggregating over `age_group` and `age_group5` let us transform string variables into factors. so that we don't have to do it in the individual data sets. 
+```{r tweak-data-7, echo=echoChunks, results='show', message=FALSE}
+```
+
+### Aggregate
+Note that at this point, each row contains a population estimate for a given age in years. However, as you might have noticed that counts for each year of age are not unique:
+```{r}
+ds2 %>% 
+  dplyr::filter(
+    age %in% c(25:39), race_ethnicity == "White + Hispanic",sex == "Female", year==2018
+  ) %>% 
+  dplyr::select(race, ethnicity, age_group, age_group5, sex, age,count)
+```
+In fact, it appears that Florida Health Charts computes the total for 5-year category and then devides it evenly among constituent elements of the `age_category`. My guess, this deals with privacy guidelines. Therefore, the most granualar age break up is only 5-year categories. 
+
+To preserve the original grouping we create two separate datasets, each providing the totals for respective age category.
+```{r tweak-data-8, echo=echoChunks, results='show', message=FALSE}
+```
+It is the `ds_age_group5` that will be focus of subsequent graphs. However, to better demonstrate why we needed to create new grouping of ages, we will preserve both dataframes. 
+
+## Save to disk
+```{r save-to-disk}
+```
+The cleaned version of this dataset is available for download [here](https://github.com/dss-hmi/suicide-prevention-2019/raw/3ff78365931214e342640523f2096c2eac443b2f/analysis/blogposts/florida-demographic-growth/data/clean_data.rds).
+
+# Graphing
+
+## Total population 
+> How does the total population of Florida changes between 2006 and 2020?
+
+```{r g0, echo=TRUE, fig.height=5, fig.width=9, out.width = "900px",message=FALSE, results='show',cache=TRUE}
+
+```
+
+## Ethnic groups: Together
+> How does each ethnic group change during this time?
+
+```{r g1, echo=TRUE, fig.height=5, fig.width=9, out.width = "900px",message=FALSE, results='show',cache=TRUE}
+```
+
+## Ethnic groups: Separate
+> what Ethnic group is most dissimilar from the other three in their dynamics?
+
+```{r q1, echo=TRUE, results='show', fig.height=5, fig.width=9,out.width = "900px", message=FALSE,cache=TRUE}
+```
+
+## Age composition in 2019
+> What is the age composition of each ethnic group in 2019? 
+
+```{r g2, echo=TRUE, fig.height=7, fig.width=9, out.width = "900px", message=FALSE, results='show',cache=TRUE}
+```
+
+> What would it look like if we used the original `age_group`?
+
+```{r q2, echo=TRUE, fig.height=7, fig.width=9, out.width = "900px", message=FALSE, results='show',cache=TRUE}
+```
+
+session information
+===========================================================================
+
+For the sake of documentation and reproducibility, the current report was rendered in the following environment.  Click the line below to expand.
+
+<details>
+  <summary>Environment <span class="glyphicon glyphicon-plus-sign"></span></summary>
+```{r session-info, echo=FALSE}
+if( requireNamespace("devtools", quietly = TRUE) ) {
+  devtools::session_info()
+} else {
+  sessionInfo()
+} 
+```
+
+
+
