@@ -22,581 +22,76 @@
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;!-- These two chunks should be added in the beginning of every .Rmd that you want to source an .R script --&gt;
-&lt;!--  The 1st mandatory chunck  --&gt;
-&lt;!--  Set the working directory to the repository&#39;s base directory --&gt;
-&lt;!--  The 2nd mandatory chunck  --&gt;
-&lt;!-- Set the report-wide options, and point to the external code file. --&gt;
 &lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;This blogposts shows how to extract population estimates data reported by the Florida Department of Health, prepare them for analysis, and conduct basic exploration of the demographic growth.&lt;/p&gt;
-&lt;p&gt;See the report in its native environment of &lt;a href=&#34;https://github.com/dss-hmi/suicide-prevention-2019&#34;&gt;suicide-prevention-2019&lt;/a&gt; repository &lt;a href=&#34;https://raw.githack.com/dss-hmi/suicide-prevention-2019/3ff78365931214e342640523f2096c2eac443b2f/analysis/blogposts/florida-demographic-growth/fl-demo-growth.html&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This blogposts shows how to extract population estimates data reported by the &lt;a href=&#34;http://www.flhealthcharts.com/FLQUERY/Population/PopulationRpt.aspx&#34;&gt;Florida Department of Health&lt;/a&gt; and prepare them for analysis, specifically, for exploring the trends in demographic growth between 2006 and 2020.&lt;/p&gt;
+&lt;p&gt;Click &lt;strong&gt;&lt;a href=&#34;https://raw.githack.com/dss-hmi/suicide-prevention-2019/85e829e9a20aa3640051e8a019cdabeff5409701/analysis/blogposts/florida-demographic-growth/fl-demo-growth.html&#34;&gt;HERE&lt;/a&gt;&lt;/strong&gt; to view report in its native environment of the &lt;a href=&#34;https://github.com/dss-hmi/suicide-prevention-2019&#34;&gt;suicide-prevention-2019&lt;/a&gt; repository.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;environment&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Environment&lt;/h1&gt;
-&lt;!-- Load &#39;sourced&#39; R files.  Suppress the output when loading packages. --&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;# Attach these packages so their functions don&amp;#39;t need to be qualified
-# see http://r-pkgs.had.co.nz/namespace.html#search-path
-library(magrittr) #Pipes
-library(ggplot2)  # graphs
-library(dplyr)
-requireNamespace(&amp;quot;tidyr&amp;quot;)    # data tidying
-requireNamespace(&amp;quot;ggpubr&amp;quot;)   # publication plots
-requireNamespace(&amp;quot;readxl&amp;quot;)   # data import&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-wrangling&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Data Wrangling&lt;/h1&gt;
-&lt;div id=&#34;data-origin&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data Origin&lt;/h2&gt;
-&lt;p&gt;The initial extract of the data was obtained from &lt;a href=&#34;http://www.flhealthcharts.com/FLQUERY/Population/PopulationRpt.aspx&#34;&gt;www.flhealthcharts.com&lt;/a&gt; a reporting tool for population counts estimated by the Florida Department of Health. The figure below shows the modifications to the default query the produces the data product used in this demonstration:&lt;/p&gt;
+&lt;div id=&#34;data-origin&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data Origin&lt;/h1&gt;
+&lt;p&gt;The initial extract of the data was obtained from &lt;a href=&#34;http://www.flhealthcharts.com/FLQUERY/Population/PopulationRpt.aspx&#34;&gt;www.flhealthcharts.com&lt;/a&gt;, a reporting tool for population counts estimated by the Florida Department of Health. The figure below shows the modifications to the default query the produces the data product used in this demonstration:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;data/FloridaPopulation-2006-2020.PNG&#34; alt=&#34;&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;View of the reporting tool&lt;/p&gt;
+&lt;img src=&#34;fig/FloridaPopulation-2006-2020.PNG&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Fig 1. View of the reporting tool&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The tool gives the option to save the product of the query as an Excel book (&lt;code&gt;.xls&lt;/code&gt;), however, the import of this extension into R has been problematic, so I have converted (“save as”) the file manually into a more modern Excel format, &lt;code&gt;.xlsx&lt;/code&gt;. This file is the raw source for the current report and can be dowloaded for closer inspection &lt;a href=&#34;https://github.com/dss-hmi/suicide-prevention-2019/raw/3ff78365931214e342640523f2096c2eac443b2f/analysis/blogposts/florida-demographic-growth/data/FloridaPopulation.xlsx&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;data-import&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data import&lt;/h2&gt;
+&lt;div id=&#34;data-import&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data import&lt;/h1&gt;
 &lt;p&gt;The structure of the Excel file requires some tidying to enable a nimble analytic flow&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;data/extracted-data.PNG&#34; alt=&#34;&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;View of the extracted data&lt;/p&gt;
-&lt;/div&gt;
-&lt;!-- Load any Global functions and variables declared in the R file.  Suppress the output. --&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;# you will need to replace this path to the location where you stored your data file
-path_file_input &amp;lt;- &amp;quot;./content/post/2020-03-27-florida-demographic-growth/data/FloridaPopulation.xlsx&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- Declare any global functions specific to a Rmd output.  Suppress the output. --&gt;
-&lt;!-- # ```{r, echo=echoChunks, message=FALSE} --&gt;
-&lt;!-- # #Put code in here.  It doesn&#39;t call a chunk in the codebehind file. --&gt;
-&lt;!-- # ``` --&gt;
-&lt;!-- Load the datasets.   --&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;ds0 &amp;lt;-  readxl::read_excel(path_file_input, col_names = FALSE, skip = 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-tweaking&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data Tweaking&lt;/h2&gt;
-&lt;p&gt;We can identify several problems to address:&lt;br /&gt;
-1. Not all columns have names&lt;br /&gt;
-2. &lt;code&gt;race&lt;/code&gt;, &lt;code&gt;ethnicity&lt;/code&gt;, &lt;code&gt;sex&lt;/code&gt;, and &lt;code&gt;age_group&lt;/code&gt; are stored in merged spreadsheet cells&lt;br /&gt;
-3. Sums for categories are recorded in rows as observations (e.g &lt;code&gt;Total&lt;/code&gt;)&lt;br /&gt;
-4. Some values of &lt;code&gt;age_group&lt;/code&gt; are misinterpreted as dates (e.g. &lt;code&gt;1-4&lt;/code&gt; becomes &lt;code&gt;4-Jan&lt;/code&gt;)&lt;br /&gt;
-5. &lt;code&gt;age_group&lt;/code&gt; does not bin the population evenly (e.g. &lt;code&gt;20-24&lt;/code&gt; vs &lt;code&gt;25-34&lt;/code&gt;)&lt;/p&gt;
-&lt;div id=&#34;tweak-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Tweak 1&lt;/h3&gt;
-&lt;p&gt;To address (1) we skipped the first 3 lines during import, and now need to assign the name of the columns manually:&lt;/p&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;ds1 &amp;lt;- ds0 # duplicate to preserve the original
-# because we removed the row with columns names during import:
-names(ds1) &amp;lt;- c(&amp;quot;race&amp;quot;,&amp;quot;ethnicity&amp;quot;,&amp;quot;sex&amp;quot;,&amp;quot;age_group&amp;quot;,&amp;quot;age&amp;quot;,as.character(c(2006:2020)),&amp;quot;total&amp;quot;)
-ds1 %&amp;gt;% dplyr::glimpse(90)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Observations: 807
-Variables: 21
-$ race      &amp;lt;chr&amp;gt; &amp;quot;White&amp;quot;, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
-$ ethnicity &amp;lt;chr&amp;gt; &amp;quot;Hispanic&amp;quot;, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,...
-$ sex       &amp;lt;chr&amp;gt; &amp;quot;Female&amp;quot;, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N...
-$ age_group &amp;lt;chr&amp;gt; &amp;quot;&amp;lt;1&amp;quot;, NA, &amp;quot;43834&amp;quot;, NA, NA, NA, NA, &amp;quot;43960&amp;quot;, NA, NA, NA, NA, NA, &amp;quot;44...
-$ age       &amp;lt;chr&amp;gt; &amp;quot;0&amp;quot;, &amp;quot;Total&amp;quot;, &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;Total&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;,...
-$ `2006`    &amp;lt;dbl&amp;gt; 33295, 33295, 24323, 24323, 24323, 24323, 97292, 25382, 25382, 2538...
-$ `2007`    &amp;lt;dbl&amp;gt; 32276, 32276, 25841, 25841, 25841, 25841, 103364, 26712, 26712, 267...
-$ `2008`    &amp;lt;dbl&amp;gt; 30429, 30429, 28693, 28693, 28693, 28693, 114772, 27637, 27637, 276...
-$ `2009`    &amp;lt;dbl&amp;gt; 29468, 29468, 29927, 29919, 29917, 29853, 119616, 28378, 28378, 283...
-$ `2010`    &amp;lt;dbl&amp;gt; 33976, 33976, 24145, 24145, 24145, 24145, 96580, 25981, 25943, 2594...
-$ `2011`    &amp;lt;dbl&amp;gt; 27302, 27302, 27206, 27206, 27206, 27206, 108825, 26380, 26380, 263...
-$ `2012`    &amp;lt;dbl&amp;gt; 26795, 26795, 27566, 27566, 27566, 27566, 110264, 26817, 26817, 268...
-$ `2013`    &amp;lt;dbl&amp;gt; 27240, 27240, 27774, 27774, 27774, 27774, 111097, 27613, 27613, 276...
-$ `2014`    &amp;lt;dbl&amp;gt; 28288, 28288, 27816, 27816, 27816, 27816, 111262, 28375, 28375, 283...
-$ `2015`    &amp;lt;dbl&amp;gt; 29203, 29203, 28638, 28638, 28638, 28638, 114550, 28991, 28991, 289...
-$ `2016`    &amp;lt;dbl&amp;gt; 29889, 29889, 29643, 29643, 29643, 29643, 118572, 29658, 29658, 296...
-$ `2017`    &amp;lt;dbl&amp;gt; 30593, 30593, 30386, 30386, 30386, 30386, 121545, 30362, 30362, 303...
-$ `2018`    &amp;lt;dbl&amp;gt; 30399, 30399, 31398, 31398, 31398, 31398, 125592, 31198, 31198, 311...
-$ `2019`    &amp;lt;dbl&amp;gt; 31781, 31781, 31781, 31781, 31781, 31781, 127125, 31937, 31937, 319...
-$ `2020`    &amp;lt;dbl&amp;gt; 32313, 32313, 32313, 32313, 32313, 32313, 129252, 32476, 32476, 324...
-$ total     &amp;lt;dbl&amp;gt; 453247, 453247, 427450, 427442, 427440, 427376, 1709708, 427898, 42...&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;# Note, we will create a separate name (e.g. `ds1`, `ds2`, `ds3`, etc) only for the dataframes 
-#we intend to keep, otherwise we will overwrite the existing to augment with trivial changes&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tweak-2-and-3&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Tweak 2 and 3&lt;/h3&gt;
-&lt;p&gt;To address (2) we apply &lt;code&gt;tidyr::fill()&lt;/code&gt; which carries the observation forward until it encounters a non-empty cell. &lt;code&gt;dplyr::filter&lt;/code&gt; addresses (3), removing observations that store total counts, while &lt;code&gt;stringr::str_replace&lt;/code&gt; recodes values that got misinterpreted as dates.&lt;/p&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;ds1 &amp;lt;- ds1 %&amp;gt;%
-  # carry observations forward to fill cells missing due to Excel structure ()
-  tidyr::fill(race, ethnicity,sex,age_group, age) %&amp;gt;% 
-  dplyr::filter(!age == &amp;quot;Total&amp;quot;)  # because makes data untidy, we&amp;#39;ll compute later
-ds1 %&amp;gt;% dplyr::glimpse(90)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Observations: 688
-Variables: 21
-$ race      &amp;lt;chr&amp;gt; &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;Whi...
-$ ethnicity &amp;lt;chr&amp;gt; &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispan...
-$ sex       &amp;lt;chr&amp;gt; &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female...
-$ age_group &amp;lt;chr&amp;gt; &amp;quot;&amp;lt;1&amp;quot;, &amp;quot;43834&amp;quot;, &amp;quot;43834&amp;quot;, &amp;quot;43834&amp;quot;, &amp;quot;43834&amp;quot;, &amp;quot;43960&amp;quot;, &amp;quot;43960&amp;quot;, &amp;quot;43960&amp;quot;...
-$ age       &amp;lt;chr&amp;gt; &amp;quot;0&amp;quot;, &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;, &amp;quot;11&amp;quot;, &amp;quot;12&amp;quot;,...
-$ `2006`    &amp;lt;dbl&amp;gt; 33295, 24323, 24323, 24323, 24323, 25382, 25382, 25382, 25382, 2538...
-$ `2007`    &amp;lt;dbl&amp;gt; 32276, 25841, 25841, 25841, 25841, 26712, 26712, 26712, 26712, 2671...
-$ `2008`    &amp;lt;dbl&amp;gt; 30429, 28693, 28693, 28693, 28693, 27637, 27637, 27637, 27637, 2763...
-$ `2009`    &amp;lt;dbl&amp;gt; 29468, 29927, 29919, 29917, 29853, 28378, 28378, 28378, 28378, 2837...
-$ `2010`    &amp;lt;dbl&amp;gt; 33976, 24145, 24145, 24145, 24145, 25981, 25943, 25943, 25914, 2591...
-$ `2011`    &amp;lt;dbl&amp;gt; 27302, 27206, 27206, 27206, 27206, 26380, 26380, 26380, 26380, 2638...
-$ `2012`    &amp;lt;dbl&amp;gt; 26795, 27566, 27566, 27566, 27566, 26817, 26817, 26817, 26817, 2681...
-$ `2013`    &amp;lt;dbl&amp;gt; 27240, 27774, 27774, 27774, 27774, 27613, 27613, 27613, 27613, 2761...
-$ `2014`    &amp;lt;dbl&amp;gt; 28288, 27816, 27816, 27816, 27816, 28375, 28375, 28375, 28375, 2837...
-$ `2015`    &amp;lt;dbl&amp;gt; 29203, 28638, 28638, 28638, 28638, 28991, 28991, 28991, 28991, 2899...
-$ `2016`    &amp;lt;dbl&amp;gt; 29889, 29643, 29643, 29643, 29643, 29658, 29658, 29658, 29658, 2965...
-$ `2017`    &amp;lt;dbl&amp;gt; 30593, 30386, 30386, 30386, 30386, 30362, 30362, 30362, 30362, 3036...
-$ `2018`    &amp;lt;dbl&amp;gt; 30399, 31398, 31398, 31398, 31398, 31198, 31198, 31198, 31198, 3119...
-$ `2019`    &amp;lt;dbl&amp;gt; 31781, 31781, 31781, 31781, 31781, 31937, 31937, 31937, 31937, 3193...
-$ `2020`    &amp;lt;dbl&amp;gt; 32313, 32313, 32313, 32313, 32313, 32476, 32476, 32476, 32476, 3247...
-$ total     &amp;lt;dbl&amp;gt; 453247, 427450, 427442, 427440, 427376, 427898, 427860, 427860, 427...&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tweak-4&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Tweak 4&lt;/h3&gt;
-&lt;p&gt;We need to do some investigation to address (4) and recode values that got misinterpreted as dates during the import&lt;/p&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;ds1 %&amp;gt;% dplyr::distinct(age_group) # to find out what strings got misinterpreted&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;# A tibble: 13 x 1
-   age_group
-   &amp;lt;chr&amp;gt;    
- 1 &amp;lt;1       
- 2 43834    
- 3 43960    
- 4 44118    
- 5 15-19    
- 6 20-24    
- 7 25-34    
- 8 35-44    
- 9 45-54    
-10 55-64    
-11 65-74    
-12 75-84    
-13 85+      &lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;ds1 %&amp;gt;% 
-  dplyr::filter(age_group %in% c(&amp;quot;43834&amp;quot;,&amp;quot;43960&amp;quot;,&amp;quot;44118&amp;quot;)) %&amp;gt;% 
-  dplyr::distinct(age_group, age) # to identify how to recode&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;# A tibble: 14 x 2
-   age_group age  
-   &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;
- 1 43834     1    
- 2 43834     2    
- 3 43834     3    
- 4 43834     4    
- 5 43960     5    
- 6 43960     6    
- 7 43960     7    
- 8 43960     8    
- 9 43960     9    
-10 44118     10   
-11 44118     11   
-12 44118     12   
-13 44118     13   
-14 44118     14   &lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;# imlement the recoding
-ds1 &amp;lt;- ds1 %&amp;gt;%   
-  dplyr::mutate(
-    age_group = stringr::str_replace(age_group, &amp;quot;43834&amp;quot;, &amp;quot;1-4&amp;quot;)
-    ,age_group = stringr::str_replace(age_group, &amp;quot;43960&amp;quot;, &amp;quot;5-9&amp;quot;)
-    ,age_group = stringr::str_replace(age_group, &amp;quot;44118&amp;quot;, &amp;quot;10-14&amp;quot;)
-  ) %&amp;gt;%
-  dplyr::select(-total) # because it makes no sense in this context (adds up across the rows)
-ds1 %&amp;gt;% glimpse(90)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Observations: 688
-Variables: 20
-$ race      &amp;lt;chr&amp;gt; &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;Whi...
-$ ethnicity &amp;lt;chr&amp;gt; &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispan...
-$ sex       &amp;lt;chr&amp;gt; &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female...
-$ age_group &amp;lt;chr&amp;gt; &amp;quot;&amp;lt;1&amp;quot;, &amp;quot;1-4&amp;quot;, &amp;quot;1-4&amp;quot;, &amp;quot;1-4&amp;quot;, &amp;quot;1-4&amp;quot;, &amp;quot;5-9&amp;quot;, &amp;quot;5-9&amp;quot;, &amp;quot;5-9&amp;quot;, &amp;quot;5-9&amp;quot;, &amp;quot;5-9&amp;quot;...
-$ age       &amp;lt;chr&amp;gt; &amp;quot;0&amp;quot;, &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;, &amp;quot;11&amp;quot;, &amp;quot;12&amp;quot;,...
-$ `2006`    &amp;lt;dbl&amp;gt; 33295, 24323, 24323, 24323, 24323, 25382, 25382, 25382, 25382, 2538...
-$ `2007`    &amp;lt;dbl&amp;gt; 32276, 25841, 25841, 25841, 25841, 26712, 26712, 26712, 26712, 2671...
-$ `2008`    &amp;lt;dbl&amp;gt; 30429, 28693, 28693, 28693, 28693, 27637, 27637, 27637, 27637, 2763...
-$ `2009`    &amp;lt;dbl&amp;gt; 29468, 29927, 29919, 29917, 29853, 28378, 28378, 28378, 28378, 2837...
-$ `2010`    &amp;lt;dbl&amp;gt; 33976, 24145, 24145, 24145, 24145, 25981, 25943, 25943, 25914, 2591...
-$ `2011`    &amp;lt;dbl&amp;gt; 27302, 27206, 27206, 27206, 27206, 26380, 26380, 26380, 26380, 2638...
-$ `2012`    &amp;lt;dbl&amp;gt; 26795, 27566, 27566, 27566, 27566, 26817, 26817, 26817, 26817, 2681...
-$ `2013`    &amp;lt;dbl&amp;gt; 27240, 27774, 27774, 27774, 27774, 27613, 27613, 27613, 27613, 2761...
-$ `2014`    &amp;lt;dbl&amp;gt; 28288, 27816, 27816, 27816, 27816, 28375, 28375, 28375, 28375, 2837...
-$ `2015`    &amp;lt;dbl&amp;gt; 29203, 28638, 28638, 28638, 28638, 28991, 28991, 28991, 28991, 2899...
-$ `2016`    &amp;lt;dbl&amp;gt; 29889, 29643, 29643, 29643, 29643, 29658, 29658, 29658, 29658, 2965...
-$ `2017`    &amp;lt;dbl&amp;gt; 30593, 30386, 30386, 30386, 30386, 30362, 30362, 30362, 30362, 3036...
-$ `2018`    &amp;lt;dbl&amp;gt; 30399, 31398, 31398, 31398, 31398, 31198, 31198, 31198, 31198, 3119...
-$ `2019`    &amp;lt;dbl&amp;gt; 31781, 31781, 31781, 31781, 31781, 31937, 31937, 31937, 31937, 3193...
-$ `2020`    &amp;lt;dbl&amp;gt; 32313, 32313, 32313, 32313, 32313, 32476, 32476, 32476, 32476, 3247...&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tweak-5&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Tweak 5&lt;/h3&gt;
-&lt;p&gt;Now we need to recode the values of &lt;code&gt;age&lt;/code&gt; into a new grouping variable &lt;code&gt;age_group5&lt;/code&gt;, which will correct the unevennes of the original grouping in &lt;code&gt;age_group&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;ds1$age_group5 &amp;lt;- ds1$age_group # because we want to keep the original for quality check
-ds1$age_group5[ds1$age %in% c(0:4)]   &amp;lt;- &amp;quot;0-4&amp;quot;
-ds1$age_group5[ds1$age %in% c(25:29)] &amp;lt;- &amp;quot;25-29&amp;quot;
-ds1$age_group5[ds1$age %in% c(30:34)] &amp;lt;- &amp;quot;30-34&amp;quot;
-ds1$age_group5[ds1$age %in% c(35:39)] &amp;lt;- &amp;quot;35-39&amp;quot;
-ds1$age_group5[ds1$age %in% c(40:44)] &amp;lt;- &amp;quot;40-44&amp;quot;
-ds1$age_group5[ds1$age %in% c(45:49)] &amp;lt;- &amp;quot;45-49&amp;quot;
-ds1$age_group5[ds1$age %in% c(50:54)] &amp;lt;- &amp;quot;50-54&amp;quot;
-ds1$age_group5[ds1$age %in% c(55:59)] &amp;lt;- &amp;quot;55-59&amp;quot;
-ds1$age_group5[ds1$age %in% c(60:64)] &amp;lt;- &amp;quot;60-64&amp;quot;
-ds1$age_group5[ds1$age %in% c(65:69)] &amp;lt;- &amp;quot;65-69&amp;quot;
-ds1$age_group5[ds1$age %in% c(70:74)] &amp;lt;- &amp;quot;70-74&amp;quot;
-ds1$age_group5[ds1$age %in% c(75:79)] &amp;lt;- &amp;quot;75-79&amp;quot;
-ds1$age_group5[ds1$age %in% c(80:84)] &amp;lt;- &amp;quot;80-84&amp;quot;
-
-ds1 %&amp;gt;% dplyr::distinct(age_group, age_group5) # to inspect the result&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;# A tibble: 19 x 2
-   age_group age_group5
-   &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;     
- 1 &amp;lt;1        0-4       
- 2 1-4       0-4       
- 3 5-9       5-9       
- 4 10-14     10-14     
- 5 15-19     15-19     
- 6 20-24     20-24     
- 7 25-34     25-29     
- 8 25-34     30-34     
- 9 35-44     35-39     
-10 35-44     40-44     
-11 45-54     45-49     
-12 45-54     50-54     
-13 55-64     55-59     
-14 55-64     60-64     
-15 65-74     65-69     
-16 65-74     70-74     
-17 75-84     75-79     
-18 75-84     80-84     
-19 85+       85+       &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;pivot-long&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Pivot Long&lt;/h3&gt;
-&lt;p&gt;To enable a more seemless graph making, as well as to provide a more convenient shape for subsequent aggregation over age groups, we need to &lt;code&gt;tidyr:pivot_long&lt;/code&gt; (formely known as &lt;code&gt;tidyr::gather&lt;/code&gt;) the columns storing population estimates for each year.&lt;/p&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;# to translate into a longer form with respect to year
-ds2 &amp;lt;- ds1 %&amp;gt;%
-  tidyr::pivot_longer(cols = as.character(2006:2020),names_to = &amp;quot;year&amp;quot;, values_to = &amp;quot;count&amp;quot;) 
-ds2 %&amp;gt;% dplyr::glimpse(90)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Observations: 10,320
-Variables: 8
-$ race       &amp;lt;chr&amp;gt; &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;White&amp;quot;, &amp;quot;Wh...
-$ ethnicity  &amp;lt;chr&amp;gt; &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispanic&amp;quot;, &amp;quot;Hispa...
-$ sex        &amp;lt;chr&amp;gt; &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Femal...
-$ age_group  &amp;lt;chr&amp;gt; &amp;quot;&amp;lt;1&amp;quot;, &amp;quot;&amp;lt;1&amp;quot;, &amp;quot;&amp;lt;1&amp;quot;, &amp;quot;&amp;lt;1&amp;quot;, &amp;quot;&amp;lt;1&amp;quot;, &amp;quot;&amp;lt;1&amp;quot;, &amp;quot;&amp;lt;1&amp;quot;, &amp;quot;&amp;lt;1&amp;quot;, &amp;quot;&amp;lt;1&amp;quot;, &amp;quot;&amp;lt;1&amp;quot;, &amp;quot;&amp;lt;1&amp;quot;, ...
-$ age        &amp;lt;chr&amp;gt; &amp;quot;0&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;...
-$ age_group5 &amp;lt;chr&amp;gt; &amp;quot;0-4&amp;quot;, &amp;quot;0-4&amp;quot;, &amp;quot;0-4&amp;quot;, &amp;quot;0-4&amp;quot;, &amp;quot;0-4&amp;quot;, &amp;quot;0-4&amp;quot;, &amp;quot;0-4&amp;quot;, &amp;quot;0-4&amp;quot;, &amp;quot;0-4&amp;quot;, &amp;quot;0-...
-$ year       &amp;lt;chr&amp;gt; &amp;quot;2006&amp;quot;, &amp;quot;2007&amp;quot;, &amp;quot;2008&amp;quot;, &amp;quot;2009&amp;quot;, &amp;quot;2010&amp;quot;, &amp;quot;2011&amp;quot;, &amp;quot;2012&amp;quot;, &amp;quot;2013&amp;quot;, &amp;quot;2...
-$ count      &amp;lt;dbl&amp;gt; 33295, 32276, 30429, 29468, 33976, 27302, 26795, 27240, 28288, 292...&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;# `ds2` is the source set for computing totals because it has both `age_group`` categories&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;factors&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Factors&lt;/h3&gt;
-&lt;p&gt;Before aggregating over &lt;code&gt;age_group&lt;/code&gt; and &lt;code&gt;age_group5&lt;/code&gt; let us transform string variables into factors. so that we don’t have to do it in the individual data sets.&lt;/p&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;lvl_age_groups &amp;lt;-c(
-  &amp;quot;&amp;lt;1&amp;quot;
-  ,&amp;quot;1-4&amp;quot;
-  ,&amp;quot;5-9&amp;quot;
-  ,&amp;quot;10-14&amp;quot;
-  ,&amp;quot;15-19&amp;quot;
-  ,&amp;quot;20-24&amp;quot;
-  ,&amp;quot;25-34&amp;quot;
-  ,&amp;quot;35-44&amp;quot;
-  ,&amp;quot;45-54&amp;quot;
-  ,&amp;quot;55-64&amp;quot;
-  ,&amp;quot;65-74&amp;quot;
-  ,&amp;quot;75-84&amp;quot;
-  ,&amp;quot;85+&amp;quot;
-)
-
-lvl_age_groups5 &amp;lt;- c(
-  &amp;quot;0-4&amp;quot;
-  ,&amp;quot;5-9&amp;quot;
-  ,&amp;quot;10-14&amp;quot;
-  ,&amp;quot;15-19&amp;quot;
-  ,&amp;quot;20-24&amp;quot;
-  ,&amp;quot;25-29&amp;quot;
-  ,&amp;quot;30-34&amp;quot;
-  ,&amp;quot;35-39&amp;quot;
-  ,&amp;quot;40-44&amp;quot;
-  ,&amp;quot;45-49&amp;quot;
-  ,&amp;quot;50-54&amp;quot;
-  ,&amp;quot;55-59&amp;quot;
-  ,&amp;quot;60-64&amp;quot;
-  ,&amp;quot;65-69&amp;quot;
-  ,&amp;quot;70-74&amp;quot;
-  ,&amp;quot;75-79&amp;quot;
-  ,&amp;quot;80-84&amp;quot;
-  ,&amp;quot;85+&amp;quot;
-)
-ds2 &amp;lt;- ds2 %&amp;gt;%
-  dplyr::mutate(
-    race_ethnicity = factor(paste0(race, &amp;quot; + &amp;quot;, ethnicity))
-    ,race          = factor(race)
-    ,ethnicity     = factor(ethnicity)
-    ,age_group     = factor(age_group, levels = lvl_age_groups)
-    ,age_group5    = factor(age_group5, levels = lvl_age_groups5)
-    ,age           = as.integer(age)
-    ,sex           = factor(sex)
-    ,year          = as.integer(year)
-  ) %&amp;gt;% 
-  dplyr::select(race, ethnicity, age_group, age_group5, dplyr::everything())
-ds2 %&amp;gt;% dplyr::glimpse(90)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Observations: 10,320
-Variables: 9
-$ race           &amp;lt;fct&amp;gt; White, White, White, White, White, White, White, White, White,...
-$ ethnicity      &amp;lt;fct&amp;gt; Hispanic, Hispanic, Hispanic, Hispanic, Hispanic, Hispanic, Hi...
-$ age_group      &amp;lt;fct&amp;gt; &amp;lt;1, &amp;lt;1, &amp;lt;1, &amp;lt;1, &amp;lt;1, &amp;lt;1, &amp;lt;1, &amp;lt;1, &amp;lt;1, &amp;lt;1, &amp;lt;1, &amp;lt;1, &amp;lt;1, &amp;lt;1, &amp;lt;1, 1-...
-$ age_group5     &amp;lt;fct&amp;gt; 0-4, 0-4, 0-4, 0-4, 0-4, 0-4, 0-4, 0-4, 0-4, 0-4, 0-4, 0-4, 0-...
-$ sex            &amp;lt;fct&amp;gt; Female, Female, Female, Female, Female, Female, Female, Female...
-$ age            &amp;lt;int&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,...
-$ year           &amp;lt;int&amp;gt; 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 20...
-$ count          &amp;lt;dbl&amp;gt; 33295, 32276, 30429, 29468, 33976, 27302, 26795, 27240, 28288,...
-$ race_ethnicity &amp;lt;fct&amp;gt; White + Hispanic, White + Hispanic, White + Hispanic, White + ...&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;aggregate&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Aggregate&lt;/h3&gt;
-&lt;p&gt;Note that at this point, each row contains a population estimate for a given age in years. However, as you might have noticed that counts for each year of age are not unique:&lt;/p&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;ds2 %&amp;gt;% 
-  dplyr::filter(
-    age %in% c(25:39), race_ethnicity == &amp;quot;White + Hispanic&amp;quot;,sex == &amp;quot;Female&amp;quot;, year==2018
-  ) %&amp;gt;% 
-  dplyr::select(race, ethnicity, age_group, age_group5, sex, age,count)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;# A tibble: 15 x 7
-   race  ethnicity age_group age_group5 sex      age count
-   &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt;     &amp;lt;fct&amp;gt;     &amp;lt;fct&amp;gt;      &amp;lt;fct&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;
- 1 White Hispanic  25-34     25-29      Female    25 34479
- 2 White Hispanic  25-34     25-29      Female    26 34479
- 3 White Hispanic  25-34     25-29      Female    27 34479
- 4 White Hispanic  25-34     25-29      Female    28 34479
- 5 White Hispanic  25-34     25-29      Female    29 34479
- 6 White Hispanic  25-34     30-34      Female    30 35056
- 7 White Hispanic  25-34     30-34      Female    31 35056
- 8 White Hispanic  25-34     30-34      Female    32 35056
- 9 White Hispanic  25-34     30-34      Female    33 35056
-10 White Hispanic  25-34     30-34      Female    34 35056
-11 White Hispanic  35-44     35-39      Female    35 36549
-12 White Hispanic  35-44     35-39      Female    36 36549
-13 White Hispanic  35-44     35-39      Female    37 36549
-14 White Hispanic  35-44     35-39      Female    38 36549
-15 White Hispanic  35-44     35-39      Female    39 36549&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In fact, it appears that Florida Health Charts computes the total for 5-year category and then devides it evenly among constituent elements of the &lt;code&gt;age_category&lt;/code&gt;. My guess, this deals with privacy guidelines. Therefore, the most granualar age break up is only 5-year categories.&lt;/p&gt;
-&lt;p&gt;To preserve the original grouping we create two separate datasets, each providing the totals for respective age category.&lt;/p&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;ds_age_group &amp;lt;- ds2 %&amp;gt;% 
-  dplyr::group_by(race, ethnicity, sex, age_group, year) %&amp;gt;% 
-  dplyr::summarize(
-    count = sum(count, na.rm = T)
-  ) %&amp;gt;% 
-  dplyr::ungroup() %&amp;gt;% 
-  dplyr::mutate(
-    race_ethnicity = paste0(race, &amp;quot; + &amp;quot;, ethnicity),
-    race_ethnicity = factor(race_ethnicity)
-  )
-
-ds_age_group5 &amp;lt;- ds2 %&amp;gt;% 
-  dplyr::group_by(race, ethnicity, sex, age_group5, year) %&amp;gt;% 
-  dplyr::summarize(
-    count = sum(count, na.rm = T)
-  ) %&amp;gt;% 
-  dplyr::ungroup() %&amp;gt;% 
-  dplyr::mutate(
-    race_ethnicity = paste0(race, &amp;quot; + &amp;quot;, ethnicity),
-    race_ethnicity = factor(race_ethnicity)
-  )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;It is the &lt;code&gt;ds_age_group5&lt;/code&gt; that will be focus of subsequent graphs. However, to better demonstrate why we needed to create new grouping of ages, we will preserve both dataframes.&lt;/p&gt;
+&lt;img src=&#34;fig/extracted-data.PNG&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Fig 2. View of the extracted data&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;save-to-disk&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Save to disk&lt;/h2&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;list(
-  &amp;quot;ds_wide&amp;quot;        = ds1
-  ,&amp;quot;ds_long&amp;quot;       = ds2
-  ,&amp;quot;ds_age_group&amp;quot;  = ds_age_group
-  ,&amp;quot;ds_age_group3&amp;quot; = ds_age_group5
-) %&amp;gt;% 
-  saveRDS(&amp;quot;./content/post/2020-03-27-florida-demographic-growth/data/clean_data.rds&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The cleaned version of this dataset is available for download &lt;a href=&#34;https://github.com/dss-hmi/suicide-prevention-2019/raw/3ff78365931214e342640523f2096c2eac443b2f/analysis/blogposts/florida-demographic-growth/data/clean_data.rds&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
+&lt;div id=&#34;data-tweaking&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data Tweaking&lt;/h1&gt;
+&lt;p&gt;We can identify several problems to address:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Not all columns have names&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;race&lt;/code&gt;, &lt;code&gt;ethnicity&lt;/code&gt;, &lt;code&gt;sex&lt;/code&gt;, and &lt;code&gt;age_group&lt;/code&gt; are stored in merged spreadsheet cells&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Sums for categories are recorded in rows as observations (e.g &lt;code&gt;Total&lt;/code&gt;)&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Some values of &lt;code&gt;age_group&lt;/code&gt; are misinterpreted as dates (e.g. &lt;code&gt;1-4&lt;/code&gt; becomes &lt;code&gt;4-Jan&lt;/code&gt;)&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;age_group&lt;/code&gt; does not bin the population evenly (e.g. &lt;code&gt;20-24&lt;/code&gt; vs &lt;code&gt;25-34&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The cleaned version of this dataset is available for download &lt;a href=&#34;https://github.com/dss-hmi/suicide-prevention-2019/blob/4b2c812274c678b80ae351045619d3135d4e271f/analysis/blogposts/florida-demographic-growth/data/clean_data.rds&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;graphing&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Graphing&lt;/h1&gt;
-&lt;div id=&#34;total-population&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Total population&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;How does the total population of Florida changes between 2006 and 2020?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;# Total population of Florida over the years
-ds_age_group5 %&amp;gt;% 
-  dplyr::group_by(year) %&amp;gt;% 
-  dplyr::summarize(
-    count = sum(count, na.rm = T)
-  ) %&amp;gt;% 
-  ggplot(aes(x=year, y = count))+
-  geom_point()+
-  geom_line()+
-  scale_y_continuous(labels = scales::comma)+
-  theme_bw()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;figure_rmd/g0-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We will consider several questions in order to demonstrate plotting from this cleaned dataset.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;How does the total population of Florida changes between 2006 and 2020?&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;How does each ethnic group change during this time?&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;what Ethnic group is most dissimilar from the other three in their dynamics?&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;What would it look like if we used the original &lt;code&gt;age_group&lt;/code&gt;?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;fig/g0-1.PNG&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Graph 1.Total Population&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;ethnic-groups-together&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Ethnic groups: Together&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;How does each ethnic group change during this time?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;# total population of Florida by broken down by 4 ethnic groups (race_ethnicity)
-d1 &amp;lt;- ds_age_group5 %&amp;gt;% 
-  dplyr::group_by(race_ethnicity, year) %&amp;gt;% 
-  dplyr::summarize(
-    n_people = sum(count, rm.na = T)
-  )
-g1 &amp;lt;- d1 %&amp;gt;% 
-  ggplot(aes(x = year,  y = n_people, color = race_ethnicity))+
-  geom_line(aes(group = race_ethnicity))+
-  geom_point(shape = 21, fill = NA, size =2)+
-  scale_y_continuous(labels = scales::comma)+
-  theme_bw()+
-  theme(
-    axis.text.x = element_text(angle = - 90,vjust =.5, hjust = -0)
-    #https://stackoverflow.com/questions/1330989/rotating-and-spacing-axis-labels-in-ggplot2
-  )+
-  labs(
-    title = &amp;quot;Population growth in Florida over last 15 years \n  broken down by ethnic groups&amp;quot;
-    ,color = &amp;quot;Ethnic Group&amp;quot;
-    ,x = &amp;quot;Calendar Year&amp;quot;
-    ,y = &amp;quot;Population Count&amp;quot;
-  )
-g1&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;figure_rmd/g1-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;fig/g1-1.PNG&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Graph 2. Ethnic groups: Together&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;ethnic-groups-separate&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Ethnic groups: Separate&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;what Ethnic group is most dissimilar from the other three in their dynamics?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;# Q: what Ethnic group is most dissimilar from the other three in their dynamics?
-g1 + facet_wrap(~race_ethnicity, scale = &amp;quot;free_y&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;figure_rmd/q1-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;# A: &amp;quot;White + Non-Hispanic&amp;quot; because of a &amp;quot;dip&amp;quot; in late 2000&amp;#39;s&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;fig/g2-1.PNG&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Graph 3. Ethnic groups: Separate&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;age-composition-in-2019&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Age composition in 2019&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;What is the age composition of each ethnic group in 2019?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;# Build a graph showing age composition of all ethnic groups in 2019
-g2 &amp;lt;- ds_age_group5 %&amp;gt;%
-  dplyr::filter(year == 2019) %&amp;gt;%
-  ggplot(aes(x = age_group5, y = count, fill = race_ethnicity)) +
-  geom_col()+
-  facet_grid(sex ~ race_ethnicity)+
-  scale_y_continuous(labels = scales::comma)+
-  # https://stackoverflow.com/questions/14563989/force-r-to-stop-plotting-abbreviated-axis-labels-e-g-1e00-in-ggplot2 also https://r-graphics.org/recipe-axes-tick-label
-  theme_bw()+
-  theme(
-     axis.text.x = element_text(angle = - 90,vjust =.5, hjust = -0)
-     #https://stackoverflow.com/questions/1330989/rotating-and-spacing-axis-labels-in-ggplot2
-  )+
-  labs(
-    title = &amp;quot;Population in Florida in 2019 broken down by age groups and gender&amp;quot;
-    ,color = &amp;quot;Ethnic Group&amp;quot;
-    ,x = &amp;quot;Calendar Year&amp;quot;
-    ,y = &amp;quot;Population Count&amp;quot;
-  )
-g2&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;figure_rmd/g2-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;What would it look like if we used the original &lt;code&gt;age_group&lt;/code&gt;?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;g2a &amp;lt;- ds_age_group %&amp;gt;%
-  dplyr::filter(year == 2019) %&amp;gt;%
-  ggplot(aes(x = age_group, y = count, fill = race_ethnicity)) +
-  geom_col()+
-  facet_grid(sex ~ race_ethnicity)+
-  scale_y_continuous(labels = scales::comma)+
-  # https://stackoverflow.com/questions/14563989/force-r-to-stop-plotting-abbreviated-axis-labels-e-g-1e00-in-ggplot2 also https://r-graphics.org/recipe-axes-tick-label
-  theme_bw()+
-  theme(
-    axis.text.x = element_text(angle = - 90,vjust =.5, hjust = -0)
-    #https://stackoverflow.com/questions/1330989/rotating-and-spacing-axis-labels-in-ggplot2
-  )+
-  labs(
-    title = &amp;quot;Population in Florida in 2019 broken down by age groups and gender&amp;quot;
-    ,color = &amp;quot;Ethnic Group&amp;quot;
-    ,x = &amp;quot;Calendar Year&amp;quot;
-    ,y = &amp;quot;Population Count&amp;quot;
-  )
-g2a&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;figure_rmd/q2-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;fig/q1-1.PNG&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Graph 4. Age Composition: 5-year groups&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;fig/q2-1.PNG&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Graph 4. Age Composition: original groups&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;session-information&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;session information&lt;/h1&gt;
-&lt;p&gt;For the sake of documentation and reproducibility, the current report was rendered in the following environment. Click the line below to expand.&lt;/p&gt;
-&lt;details&gt;
-&lt;p&gt;&lt;summary&gt;Environment &lt;span class=&#34;glyphicon glyphicon-plus-sign&#34;&gt;&lt;/span&gt;&lt;/summary&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;- Session info -------------------------------------------------------------------------------------------------------
- setting  value                       
- version  R version 3.6.2 (2019-12-12)
- os       Windows 10 x64              
- system   x86_64, mingw32             
- ui       RTerm                       
- language (EN)                        
- collate  English_United States.1252  
- ctype    English_United States.1252  
- tz       America/New_York            
- date     2020-03-29                  
-
-- Packages -----------------------------------------------------------------------------------------------------------
- package     * version date       lib source        
- assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.6.2)
- backports     1.1.5   2019-10-02 [1] CRAN (R 3.6.1)
- blogdown      0.17    2019-11-13 [1] CRAN (R 3.6.2)
- bookdown      0.17    2020-01-11 [1] CRAN (R 3.6.2)
- callr         3.4.2   2020-02-12 [1] CRAN (R 3.6.2)
- cellranger    1.1.0   2016-07-27 [1] CRAN (R 3.6.2)
- cli           2.0.1   2020-01-08 [1] CRAN (R 3.6.2)
- colorspace    1.4-1   2019-03-18 [1] CRAN (R 3.6.1)
- crayon        1.3.4   2017-09-16 [1] CRAN (R 3.6.2)
- desc          1.2.0   2018-05-01 [1] CRAN (R 3.6.2)
- devtools      2.2.2   2020-02-17 [1] CRAN (R 3.6.3)
- digest        0.6.24  2020-02-12 [1] CRAN (R 3.6.2)
- dplyr       * 0.8.4   2020-01-31 [1] CRAN (R 3.6.2)
- ellipsis      0.3.0   2019-09-20 [1] CRAN (R 3.6.2)
- evaluate      0.14    2019-05-28 [1] CRAN (R 3.6.2)
- fansi         0.4.1   2020-01-08 [1] CRAN (R 3.6.2)
- fs            1.3.1   2019-05-06 [1] CRAN (R 3.6.2)
- ggplot2     * 3.2.1   2019-08-10 [1] CRAN (R 3.6.2)
- ggpubr        0.2.5   2020-02-13 [1] CRAN (R 3.6.2)
- ggsignif      0.6.0   2019-08-08 [1] CRAN (R 3.6.2)
- glue          1.3.1   2019-03-12 [1] CRAN (R 3.6.2)
- gtable        0.3.0   2019-03-25 [1] CRAN (R 3.6.2)
- htmltools     0.4.0   2019-10-04 [1] CRAN (R 3.6.2)
- knitr       * 1.28    2020-02-06 [1] CRAN (R 3.6.2)
- lazyeval      0.2.2   2019-03-15 [1] CRAN (R 3.6.2)
- lifecycle     0.1.0   2019-08-01 [1] CRAN (R 3.6.2)
- magrittr    * 1.5     2014-11-22 [1] CRAN (R 3.6.2)
- memoise       1.1.0   2017-04-21 [1] CRAN (R 3.6.2)
- munsell       0.5.0   2018-06-12 [1] CRAN (R 3.6.2)
- pillar        1.4.3   2019-12-20 [1] CRAN (R 3.6.2)
- pkgbuild      1.0.6   2019-10-09 [1] CRAN (R 3.6.2)
- pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 3.6.2)
- pkgload       1.0.2   2018-10-29 [1] CRAN (R 3.6.2)
- prettyunits   1.1.1   2020-01-24 [1] CRAN (R 3.6.2)
- processx      3.4.2   2020-02-09 [1] CRAN (R 3.6.2)
- ps            1.3.2   2020-02-13 [1] CRAN (R 3.6.2)
- purrr         0.3.3   2019-10-18 [1] CRAN (R 3.6.2)
- R6            2.4.1   2019-11-12 [1] CRAN (R 3.6.2)
- Rcpp          1.0.3   2019-11-08 [1] CRAN (R 3.6.2)
- readxl        1.3.1   2019-03-13 [1] CRAN (R 3.6.2)
- remotes       2.1.1   2020-02-15 [1] CRAN (R 3.6.2)
- rlang         0.4.4   2020-01-28 [1] CRAN (R 3.6.2)
- rmarkdown     2.1     2020-01-20 [1] CRAN (R 3.6.2)
- rprojroot     1.3-2   2018-01-03 [1] CRAN (R 3.6.2)
- scales        1.1.0   2019-11-18 [1] CRAN (R 3.6.2)
- sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.6.2)
- stringi       1.4.5   2020-01-11 [1] CRAN (R 3.6.2)
- stringr       1.4.0   2019-02-10 [1] CRAN (R 3.6.2)
- testthat      2.3.1   2019-12-01 [1] CRAN (R 3.6.2)
- tibble        2.1.3   2019-06-06 [1] CRAN (R 3.6.2)
- tidyr         1.0.2   2020-01-24 [1] CRAN (R 3.6.2)
- tidyselect    1.0.0   2020-01-27 [1] CRAN (R 3.6.2)
- usethis       1.5.1   2019-07-04 [1] CRAN (R 3.6.2)
- utf8          1.1.4   2018-05-24 [1] CRAN (R 3.6.2)
- vctrs         0.2.2   2020-01-24 [1] CRAN (R 3.6.2)
- withr         2.1.2   2018-03-15 [1] CRAN (R 3.6.2)
- xfun          0.12    2020-01-13 [1] CRAN (R 3.6.2)
- yaml          2.2.1   2020-02-01 [1] CRAN (R 3.6.2)
-
-[1] C:/Users/an499583/Documents/R/win-library/3.6
-[2] C:/Program Files/R/R-3.6.2/library&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
     </item>
