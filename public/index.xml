@@ -7,10 +7,38 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Fri, 27 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Online Courses and Textbooks</title>
+      <link>/post/2020-05-21-online-course-and-textbooks/</link>
+      <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-05-21-online-course-and-textbooks/</guid>
+      <description>
+
+&lt;h1 id=&#34;books&#34;&gt;Books&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/&#34; target=&#34;_blank&#34;&gt;R for Data Science&lt;/a&gt;  by Garrett Grolemund and Hadley Wickham&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://rkabacoff.github.io/datavis/&#34; target=&#34;_blank&#34;&gt;Data Visualization with R&lt;/a&gt; by Rob Kabacoff&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://r-graphics.org/&#34; target=&#34;_blank&#34;&gt;R Graphics Cookbook&lt;/a&gt; by Winston Chang&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://plotly-r.com/index.html&#34; target=&#34;_blank&#34;&gt;Interactive web-based data visualization with R, plotly, and shiny&lt;/a&gt; by Carson Sievert&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;courses&#34;&gt;Courses&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dereksonderegger.github.io/444/index.html&#34; target=&#34;_blank&#34;&gt;Introductory Data Science using R&lt;/a&gt; by Derek L. Sonderegger&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://datavizm20.classes.andrewheiss.com/&#34; target=&#34;_blank&#34;&gt;Data Visualization&lt;/a&gt; by Andrew Heiss&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.discoveringstatistics.com/&#34; target=&#34;_blank&#34;&gt;Discovering Statistics&lt;/a&gt; by Andy Field&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://datavis.ca/courses/RGraphics/&#34; target=&#34;_blank&#34;&gt;Data Visualization in R&lt;/a&gt; by Michael Friendly&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Florida Demographic Growth</title>
