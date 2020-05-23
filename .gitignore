@@ -30,3 +30,4 @@ public/img/photos/*
 .Rproj.user/shared/notebooks/paths
 .Rhistory
 .Rhistory
+*.pper
