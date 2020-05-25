@@ -42,6 +42,71 @@
     </item>
     
     <item>
+      <title>Florida Suicides (1) - General Trends</title>
+      <link>/post/2020-04-26-florida-suicide-1/</link>
+      <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-04-26-florida-suicide-1/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data&#34;&gt;Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#q1---what-is-the-overall-trajectory-of-suicides-in-fl-between-2006-and-2017&#34;&gt;Q1 - What is the overall trajectory of suicides in FL between 2006 and 2017?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#q2---how-does-change-in-suicide-rates-differ-by-age-group&#34;&gt;Q2 - How does change in suicide rates differ by AGE group?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#q3---how-do-suicide-trends-differ-by-sex&#34;&gt;Q3 - How do suicide trends differ by SEX?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#q4---how-do-suicide-trends-differ-by-sex-and-age-group&#34;&gt;Q4 - How do suicide trends differ by SEX and AGE group?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#q5---how-do-suicide-trends-differ-by-race&#34;&gt;Q5 - How do suicide trends differ by RACE?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#q6---how-do-suicide-trends-differ-by-race-and-sex&#34;&gt;Q6 - How do suicide trends differ by RACE and SEX?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This blogpost graphs the trends of suicides in Florida from 2006 to 2017, exploring the differences in age, sex, and race among persons 10 years and older.&lt;/p&gt;
+&lt;p&gt;Click &lt;strong&gt;&lt;a href=&#34;https://raw.githack.com/dss-hmi/suicide-prevention-2019/c25a570da54cc9716f6df021fa94fcfd02162048/analysis/blogposts/florida-suicide-1/fl-suicide-1.html&#34;&gt;HERE&lt;/a&gt;&lt;/strong&gt; to view report in its native environment of the &lt;a href=&#34;https://github.com/dss-hmi/suicide-prevention-2019&#34;&gt;suicide-prevention-2019&lt;/a&gt; repository.&lt;/p&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data&lt;/h3&gt;
+&lt;p&gt;The initial extract of the data was obtained from &lt;a href=&#34;http://www.flhealthcharts.com/FLQUERY/Population/PopulationRpt.aspx&#34;&gt;www.flhealthcharts.com&lt;/a&gt;, a reporting tool for population counts estimated by the Florida Department of Health. The dataset contains suicide mortality counts and population estimates for years 2006-2017, broken down by suicide means, county, sex, age group, and race. The &lt;code&gt;.csv&lt;/code&gt; of this dataset is &lt;a href=&#34;https://github.com/dss-hmi/suicide-prevention-2019/blob/b225979bad5e4728d7a594fd455ab929d3ccafb0/data-public/derived/9-population-suicide.csv&#34;&gt;available for download&lt;/a&gt;. For details regarding data preparation, please consult the &lt;a href=&#34;https://github.com/dss-hmi/suicide-prevention-2019&#34;&gt;suicide-prevention-2019&lt;/a&gt; repository.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q1---what-is-the-overall-trajectory-of-suicides-in-fl-between-2006-and-2017&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Q1 - What is the overall trajectory of suicides in FL between 2006 and 2017?&lt;/h3&gt;
+&lt;p&gt;Similar to national trends, the rates of suicide in Florida has been on the rise since 2006. In 2006, the Department of Health registered &lt;code&gt;2,402&lt;/code&gt; suicides, while in 2017 this number reached &lt;code&gt;3,141&lt;/code&gt;. On average, each year the total number of suicides in Florida increased by &lt;code&gt;57&lt;/code&gt; during this time. While the rising number of suicides events could be partially explained by demographic growth (see &lt;a href=&#34;https://raw.githack.com/dss-hmi/suicide-prevention-2019/c25a570da54cc9716f6df021fa94fcfd02162048/analysis/blogposts/florida-suicide-1/fl-suicide-1.html&#34;&gt;full report&lt;/a&gt; for details ), when adjusted for population size the rate per 100,000 still indicated that suicides became more prevalent: the rate increased from &lt;code&gt;15&lt;/code&gt; in 2006 to &lt;code&gt;17.2&lt;/code&gt; per 100,000 in 2017, averaging &lt;code&gt;.15&lt;/code&gt; in annual growth.
+&lt;img src=&#34;fig/g11-1.png&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q2---how-does-change-in-suicide-rates-differ-by-age-group&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Q2 - How does change in suicide rates differ by AGE group?&lt;/h3&gt;
+&lt;p&gt;Only two age groups, &lt;code&gt;35-44&lt;/code&gt; and &lt;code&gt;45-54&lt;/code&gt; exhibited decline in suicide rates, witnessed by a negative slope coefficient in the liniear model, regressing the rate on year. However, examination of the raw data point behind the linear model suggests that negative slope might be coincidental to an overal steady treajectory.&lt;/p&gt;
+&lt;p&gt;For all other age groups, the rates of suicides increased. The highest increase in suicide rates per 100,000 is observed in the &lt;code&gt;85+&lt;/code&gt; group, for which the rate rose by &lt;code&gt;.64&lt;/code&gt; annualy from &lt;code&gt;21.3&lt;/code&gt; suicides per 100,000 in 2006 to &lt;code&gt;25.3&lt;/code&gt; in 2017.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fig/g22-1.png&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q3---how-do-suicide-trends-differ-by-sex&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Q3 - How do suicide trends differ by SEX?&lt;/h3&gt;
+&lt;p&gt;As expected, suicides are more more prevalent among men. Notably, the increase for men was steeper: from 2006 to 2017 the rate of suicides for men rose from &lt;code&gt;23.8&lt;/code&gt; to &lt;code&gt;27.4&lt;/code&gt; per 100,000, averaging &lt;code&gt;.19&lt;/code&gt; per year, wheras for women this increase was smaller, rising from &lt;code&gt;6.7&lt;/code&gt; to &lt;code&gt;7.5&lt;/code&gt;, over the same time period, averaging &lt;code&gt;.11&lt;/code&gt; per year.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fig/g31-1.png&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q4---how-do-suicide-trends-differ-by-sex-and-age-group&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Q4 - How do suicide trends differ by SEX and AGE group?&lt;/h3&gt;
+&lt;p&gt;The top view helps comparing the overal level of suicide rates among age groups, accounting for sex differences. We see that the highest rates are among the oldest Floridians: &lt;code&gt;75-84&lt;/code&gt; and &lt;code&gt;85+&lt;/code&gt; groups, the latter exhibiting the fastest growth rate of &lt;code&gt;1.44&lt;/code&gt; per year, rising by almost &lt;code&gt;20%&lt;/code&gt; from &lt;code&gt;49.2&lt;/code&gt; per 100,000 in 2006 to &lt;code&gt;58.5&lt;/code&gt; in 2017.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fig/g42-1.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;To better view the trends withing the age groups, we replot this figure with free y-axis, exposing more nuanced longitudinal trends.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fig/g41-1.png&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q5---how-do-suicide-trends-differ-by-race&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Q5 - How do suicide trends differ by RACE?&lt;/h3&gt;
+&lt;p&gt;White Non-Hispanics exhibit the highest suicide rate and also the steepest growth of &lt;code&gt;.32&lt;/code&gt; suicides per 100,000 per year. The top row of the graph places the trends on the same scale, while the bottom row displays them on individual scale. Note, however, that annual fluctuations are less meaningful for less populous ethnic groups, such as &lt;code&gt;Black &amp;amp; Other + Hispanic&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fig/g51a-1.png&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q6---how-do-suicide-trends-differ-by-race-and-sex&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Q6 - How do suicide trends differ by RACE and SEX?&lt;/h3&gt;
+&lt;p&gt;Regardless of the ethnic group, suicide is more prevalent among men, particularly of the &lt;code&gt;White + Non-Hispanic&lt;/code&gt; origin. Notably, white non-hispanic women are more likely to commit suicide than women of any other ethnic group.
+&lt;img src=&#34;fig/g51c-1.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Replotting with free y-axis helps us see that growth in suicide rate among men is not universal across ethnic groups. Suicide rate is actually &lt;strong&gt;decreasing&lt;/strong&gt; among non-white men with Hispanic origin.
+&lt;img src=&#34;fig/g51c-2.png&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Florida Demographic Growth</title>
       <link>/post/2020-03-27-florida-demographic-growth/</link>
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>

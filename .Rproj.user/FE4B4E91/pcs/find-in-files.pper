@@ -2,11 +2,10 @@
     "dialog-state" : {
         "caseSensitive" : false,
         "filePatterns" : [
-            "*.r",
-            "*.R"
+            "*.Rmd"
         ],
         "path" : "C:/Users/an499583/OneDrive - University of Central Florida/GitHub",
-        "query" : "Reduce",
+        "query" : "<img",
         "regex" : false
     }
 }

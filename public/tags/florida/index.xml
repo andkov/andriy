@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Fri, 27 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/florida/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Florida Suicides (1) - General Trends</title>
+      <link>/post/2020-04-26-florida-suicide-1/</link>
+      <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-04-26-florida-suicide-1/</guid>
+      <description>Graphing the trends of suicides in Florida from 2006 to 2017, exploring the differences in age, gender, and race among persons 10 years and older</description>
+    </item>
     
     <item>
       <title>Florida Demographic Growth</title>
