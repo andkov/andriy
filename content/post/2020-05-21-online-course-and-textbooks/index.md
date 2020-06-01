@@ -2,6 +2,7 @@
 title: Online Courses and Textbooks
 author: Andriy Koval
 date: '2020-05-21'
+lastmod: '2020-06-01'
 slug: [online-courses-and-textbooks]
 categories:
   - learning resource
@@ -28,6 +29,7 @@ projects: []
 - [R Graphics Cookbook](https://r-graphics.org/) by Winston Chang
 - [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com/index.html) by Carson Sievert  
 - [Statistical Inference via Data Science.A ModernDive into R and the tidyverse](https://moderndive.com/) by Chester Ismay and Albert Y. Kim
+- [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/) by Roger Peng
 
 # Courses
 
