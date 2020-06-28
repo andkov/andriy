@@ -1,13 +1,13 @@
 {
-    "path" : "C:/Users/an499583/OneDrive - University of Central Florida/GitHub/andriy",
-    "sortOrder" : [
+    "path": "C:/Users/an499583/OneDrive - University of Central Florida/GitHub/andriy/content/post/2020-04-26-florida-suicide-1",
+    "sortOrder": [
         {
-            "ascending" : false,
-            "columnIndex" : 1
+            "columnIndex": 1,
+            "ascending": false
         },
         {
-            "ascending" : true,
-            "columnIndex" : 2
+            "columnIndex": 2,
+            "ascending": true
         }
     ]
 }

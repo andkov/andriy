@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>graph making</title>
+      <link>/categories/graph-making/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/graph-making/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>learning resource</title>
@@ -27,15 +36,6 @@
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/analytic-workflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>graph making</title>
-      <link>/categories/graph-making/</link>
-      <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/graph-making/</guid>
       <description></description>
     </item>
     

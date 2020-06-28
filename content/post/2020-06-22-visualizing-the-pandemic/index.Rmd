@@ -1,0 +1,62 @@
+---
+title: Visualizing the Pandemic
+author: Andriy Koval
+date: '2020-06-22'
+slug: []
+categories:
+  - graph making
+tags:
+  - ggplot2
+  - longitudinal analysis
+  - public health
+  - COVID-19
+subtitle: ''
+summary: 'Demonstrating how to 1) build interactive visualizationsusing `plotly::ggplotly()`, 2) compute relative timelines for each country and 3) plot sequence of key events for cross-country comparison.'
+authors: []
+lastmod: '2020-06-22T12:30:30-04:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_6kiNmv791w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# TL;DR
+
+I gave a workshop on visualizing COVID-19 data in multiple countries, demonstrating how to 1) build interactive visualizations  using `plotly::ggplotly()`, 2) compute relative timelines for each country and 3) plot sequence of key events for cross-country comparison. To structure the workshop and create the criteria of success/progress, I have broken down the session into three parts, each aimed at producing a graphic.
+
+|Goal 1| Goal 2| Goal 3|
+|---|---|---|  
+|Timeseries with interactive highlights|Trajectories with relative timelines| Sequence of key epidemiological events|
+|![][g1]|![][g2]|![][g3]|
+
+[g1]:goal_1.PNG
+[g2]:goal_2.PNG
+[g3]:goal_3.PNG
+
+__KEY LINKS__   
+- https://github.com/andkov/vada-2020-summer-school - github repo created to accompany this workshop. Includes data and scripts.     
+-  [Visualizing the Pandemic][narrated] - dynamic report narrating the workshop. (covers what did not fit into the video)
+
+[narrated]:https://raw.githack.com/andkov/vada-2020-summer-school/master/analysis/covid-trajectory/covid-trajectory-1.html
+[![](VADA-header.png){width=100%}](http://vada.cs.umanitoba.ca/program/)
+
+# Learning Objectives
+
+Recently I was invited to give a workshop  at the 2020 Summer School event of the [Visual and Automated Disease Analytic](http://vada.cs.umanitoba.ca/program/) (VADA) graduate training program, which was held virtually this year due to COVID-19 pandemic. 
+
+Naturally, COVID-19 was featured prominently in the talks and took the center stage during the analytic session on Thursday, the last day of the summer school. My workshop was scheduled to open the workshop series, so I wanted to give the students some tools for visual exploration of longitudinal data. The target learning objectives aspired for participants to be able to: 
+
+1. Plot time series of COVID-19 cases using `ggplot2` package
+2. Add interactive highlights to trajectories using `plotly` package
+3. Compute indicators for key epidemiological events in each country (e.g. day of the first death)
+4. Construct country-specific timelines relative to key epidemiological events
+5. Visualize the sequence of key events for a group of countries
+
+Now you see why I used "aspired" instead of "intended".  No,  I didn't get to finish it all in under 60 minutes. However, I have anticipated this and created a [narrated version fo the workshop][narrated] which captured all demonstrations I wanted to go through. This dynamic report is best understood in the larger context of the https://github.com/andkov/vada-2020-summer-school repository, which I have created to offer a jump start for comparing COVID-19 trajectories across multiple geographies. 
+
+
+
+

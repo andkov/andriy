@@ -7,10 +7,72 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Visualizing the Pandemic</title>
+      <link>/post/2020-06-22-visualizing-the-pandemic/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-06-22-visualizing-the-pandemic/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/_6kiNmv791w&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;div id=&#34;tldr&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;TL;DR&lt;/h1&gt;
+&lt;p&gt;I gave a workshop on visualizing COVID-19 data in multiple countries, demonstrating how to 1) build interactive visualizations using &lt;code&gt;plotly::ggplotly()&lt;/code&gt;, 2) compute relative timelines for each country and 3) plot sequence of key events for cross-country comparison. To structure the workshop and create the criteria of success/progress, I have broken down the session into three parts, each aimed at producing a graphic.&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;33%&#34; /&gt;
+&lt;col width=&#34;33%&#34; /&gt;
+&lt;col width=&#34;33%&#34; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;Goal 1&lt;/th&gt;
+&lt;th&gt;Goal 2&lt;/th&gt;
+&lt;th&gt;Goal 3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Timeseries with interactive highlights&lt;/td&gt;
+&lt;td&gt;Trajectories with relative timelines&lt;/td&gt;
+&lt;td&gt;Sequence of key epidemiological events&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;img src=&#34;goal_1.PNG&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;goal_2.PNG&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;goal_3.PNG&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;KEY LINKS&lt;/strong&gt;&lt;br /&gt;
+- &lt;a href=&#34;https://github.com/andkov/vada-2020-summer-school&#34; class=&#34;uri&#34;&gt;https://github.com/andkov/vada-2020-summer-school&lt;/a&gt; - github repo created to accompany this workshop. Includes data and scripts.&lt;br /&gt;
+- &lt;a href=&#34;https://raw.githack.com/andkov/vada-2020-summer-school/master/analysis/covid-trajectory/covid-trajectory-1.html&#34;&gt;Visualizing the Pandemic&lt;/a&gt; - dynamic report narrating the workshop. (covers what did not fit into the video)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://vada.cs.umanitoba.ca/program/&#34;&gt;&lt;img src=&#34;VADA-header.png&#34; style=&#34;width:100.0%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;learning-objectives&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Learning Objectives&lt;/h1&gt;
+&lt;p&gt;Recently I was invited to give a workshop at the 2020 Summer School event of the &lt;a href=&#34;http://vada.cs.umanitoba.ca/program/&#34;&gt;Visual and Automated Disease Analytic&lt;/a&gt; (VADA) graduate training program, which was held virtually this year due to COVID-19 pandemic.&lt;/p&gt;
+&lt;p&gt;Naturally, COVID-19 was featured prominently in the talks and took the center stage during the analytic session on Thursday, the last day of the summer school. My workshop was scheduled to open the workshop series, so I wanted to give the students some tools for visual exploration of longitudinal data. The target learning objectives aspired for participants to be able to:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Plot time series of COVID-19 cases using &lt;code&gt;ggplot2&lt;/code&gt; package&lt;/li&gt;
+&lt;li&gt;Add interactive highlights to trajectories using &lt;code&gt;plotly&lt;/code&gt; package&lt;/li&gt;
+&lt;li&gt;Compute indicators for key epidemiological events in each country (e.g. day of the first death)&lt;/li&gt;
+&lt;li&gt;Construct country-specific timelines relative to key epidemiological events&lt;/li&gt;
+&lt;li&gt;Visualize the sequence of key events for a group of countries&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now you see why I used “aspired” instead of “intended”. No, I didn’t get to finish it all in under 60 minutes. However, I have anticipated this and created a &lt;a href=&#34;https://raw.githack.com/andkov/vada-2020-summer-school/master/analysis/covid-trajectory/covid-trajectory-1.html&#34;&gt;narrated version fo the workshop&lt;/a&gt; which captured all demonstrations I wanted to go through. This dynamic report is best understood in the larger context of the &lt;a href=&#34;https://github.com/andkov/vada-2020-summer-school&#34; class=&#34;uri&#34;&gt;https://github.com/andkov/vada-2020-summer-school&lt;/a&gt; repository, which I have created to offer a jump start for comparing COVID-19 trajectories across multiple geographies.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Online Courses and Textbooks</title>

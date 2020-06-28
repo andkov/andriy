@@ -3,13 +3,65 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/authors/andriy-koval/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2020-06-22T12:30:30-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/tags/covid-19/</loc>
+    <lastmod>2020-06-22T12:30:30-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-06-22T12:30:30-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-06-22T12:30:30-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-06-22T12:30:30-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/2020-06-22-visualizing-the-pandemic/</loc>
+    <lastmod>2020-06-22T12:30:30-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ggplot2/</loc>
+    <lastmod>2020-06-22T12:30:30-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/graph-making/</loc>
+    <lastmod>2020-06-22T12:30:30-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/longitudinal-analysis/</loc>
+    <lastmod>2020-06-22T12:30:30-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/public-health/</loc>
+    <lastmod>2020-06-22T12:30:30-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/andriy-koval/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -21,35 +73,12 @@
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/post/2020-05-21-online-course-and-textbooks/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/r/</loc>
-    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/ggplot2/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -73,12 +102,6 @@
   
   <url>
     <loc>/categories/analytic-workflow/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/graph-making/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -289,12 +312,6 @@
   </url>
   
   <url>
-    <loc>/tags/public-health/</loc>
-    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/reproducible-research/</loc>
     <lastmod>2019-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -469,12 +486,6 @@
   
   <url>
     <loc>/categories/coordinated-analysis/</loc>
-    <lastmod>2019-03-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/longitudinal-analysis/</loc>
     <lastmod>2019-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

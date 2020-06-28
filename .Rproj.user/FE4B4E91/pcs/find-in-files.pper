@@ -1,11 +1,11 @@
 {
-    "dialog-state" : {
-        "caseSensitive" : false,
-        "filePatterns" : [
+    "dialog-state": {
+        "caseSensitive": false,
+        "filePatterns": [
             "*.Rmd"
         ],
-        "path" : "C:/Users/an499583/OneDrive - University of Central Florida/GitHub",
-        "query" : "<img",
-        "regex" : false
+        "path": "C:/Users/an499583/OneDrive - University of Central Florida/GitHub",
+        "query": "<img",
+        "regex": false
     }
 }

@@ -1,0 +1,76 @@
+---
+title: Visualizing the Pandemic
+author: Andriy Koval
+date: '2020-06-22'
+slug: []
+categories:
+  - graph making
+tags:
+  - ggplot2
+  - longitudinal analysis
+  - public health
+  - COVID-19
+subtitle: ''
+summary: 'Demonstrating how to 1) build interactive visualizationsusing `plotly::ggplotly()`, 2) compute relative timelines for each country and 3) plot sequence of key events for cross-country comparison.'
+authors: []
+lastmod: '2020-06-22T12:30:30-04:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_6kiNmv791w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<div id="tldr" class="section level1">
+<h1>TL;DR</h1>
+<p>I gave a workshop on visualizing COVID-19 data in multiple countries, demonstrating how to 1) build interactive visualizations using <code>plotly::ggplotly()</code>, 2) compute relative timelines for each country and 3) plot sequence of key events for cross-country comparison. To structure the workshop and create the criteria of success/progress, I have broken down the session into three parts, each aimed at producing a graphic.</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Goal 1</th>
+<th>Goal 2</th>
+<th>Goal 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Timeseries with interactive highlights</td>
+<td>Trajectories with relative timelines</td>
+<td>Sequence of key epidemiological events</td>
+</tr>
+<tr class="even">
+<td><img src="goal_1.PNG" /></td>
+<td><img src="goal_2.PNG" /></td>
+<td><img src="goal_3.PNG" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>KEY LINKS</strong><br />
+- <a href="https://github.com/andkov/vada-2020-summer-school" class="uri">https://github.com/andkov/vada-2020-summer-school</a> - github repo created to accompany this workshop. Includes data and scripts.<br />
+- <a href="https://raw.githack.com/andkov/vada-2020-summer-school/master/analysis/covid-trajectory/covid-trajectory-1.html">Visualizing the Pandemic</a> - dynamic report narrating the workshop. (covers what did not fit into the video)</p>
+<p><a href="http://vada.cs.umanitoba.ca/program/"><img src="VADA-header.png" style="width:100.0%" /></a></p>
+</div>
+<div id="learning-objectives" class="section level1">
+<h1>Learning Objectives</h1>
+<p>Recently I was invited to give a workshop at the 2020 Summer School event of the <a href="http://vada.cs.umanitoba.ca/program/">Visual and Automated Disease Analytic</a> (VADA) graduate training program, which was held virtually this year due to COVID-19 pandemic.</p>
+<p>Naturally, COVID-19 was featured prominently in the talks and took the center stage during the analytic session on Thursday, the last day of the summer school. My workshop was scheduled to open the workshop series, so I wanted to give the students some tools for visual exploration of longitudinal data. The target learning objectives aspired for participants to be able to:</p>
+<ol style="list-style-type: decimal">
+<li>Plot time series of COVID-19 cases using <code>ggplot2</code> package</li>
+<li>Add interactive highlights to trajectories using <code>plotly</code> package</li>
+<li>Compute indicators for key epidemiological events in each country (e.g. day of the first death)</li>
+<li>Construct country-specific timelines relative to key epidemiological events</li>
+<li>Visualize the sequence of key events for a group of countries</li>
+</ol>
+<p>Now you see why I used “aspired” instead of “intended”. No, I didn’t get to finish it all in under 60 minutes. However, I have anticipated this and created a <a href="https://raw.githack.com/andkov/vada-2020-summer-school/master/analysis/covid-trajectory/covid-trajectory-1.html">narrated version fo the workshop</a> which captured all demonstrations I wanted to go through. This dynamic report is best understood in the larger context of the <a href="https://github.com/andkov/vada-2020-summer-school" class="uri">https://github.com/andkov/vada-2020-summer-school</a> repository, which I have created to offer a jump start for comparing COVID-19 trajectories across multiple geographies.</p>
+</div>
