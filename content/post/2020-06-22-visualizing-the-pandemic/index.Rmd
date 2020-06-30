@@ -3,7 +3,7 @@ title: Visualizing the Pandemic
 subtitle: "Comparing Trajectories of COVID-19 across Countries"
 author: Andriy Koval
 date: '2020-06-22'
-slug: []
+slug: [visualizing-pandemic-vada-2020]
 categories:
   - graph making
 tags:
