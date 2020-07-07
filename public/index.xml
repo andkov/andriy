@@ -627,6 +627,25 @@ survived ~ sex + age + passenger_class + port_embarked
     </item>
     
     <item>
+      <title>Blueprints for Learning</title>
+      <link>/publication/koval-2018-blueprints-for-learning/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/koval-2018-blueprints-for-learning/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Poster presented at the &lt;a href=&#34;http://chspr.ubc.ca/conference/past-conferences/2018-the-system-awakens/&#34;&gt;30th conference of the Centre for Health Services and Policy Research&lt;/a&gt;, Vancouver, BC&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;chspr-2018-poster.pdf&#34;&gt;&lt;img src=&#34;chspr-2018-poster.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this poster we present a framework for planning and implementing research projects that rely on skills and techniques of “data science” to generate actionable knowledge from linked, full-cross-continuum health data in the context of learning healthcare system.&lt;/p&gt;
+&lt;p&gt;First, we lay out the elements of the general framework for applied health data science (AHDS), exemplifying a generic workflow process. Then we delineate critical features of the environments for data access and data analysis that are critical to ensuring practical reproducibility - a paramount consideration for building a healthcare system that learns.&lt;/p&gt;
+&lt;p&gt;Using an ongoing research program at the Stroke Rapid Assessment Unit at VIHA, we proceed to demonstrate how a specific implementation of this framework transmutes into the research/analytical core of the Cognitive Health Initiative (CHI), which pursues a combination of computerized cognitive assessments and provider-generated clinical records to advance the accuracy of diagnosing and to improve patient care. Data visualizations of person-level and cohort-level are provided.&lt;/p&gt;
+&lt;p&gt;We conclude by demonstrating how this framework could be instantiated to support two projects of the current HSI fellow. The first project, explores the predictive capacity of clinical transactions (i.e. how healthcare system was engaged by the patient) to anticipate catastrophic medical events, such as opioid overdose (OO) or a death from an OO. The second project aims to leverage directly off of transactional records generated at a full continuum of services to enhance the surveillance of MHSU conditions, which are notoriously prone to be misrepresented by administrative sources of data.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Independent and Interactive Impacts of Hypertension and Diabetes Mellitus on Verbal Memory</title>
       <link>/publication/kelly-2016-hypertension-diabetes-memory/</link>
       <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>

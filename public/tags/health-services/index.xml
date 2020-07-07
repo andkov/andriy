@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>health services on Andriy Koval</title>
+    <link>/tags/health-services/</link>
+    <description>Recent content in health services on Andriy Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Andriy Koval</copyright>
+    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/health-services/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blueprints for Learning</title>
+      <link>/publication/koval-2018-blueprints-for-learning/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/koval-2018-blueprints-for-learning/</guid>
+      <description>Describes the tools and framework for identifying, describing, and analyzing person- and cohort- level service utilization in complex health service terrain.</description>
+    </item>
+    
+  </channel>
+</rss>
