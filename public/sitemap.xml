@@ -677,7 +677,71 @@
   
   <url>
     <loc>/publication_types/7/</loc>
-    <lastmod>2004-12-05T00:00:00+00:00</lastmod>
+    <lastmod>2014-08-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/koval-2014-phd-thesis/</loc>
+    <lastmod>2014-08-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/graph-making/</loc>
+    <lastmod>2014-08-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/interface-design/</loc>
+    <lastmod>2014-08-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/latent-growth-curves/</loc>
+    <lastmod>2014-08-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/longitudinal-modeling/</loc>
+    <lastmod>2014-08-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/model-sequences/</loc>
+    <lastmod>2014-08-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/thesis/</loc>
+    <lastmod>2014-08-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/koval-2008-master-thesis/</loc>
+    <lastmod>2008-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/monte-carlo-simulation/</loc>
+    <lastmod>2008-08-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/differential-item-functioning/</loc>
+    <lastmod>2008-08-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/psychometrics/</loc>
+    <lastmod>2008-08-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -700,12 +764,6 @@
   
   <url>
     <loc>/tags/survey/</loc>
-    <lastmod>2004-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/thesis/</loc>
     <lastmod>2004-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

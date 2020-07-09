@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>graph making on Andriy Koval</title>
+    <link>/tags/graph-making/</link>
+    <description>Recent content in graph making on Andriy Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Andriy Koval</copyright>
+    <lastBuildDate>Tue, 05 Aug 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/graph-making/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Graphical System for Longitudinal Modeling using Dynamic Documents.Application to NLSY97 Religiosity Data</title>
+      <link>/publication/koval-2014-phd-thesis/</link>
+      <pubDate>Tue, 05 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/koval-2014-phd-thesis/</guid>
+      <description>Proposes a graphical analysis and presentation system for fitting, evaluating, and reporting multilevel longitudinal models.</description>
+    </item>
+    
+  </channel>
+</rss>

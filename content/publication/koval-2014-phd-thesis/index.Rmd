@@ -1,0 +1,109 @@
+---
+title: A Graphical System for Longitudinal Modeling using Dynamic Documents.Application to NLSY97 Religiosity Data
+subtitle: PhD Thesis
+author: Andriy Koval
+
+date: '2014-08-05'
+
+slug: [koval-2014-graphical-methods-model-sequence]
+categories:
+  - thesis
+  
+tags:
+  - longitudinal modeling
+  - model sequences
+  - graph making
+  - interface design
+  - latent growth curves
+
+doi: ""
+featured: yes
+image: 
+  caption: ''
+  focal_point: "Center"
+  preview_only: no
+projects: [education]
+publication_types:
+- "7"
+
+
+summary: Proposes a graphical analysis and presentation system for fitting, evaluating, and reporting multilevel longitudinal models. 
+
+abstract: This dissertation proposes a graphical analysis and presentation system for fitting, evaluating, and reporting longitudinal models in social sciences. The graphical innovations demonstrated here address practical issues that arise in evaluating sequences of statistical models. A progression of nested or otherwise related models in a sequence creates a context for model comparisons. The proposed graphical methods provide the researcher with visualization tools to facilitate model evaluation, using data mapping and interactive document design. The study applies these methods to examine empirical trends of religious involvement using a nationally representative household sample of American youth, the National Longitudinal Survey of Youth, 1997 (NLSY97). Annual measures in the NLSY97 from 2000 to 2011 provided panel data on church attendance from approximately 9,000 individuals born between 1980 and 1984. These data are examined using latent curve models (LCM) to study the nature of change in religious involvement between ages 13 and 31. Data, code, and reproducibility instructions for this study are published as a GitHub repository and are available to the research community.
+
+authors:
+- admin
+
+url_code: ""
+url_dataset: ""
+url_pdf: "publication/koval-2014-phd-thesis/koval-2014-graphical-methods-model-sequences.pdf"
+url_poster: ""
+url_project: ""
+url_slides: ""
+url_source: ""
+url_video: ""
+---
+
+[download pdf](koval-2014-graphical-methods-model-sequences.pdf)
+
+Defended on August 5, 2014, in  partial fulfillment of the requirements for the degree of Doctor of Philosophy, in the Quantitative Methods program of Peabody College of Education and Human Development, Vanderbilt University. 
+
+
+# Table of Content
+
+## Introduction
+Overview    
+Model Sequences  
+An Applied Example  
+Graphical Methods for Model Sequences   
+Organization and Chapter Summary  
+
+## Literature Review 
+The Challenge of Model Complexity  
+- Complexity on the rise   
+- Types of complexity   
+Review of Longitudinal Methods  
+Modeling Religiosity   
+
+## Methods 
+NLSY97 Sample   
+Data and Measures   
+- Selected variables  
+- Data structures   
+- Focus Outcome Variable: Church Attendance  
+Research Methodology   
+- Model Specification  
+
+## Results   
+Descriptives   
+- Age and basic demographic  
+- Church attendance: cross-sectional view  
+Sequence of latent curve models  
+- Fitted models   
+- Representing model solution  
+- Model selection criteria  
+- Model analysis and synthesis  
+- Other custom sequences   
+- Changing the metric of time  
+Conclusions   
+
+# Discussion 
+Dynamics of church attendance  
+Uses and Applications  
+- Analysis and Synthesis   
+- Reproduction   
+- Communication   
+- Limitations and Future Directions  
+Conclusions  
+
+## References 
+
+## Appendix 
+
+
+
+
+
+
+
+
