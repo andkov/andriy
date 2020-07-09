@@ -1,0 +1,83 @@
+---
+title: Influence of Brand Advertising on the Nature of Interpersonal Communication in Ukrainian Society
+subtitle: Undergraduate Thesis
+author: Andriy Koval
+
+date: '2004-12-05'
+
+slug: [koval-2004-influence-of-brands-in-ukraine]
+categories:
+  - thesis
+  
+tags:
+  - advertising
+  - survey
+  - Ukraine
+
+doi: ""
+featured: yes
+image: 
+  caption: ''
+  focal_point: "Center"
+  preview_only: no
+projects: [education]
+publication_types:
+- "7"
+
+
+summary: Explores the history of brand advertising and its implementation in the emergence market economy of post-soviet Ukraine, specifically the effects of western marketing campaigns on the fabric of interpersonal relations and communication. 
+
+authors:
+- admin
+
+url_code: ""
+url_dataset: ""
+url_pdf: "publication/koval-2004-undergraduate-thesis/koval-2004-influences-of-brands-in-ukraine.pdf"
+url_poster: ""
+url_project: ""
+url_slides: ""
+url_source: ""
+url_video: ""
+---
+[download pdf](koval-2004-influences-of-brands-in-ukraine.pdf)
+
+Defended on December 5, 2004, in fulfillment of requirements by the Honors College of Middle Tennessee State University. Thesis explores the history of brand advertising and its implementation in the emergence market economy of post-soviet Ukraine, specifically the effects of western marketing campaigns on the fabric of interpersonal relations and communication. 
+
+# Table of Content
+
+### Part I.  Advertising and Branding : History, Concepts, Psychology
+
+Chapter 1. Introduction and major concepts  
+Chapter 2. Origins of consumer culture 1865-1917  
+Chapter 3. Evolution in the market place  
+Chapter 4. De-personalization of markets and growth of individualism  
+Chapter 5. Advertising/Branding - Psychological concepts and applications  
+Chapter 6. Model of brand advertising  
+  - Function 1. Informational and pseudo-information  
+  - Function 2. Self-identification  
+  - Function 3. Self-expression  
+
+### Part II. The Brandless Country
+
+Chapter 7. Advertising in the Soviet Union  
+Chapter 8. Advertising in Independent Ukraine  
+  - A. Who owns advertising industry in Ukraine?  
+  - B. Who owns business in Ukraine?  
+  - C. Who spends the most on advertising?  
+  - D. Who has most popular brands?	  
+
+### Part III. Research and analysis 
+
+Chapter 9. Purpose, Design, Makeup, Hypotheses  
+Chapter 10. Results and Analysis  
+Chapter 11. Conclusion  
+
+## Bibliography
+
+## Appendix
+
+
+
+
+
+

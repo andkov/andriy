@@ -345,5 +345,32 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Ukraine</title>
+      <link>/tags/ukraine/</link>
+      <pubDate>Sun, 05 Dec 2004 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ukraine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>advertising</title>
+      <link>/tags/advertising/</link>
+      <pubDate>Sun, 05 Dec 2004 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/advertising/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>survey</title>
+      <link>/tags/survey/</link>
+      <pubDate>Sun, 05 Dec 2004 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/survey/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
