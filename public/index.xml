@@ -7,10 +7,286 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Mon, 22 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Florida Suicides (2) - Youth Trends</title>
+      <link>/post/2020-08-02-florida-suicide-2/</link>
+      <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-08-02-florida-suicide-2/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data&#34;&gt;Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#q1---overall-trend&#34;&gt;Q1 - Overall Trend&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#q2---suicide-across-lifespan&#34;&gt;Q2 - Suicide across lifespan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#q3---prevalent-methods&#34;&gt;Q3 - Prevalent Methods&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#q4---methods-across-years&#34;&gt;Q4 - Methods across Years&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#q5---sex-and-ethnicity&#34;&gt;Q5 - Sex and Ethnicity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#session-information&#34;&gt;session information&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This blogpost graphs the trends of youth suicides in Florida from 2006 to 2017, exploring the differences in age, sex, and race among persons 10 years and older.&lt;/p&gt;
+&lt;!-- These two chunks should be added in the beginning of every .Rmd that you want to source an .R script --&gt;
+&lt;!--  The 1st mandatory chunck  --&gt;
+&lt;!--  Set the working directory to the repository&#39;s base directory --&gt;
+&lt;!--  The 2nd mandatory chunck  --&gt;
+&lt;!-- Set the report-wide options, and point to the external code file. --&gt;
+&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Abstract&lt;/h1&gt;
+&lt;!-- NEED TO UPDATE  --&gt;
+&lt;p&gt;This blogpost explores suicide trends among youth (ages 10 - 24) in Florida between 2006 and 2017, examining the effects of race and gender. The post answers the following questions with respect to population in focus:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q1 - What is the overall trajectory of youth suicides in FL between 2006 and 2017?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q2 - What ages are most vulnerable to suicide?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q3 - What are the most prevalent methods of youth suicide?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q4 - How do trends compare across the methods of suicide?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q5 - How do trends compare by race, sex, and methods of suicide?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- Load &#39;sourced&#39; R files.  Suppress the output when loading packages. --&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data&lt;/h1&gt;
+&lt;p&gt;The suicide data comes from &lt;a href=&#34;http://www.flhealthcharts.com/charts/default.aspx&#34;&gt;Florida Health Charts&lt;/a&gt; and contains suicide mortality between 2006 and 2017, broken down by suicide means, county, sex, age, and race. Additionally, we use &lt;a href=&#34;https://wonder.cdc.gov/bridged-race-population.html&#34;&gt;Bridged-Race Population Estimates&lt;/a&gt; to help with age-specific rate calculations.&lt;/p&gt;
+&lt;p&gt;The groomed data sets are available for download: &lt;a href=&#34;https://github.com/dss-hmi/suicide-prevention-2019/blob/d72ee51834ab48ab84547e20a6109a13aa88d2a2/data-public/derived/9-population-suicide.rds&#34;&gt;FL Suicides&lt;/a&gt; and &lt;a href=&#34;https://github.com/dss-hmi/suicide-prevention-2019/blob/d72ee51834ab48ab84547e20a6109a13aa88d2a2/data-public/derived/9-population-suicide-2.rds&#34;&gt;FL Population Estimates&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The observation unit is defined by the first 6 variables: &lt;code&gt;county&lt;/code&gt;, &lt;code&gt;year&lt;/code&gt;, &lt;code&gt;sex&lt;/code&gt;, &lt;code&gt;race&lt;/code&gt;, &lt;code&gt;ethnicity&lt;/code&gt;, &lt;code&gt;age_group&lt;/code&gt;. For each unit, there are two measures: the number of people (&lt;code&gt;n_population&lt;/code&gt;) and the number of observed suicide events (&lt;code&gt;n_suicides&lt;/code&gt;). The latter is broken down by means of suicide.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Rows: 19,296
+Columns: 16
+$ county                                &amp;lt;fct&amp;gt; Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Alachu...
+$ year                                  &amp;lt;int&amp;gt; 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2006, 200...
+$ sex                                   &amp;lt;fct&amp;gt; Female, Female, Female, Female, Female, Female, Female, Female, Femal...
+$ age_group                             &amp;lt;fct&amp;gt; 10-14, 15-19, 20-24, 10-14, 15-19, 20-24, 10-14, 15-19, 20-24, 10-14,...
+$ race                                  &amp;lt;fct&amp;gt; Black &amp;amp; Other, Black &amp;amp; Other, Black &amp;amp; Other, Black &amp;amp; Other, Black &amp;amp; O...
+$ ethnicity                             &amp;lt;fct&amp;gt; Hispanic, Hispanic, Hispanic, Non-Hispanic, Non-Hispanic, Non-Hispani...
+$ n_population                          &amp;lt;int&amp;gt; 50, 125, 250, 2410, 3763, 4695, 390, 1038, 2060, 3215, 6993, 14660, 5...
+$ n_suicides                            &amp;lt;int&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Drugs &amp;amp; Biological Substances`       &amp;lt;dbl&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Other Gases &amp;amp; Vapors`                &amp;lt;dbl&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Hanging, Strangulation, Suffocation` &amp;lt;dbl&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Firearms Discharge`                  &amp;lt;dbl&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Jump From High Place`                &amp;lt;dbl&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Other &amp;amp; Unspec &amp;amp; Sequelae`           &amp;lt;dbl&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Other &amp;amp; Unspec Sol/Liq &amp;amp; Vapor`      &amp;lt;dbl&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ race_ethnicity                        &amp;lt;fct&amp;gt; Black &amp;amp; Other + Hispanic, Black &amp;amp; Other + Hispanic, Black &amp;amp; Other + H...&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Rows: 875,824
+Columns: 11
+$ county         &amp;lt;fct&amp;gt; Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Al...
+$ year           &amp;lt;int&amp;gt; 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 20...
+$ sex            &amp;lt;fct&amp;gt; Female, Female, Female, Female, Female, Female, Female, Female, Female, Female, Female, Fema...
+$ age            &amp;lt;int&amp;gt; 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7,...
+$ race           &amp;lt;fct&amp;gt; Black &amp;amp; Other, Black &amp;amp; Other, White, White, Black &amp;amp; Other, Black &amp;amp; Other, White, White, Blac...
+$ ethnicity      &amp;lt;fct&amp;gt; Hispanic, Non-Hispanic, Hispanic, Non-Hispanic, Hispanic, Non-Hispanic, Hispanic, Non-Hispan...
+$ n_population   &amp;lt;dbl&amp;gt; 9, 413, 61, 672, 6, 368, 66, 602, 11, 401, 57, 655, 9, 364, 76, 629, 8, 363, 51, 633, 3, 383...
+$ n_suicides     &amp;lt;int&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
+$ n_firearms     &amp;lt;int&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
+$ n_other        &amp;lt;int&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
+$ race_ethnicity &amp;lt;fct&amp;gt; Black &amp;amp; Other + Hispanic, Black &amp;amp; Other + Non-Hispanic, White + Hispanic, White + Non-Hispan...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Another data set, &lt;code&gt;ds2&lt;/code&gt;, augmented with CDC population estimates, has very similar structure, but differs from &lt;code&gt;ds1&lt;/code&gt; in three respects:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Instead of &lt;code&gt;age_group&lt;/code&gt; it features &lt;code&gt;age&lt;/code&gt;, measured in whole years, providing higher resolution&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Mortality cause is grouped into two categories &lt;code&gt;fireamrs&lt;/code&gt; and &lt;code&gt;other&lt;/code&gt;, as opposed to a more granular, 7-category classification of mortality cause in &lt;code&gt;ds1&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Covers years &lt;code&gt;2000-2018&lt;/code&gt; as opposed to &lt;code&gt;2006-2018&lt;/code&gt; in &lt;code&gt;ds1&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;summary-of-differences-in-data-sets-used-in-the-report&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Summary of differences in data sets used in the report:&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;data set&lt;/th&gt;
+&lt;th&gt;suicide means&lt;/th&gt;
+&lt;th&gt;age resolution&lt;/th&gt;
+&lt;th&gt;years covered&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;ds1&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;age group&lt;/td&gt;
+&lt;td&gt;2006 - 2017&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;ds2&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;1 year&lt;/td&gt;
+&lt;td&gt;2000 - 2018&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;These differences arose from certain limitations in data procurement. We use &lt;code&gt;ds2&lt;/code&gt; to explore age difference with higher resolution, at the expense of reducing resolution in mortality cause.&lt;/p&gt;
+&lt;p&gt;The combined variable &lt;code&gt;race_ethinicity&lt;/code&gt; is the product of the two respective components and was made to be idendical in both data sets:&lt;/p&gt;
+&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;ds1 %&amp;gt;% distinct(race, ethnicity, race_ethnicity) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;# A tibble: 4 x 3
+  race          ethnicity    race_ethnicity              
+  &amp;lt;fct&amp;gt;         &amp;lt;fct&amp;gt;        &amp;lt;fct&amp;gt;                       
+1 Black &amp;amp; Other Hispanic     Black &amp;amp; Other + Hispanic    
+2 Black &amp;amp; Other Non-Hispanic Black &amp;amp; Other + Non-Hispanic
+3 White         Hispanic     White + Hispanic            
+4 White         Non-Hispanic White + Non-Hispanic        &lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r numberLines&#34;&gt;&lt;code&gt;all.equal(
+ds1 %&amp;gt;% distinct(race, ethnicity, race_ethnicity) ,
+ds2 %&amp;gt;% distinct(race, ethnicity, race_ethnicity) 
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] &amp;quot;Attributes: &amp;lt; Component \&amp;quot;class\&amp;quot;: Lengths (4, 3) differ (string compare on first 3) &amp;gt;&amp;quot;
+[2] &amp;quot;Attributes: &amp;lt; Component \&amp;quot;class\&amp;quot;: 3 string mismatches &amp;gt;&amp;quot;                              &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q1---overall-trend&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Q1 - Overall Trend&lt;/h1&gt;
+&lt;p&gt;To begin, let us answer the most fundamental question:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q1 - What is the overall trajectory of youth suicides in FL between 2006 and 2017?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To aid interpretation we have created an additional metric &lt;code&gt;1 out of&lt;/code&gt;, which is a direct inverse of &lt;code&gt;Rate per 100K&lt;/code&gt;, but offers a different perspective on the magnitude of the estimate. The numerical value of this metric answer the question &lt;strong&gt;“One in how many individuals commit suicide?”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;figure_rmd/q1-1-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The number of youth suicides increased by &lt;code&gt;98&lt;/code&gt; cases, rising from &lt;code&gt;203&lt;/code&gt; in 2006 to &lt;code&gt;301&lt;/code&gt; in 2017, constituting a 33% growth. If in &lt;code&gt;2006&lt;/code&gt; one out every &lt;code&gt;17.5&lt;/code&gt; thousands committed suicide, in &lt;code&gt;2017&lt;/code&gt; one out of every &lt;code&gt;12&lt;/code&gt; thousand individuals between age &lt;code&gt;10&lt;/code&gt; and &lt;code&gt;24&lt;/code&gt; took their own life. The demographic growth does not explain the increased number of suicide cases: the rate per &lt;code&gt;100,000&lt;/code&gt; increased by 45% from &lt;code&gt;5.74&lt;/code&gt; to &lt;code&gt;8.34&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Given these general trends for the entire &lt;code&gt;10 - 24&lt;/code&gt; group, we would like to understand how trends in population growth, suicide count and suicide rate compare among age group:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;figure_rmd/q1-2-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;10-14&lt;/code&gt; age group exhibits quite a dramatic decrease in the &lt;code&gt;One out of&lt;/code&gt; measure, dwarfing the scale for the other two age groups. We recreate it separately:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;figure_rmd/q1-3-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Demographic changes deserved to be examined seperately:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;figure_rmd/q1-4-1.png&#34; width=&#34;900px&#34; /&gt;
+Note the sharp change in population count from &lt;code&gt;2011&lt;/code&gt; to &lt;code&gt;2013&lt;/code&gt;. The &lt;code&gt;15-19&lt;/code&gt; group dropped, while the &lt;code&gt;20-24&lt;/code&gt; group grew quite dramatically. A closer examination, shows that while this demographic growth was present in all racial groups, it was particularly pronounced among &lt;code&gt;Non-white + Non-Hispanic&lt;/code&gt; youth. One possible explanation could be attributed to cohort effect: disproportionate amount of those in &lt;code&gt;15-19&lt;/code&gt; group transitioned to &lt;code&gt;20-24&lt;/code&gt; group during these years, but were not matched by the similar number of &lt;code&gt;10-14&lt;/code&gt;year old transitioning into &lt;code&gt;15-19&lt;/code&gt; group. Another possible explanation could reside in migration patterns.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q2---suicide-across-lifespan&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Q2 - Suicide across lifespan&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q2 - What ages are most vulnerable to suicide?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To explore whether certain age transitions are associated with increased suicidality, we plot the distribution of suicide events within each year of age among the observed years (2006 - 2018).
+&lt;img src=&#34;figure_rmd/q2-1-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;There appears to be two plateaux across the lifespan, each preceeded by sharp increase: the first from ages &lt;code&gt;25&lt;/code&gt; to &lt;code&gt;40&lt;/code&gt; and another from ages &lt;code&gt;45&lt;/code&gt; to &lt;code&gt;60&lt;/code&gt;, after which the frequency of suicide declines monotonically.&lt;/p&gt;
+&lt;p&gt;We see a marked spike in deaths during the 17 to 18 transition.
+It appears the majority of deaths in 10-14 groups could be attributed to 13 and 14 year olds (vertial dashed line). The plateau following the age 25 makes theoretical sense: after the turmoils of coming out of age and young adulthood, there life acquires a more stable character.
+&lt;img src=&#34;figure_rmd/q2-2-1.png&#34; width=&#34;900px&#34; /&gt;
+Also note, that when examining the trends within the &lt;code&gt;10-24&lt;/code&gt; age group, the relationship between the age and the suicide mortality is very well summarized by a linear model (&lt;span class=&#34;math inline&#34;&gt;\(R^2 = .85\)&lt;/span&gt;):
+&lt;img src=&#34;figure_rmd/q2-3-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q3---prevalent-methods&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Q3 - Prevalent Methods&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q3 - What are the most prevalent methods of youth suicide?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Florida Health Charts captures the causes of suicide mortality using &lt;code&gt;7&lt;/code&gt; categories. We examine the raw event count and rates per &lt;code&gt;100,000&lt;/code&gt; rates in the following two graphs:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;figure_rmd/q3-1-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Notice that two methods &lt;code&gt;gun&lt;/code&gt; and &lt;code&gt;hanging&lt;/code&gt; consistently explain the most cases of suicide in this age group. Going further, we will collapse the other &lt;code&gt;5&lt;/code&gt; categories into a single &lt;code&gt;non-gun/hang&lt;/code&gt;, so that we have sufficient &lt;code&gt;n&lt;/code&gt; to compute reliable rates.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;figure_rmd/q3-2-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q4---methods-across-years&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Q4 - Methods across Years&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q4 - How do trends compare across the methds of suicide?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;figure_rmd/q4-1-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;When ignoring race and ethnicity, the average increase in the annual rate of suicide mortality from gun (+0.0996) is 1.5 times higher than that from Hanging (+.0672) and 2.6 times higher than other means (+.0377). Notice also, that mortality from firearms and hanging follow the trajectory closely described by a linear trend: &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; = .7 and &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; = .64, respectively.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;figure_rmd/q4-2-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q5---sex-and-ethnicity&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Q5 - Sex and Ethnicity&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q5 - How do trends compare by race, sex, and means of means of suicide?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;figure_rmd/q5-1-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The most prominent increase, dwarfing others, is observed among White Non-Hispanic men, rising from 6.8 in 2006 to 11.3 in 2017, constituting a 65% growth. Between these years, the rate per 100,000 in this category was increasing on average by &lt;code&gt;.33&lt;/code&gt; per year.&lt;/p&gt;
+&lt;p&gt;Among white women of both Hispanic and Non-Hispanic origin, this growth was substantially smaller, about &lt;code&gt;+.06&lt;/code&gt; per year, similar to the growth in the rate of suicide by means other than firearms or hanging. However, suicides by hanging was increasing by &lt;code&gt;+.09&lt;/code&gt; per year.&lt;/p&gt;
+&lt;p&gt;For Non-White Non-Hispanic women, the largest growth in suicide rates was observed from hanging (&lt;code&gt;+.1&lt;/code&gt;), while suicides by other means barely increased.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;figure_rmd/q5-2-1.png&#34; width=&#34;900px&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;session-information&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;session information&lt;/h1&gt;
+&lt;p&gt;Click &lt;strong&gt;&lt;a href=&#34;https://raw.githack.com/dss-hmi/suicide-prevention-2019/570ca98ae20b2260a2bc9c25e5938ff3aebadac0/analysis/florida-suicide-10_24/fl-suicide-10_24.html&#34;&gt;HERE&lt;/a&gt;&lt;/strong&gt; to view report in its native environment of the &lt;a href=&#34;https://github.com/dss-hmi/suicide-prevention-2019&#34;&gt;suicide-prevention-2019&lt;/a&gt; repository.&lt;/p&gt;
+&lt;p&gt;For the sake of documentation and reproducibility, the current report was rendered in the following environment. Click the line below to expand.&lt;/p&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt;Environment &lt;span class=&#34;glyphicon glyphicon-plus-sign&#34;&gt;&lt;/span&gt;&lt;/summary&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- Session info -------------------------------------------------------------------------------------------------------
+ setting  value                       
+ version  R version 4.0.2 (2020-06-22)
+ os       Windows 10 x64              
+ system   x86_64, mingw32             
+ ui       RTerm                       
+ language (EN)                        
+ collate  English_United States.1252  
+ ctype    English_United States.1252  
+ tz       America/New_York            
+ date     2020-08-30                  
+
+- Packages -----------------------------------------------------------------------------------------------------------
+ package     * version date       lib source        
+ assertthat    0.2.1   2019-03-21 [1] CRAN (R 4.0.2)
+ backports     1.1.7   2020-05-13 [1] CRAN (R 4.0.0)
+ blogdown      0.20    2020-06-23 [1] CRAN (R 4.0.2)
+ bookdown      0.20    2020-06-23 [1] CRAN (R 4.0.2)
+ callr         3.4.3   2020-03-28 [1] CRAN (R 4.0.2)
+ cli           2.0.2   2020-02-28 [1] CRAN (R 4.0.2)
+ colorspace    1.4-1   2019-03-18 [1] CRAN (R 4.0.2)
+ crayon        1.3.4   2017-09-16 [1] CRAN (R 4.0.2)
+ desc          1.2.0   2018-05-01 [1] CRAN (R 4.0.2)
+ devtools      2.3.1   2020-07-21 [1] CRAN (R 4.0.2)
+ digest        0.6.25  2020-02-23 [1] CRAN (R 4.0.2)
+ dplyr       * 1.0.1   2020-07-31 [1] CRAN (R 4.0.2)
+ ellipsis      0.3.1   2020-05-15 [1] CRAN (R 4.0.2)
+ evaluate      0.14    2019-05-28 [1] CRAN (R 4.0.2)
+ fansi         0.4.1   2020-01-08 [1] CRAN (R 4.0.2)
+ fs            1.5.0   2020-07-31 [1] CRAN (R 4.0.2)
+ generics      0.0.2   2018-11-29 [1] CRAN (R 4.0.2)
+ ggplot2     * 3.3.2   2020-06-19 [1] CRAN (R 4.0.2)
+ glue          1.4.1   2020-05-13 [1] CRAN (R 4.0.2)
+ gtable        0.3.0   2019-03-25 [1] CRAN (R 4.0.2)
+ htmltools     0.5.0   2020-06-16 [1] CRAN (R 4.0.2)
+ knitr       * 1.29    2020-06-23 [1] CRAN (R 4.0.2)
+ lifecycle     0.2.0   2020-03-06 [1] CRAN (R 4.0.2)
+ magrittr    * 1.5     2014-11-22 [1] CRAN (R 4.0.2)
+ memoise       1.1.0   2017-04-21 [1] CRAN (R 4.0.2)
+ munsell       0.5.0   2018-06-12 [1] CRAN (R 4.0.2)
+ pillar        1.4.6   2020-07-10 [1] CRAN (R 4.0.2)
+ pkgbuild      1.1.0   2020-07-13 [1] CRAN (R 4.0.2)
+ pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.0.2)
+ pkgload       1.1.0   2020-05-29 [1] CRAN (R 4.0.2)
+ prettyunits   1.1.1   2020-01-24 [1] CRAN (R 4.0.2)
+ processx      3.4.3   2020-07-05 [1] CRAN (R 4.0.2)
+ ps            1.3.4   2020-08-11 [1] CRAN (R 4.0.2)
+ purrr         0.3.4   2020-04-17 [1] CRAN (R 4.0.2)
+ R6            2.4.1   2019-11-12 [1] CRAN (R 4.0.2)
+ remotes       2.2.0   2020-07-21 [1] CRAN (R 4.0.2)
+ rlang         0.4.7   2020-07-09 [1] CRAN (R 4.0.2)
+ rmarkdown     2.3     2020-06-18 [1] CRAN (R 4.0.2)
+ rprojroot     1.3-2   2018-01-03 [1] CRAN (R 4.0.2)
+ scales        1.1.1   2020-05-11 [1] CRAN (R 4.0.2)
+ sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 4.0.2)
+ stringi       1.4.6   2020-02-17 [1] CRAN (R 4.0.0)
+ stringr       1.4.0   2019-02-10 [1] CRAN (R 4.0.2)
+ testthat      2.3.2   2020-03-02 [1] CRAN (R 4.0.2)
+ tibble        3.0.3   2020-07-10 [1] CRAN (R 4.0.2)
+ tidyr         1.1.1   2020-07-31 [1] CRAN (R 4.0.2)
+ tidyselect    1.1.0   2020-05-11 [1] CRAN (R 4.0.2)
+ usethis       1.6.1   2020-04-29 [1] CRAN (R 4.0.2)
+ utf8          1.1.4   2018-05-24 [1] CRAN (R 4.0.2)
+ vctrs         0.3.2   2020-07-15 [1] CRAN (R 4.0.2)
+ withr         2.2.0   2020-04-20 [1] CRAN (R 4.0.2)
+ xfun          0.16    2020-07-24 [1] CRAN (R 4.0.2)
+ yaml          2.2.1   2020-02-01 [1] CRAN (R 4.0.2)
+
+[1] C:/Users/an499583/OneDrive - University of Central Florida/Documents/R/win-library/4.0
+[2] C:/Program Files/R/R-4.0.2/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Visualizing the Pandemic</title>
@@ -93,6 +369,7 @@
 &lt;li&gt;&lt;a href=&#34;https://bookdown.org/rdpeng/rprogdatascience/&#34; target=&#34;_blank&#34;&gt;R Programming for Data Science&lt;/a&gt; by Roger Peng&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://bradleyboehmke.github.io/HOML/&#34; target=&#34;_blank&#34;&gt;Hands-On Machine Learning with R&lt;/a&gt; Bradley Boehmke &amp;amp; Brandon Greenwell&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://faculty.marshall.usc.edu/gareth-james/ISL/&#34; target=&#34;_blank&#34;&gt;An Introduction to Statistical Learning with Applications in R&lt;/a&gt; by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learningstatisticswithr.com/&#34; target=&#34;_blank&#34;&gt;Learning Statistics with R&lt;/a&gt; by Danielle Navarro&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;courses&#34;&gt;Courses&lt;/h1&gt;

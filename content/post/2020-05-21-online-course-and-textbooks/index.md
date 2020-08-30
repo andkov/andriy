@@ -10,7 +10,7 @@ tags:
   - R
   - ggplot2
 subtitle: ''
-summary: 'A list of learning resources that I find particularly useful'
+summary: 'A list of learning resources that I like having on speed daile'
 authors: [Andriy Koval]
 lastmod: '2020-05-21'
 featured: yes
@@ -32,6 +32,7 @@ projects: []
 - [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/) by Roger Peng
 - [Hands-On Machine Learning with R](https://bradleyboehmke.github.io/HOML/) Bradley Boehmke & Brandon Greenwell  
 - [An Introduction to Statistical Learning with Applications in R](http://faculty.marshall.usc.edu/gareth-james/ISL/) by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani  
+- [Learning Statistics with R](https://learningstatisticswithr.com/) by Danielle Navarro  
 
 # Courses
 

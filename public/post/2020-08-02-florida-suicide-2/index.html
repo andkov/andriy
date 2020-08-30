@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Andriy Koval">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Graphing the trends of suicides in Florida from 2006 to 2017 among youth between 10 and 24 years of age.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/2020-08-02-florida-suicide-2/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/2.9.0/instantsearch.min.css" integrity="sha256-ZtmLe16p4jS4/2wPwwH6NzJt460SJzgLmhKrYo5yn7g=" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/2.10.2/instantsearch-theme-algolia.min.css" integrity="sha256-uL8LUd3zkI/lXvc/Hv/oOu8ld6RJcOZiUY/8c+I+3/o=" crossorigin="anonymous">
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.9719cd294ab7e6e5f592b968ad0d9c31.css">
+
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-141694793-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/2020-08-02-florida-suicide-2/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@andkovpro">
+  <meta property="twitter:creator" content="@andkovpro">
+  
+  <meta property="og:site_name" content="Andriy Koval">
+  <meta property="og:url" content="/post/2020-08-02-florida-suicide-2/">
+  <meta property="og:title" content="Florida Suicides (2) - Youth Trends | Andriy Koval">
+  <meta property="og:description" content="Graphing the trends of suicides in Florida from 2006 to 2017 among youth between 10 and 24 years of age."><meta property="og:image" content="/post/2020-08-02-florida-suicide-2/featured.jpg">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2020-08-30T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2020-08-30T00:00:00&#43;00:00">
+  
+
+  
+
+  
+
+  <title>Florida Suicides (2) - Youth Trends | Andriy Koval</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Andriy Koval</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/">
+            
+            <span>Courses</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-header d-xl-none">
+  <div class="featured-image" style="background-image: url('/post/2020-08-02-florida-suicide-2/featured_hu8b7432b592769310466c8ff42a129efe_213367_800x0_resize_q90_lanczos.jpg');"></div>
+  
+</div>
+
+
+<div class="container-fluid split-header d-none d-xl-block">
+  <div class="row">
+    <div class="col-6">
+      <div class="split-header-content">
+        <h1 itemprop="name">Florida Suicides (2) - Youth Trends</h1>
+
+        
+        <p class="page-subtitle">Trends among 10-24 year olds</p>
+        
+
+        
+
+
+
+<meta content="2020-08-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2020-08-30 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/andriy-koval/">Andriy Koval</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/kyle-belanger/">Kyle Belanger</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>2020-08-30</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    11 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/2020-08-02-florida-suicide-2/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    <a href="/categories/analytic-workflow/">analytic workflow</a>, <a href="/categories/graph-making/">graph making</a>, <a href="/categories/reproducible-research/">reproducible research</a></span>
+  
+
+  
+
+</div>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/dss-hmi/suicide-prevention-2019" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Florida%20Suicides%20%282%29%20-%20Youth%20Trends&amp;url=%2fpost%2f2020-08-02-florida-suicide-2%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2020-08-02-florida-suicide-2%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2020-08-02-florida-suicide-2%2f&amp;title=Florida%20Suicides%20%282%29%20-%20Youth%20Trends"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2020-08-02-florida-suicide-2%2f&amp;title=Florida%20Suicides%20%282%29%20-%20Youth%20Trends"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Florida%20Suicides%20%282%29%20-%20Youth%20Trends&amp;body=%2fpost%2f2020-08-02-florida-suicide-2%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="split-header-image">
+        <img src="/post/2020-08-02-florida-suicide-2/featured_hu8b7432b592769310466c8ff42a129efe_213367_680x500_fill_q90_lanczos_center.jpg" itemprop="image" alt="">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-container d-xl-none">
+  <h1 itemprop="name">Florida Suicides (2) - Youth Trends</h1>
+
+  
+  <p class="page-subtitle">Trends among 10-24 year olds</p>
+  
+
+  
+
+
+
+<meta content="2020-08-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2020-08-30 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/andriy-koval/">Andriy Koval</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/kyle-belanger/">Kyle Belanger</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>2020-08-30</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    11 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/2020-08-02-florida-suicide-2/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    <a href="/categories/analytic-workflow/">analytic workflow</a>, <a href="/categories/graph-making/">graph making</a>, <a href="/categories/reproducible-research/">reproducible research</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=&amp;url="
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u="
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=&amp;body=">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/dss-hmi/suicide-prevention-2019" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#data">Data</a></li>
+<li><a href="#q1---overall-trend">Q1 - Overall Trend</a></li>
+<li><a href="#q2---suicide-across-lifespan">Q2 - Suicide across lifespan</a></li>
+<li><a href="#q3---prevalent-methods">Q3 - Prevalent Methods</a></li>
+<li><a href="#q4---methods-across-years">Q4 - Methods across Years</a></li>
+<li><a href="#q5---sex-and-ethnicity">Q5 - Sex and Ethnicity</a></li>
+<li><a href="#session-information">session information</a></li>
+</ul>
+</div>
+
+<p>This blogpost graphs the trends of youth suicides in Florida from 2006 to 2017, exploring the differences in age, sex, and race among persons 10 years and older.</p>
+<!-- These two chunks should be added in the beginning of every .Rmd that you want to source an .R script -->
+<!--  The 1st mandatory chunck  -->
+<!--  Set the working directory to the repository's base directory -->
+<!--  The 2nd mandatory chunck  -->
+<!-- Set the report-wide options, and point to the external code file. -->
+<div id="abstract" class="section level1">
+<h1>Abstract</h1>
+<!-- NEED TO UPDATE  -->
+<p>This blogpost explores suicide trends among youth (ages 10 - 24) in Florida between 2006 and 2017, examining the effects of race and gender. The post answers the following questions with respect to population in focus:</p>
+<blockquote>
+<p>Q1 - What is the overall trajectory of youth suicides in FL between 2006 and 2017?</p>
+</blockquote>
+<blockquote>
+<p>Q2 - What ages are most vulnerable to suicide?</p>
+</blockquote>
+<blockquote>
+<p>Q3 - What are the most prevalent methods of youth suicide?</p>
+</blockquote>
+<blockquote>
+<p>Q4 - How do trends compare across the methods of suicide?</p>
+</blockquote>
+<blockquote>
+<p>Q5 - How do trends compare by race, sex, and methods of suicide?</p>
+</blockquote>
+<!-- Load 'sourced' R files.  Suppress the output when loading packages. -->
+</div>
+<div id="data" class="section level1">
+<h1>Data</h1>
+<p>The suicide data comes from <a href="http://www.flhealthcharts.com/charts/default.aspx">Florida Health Charts</a> and contains suicide mortality between 2006 and 2017, broken down by suicide means, county, sex, age, and race. Additionally, we use <a href="https://wonder.cdc.gov/bridged-race-population.html">Bridged-Race Population Estimates</a> to help with age-specific rate calculations.</p>
+<p>The groomed data sets are available for download: <a href="https://github.com/dss-hmi/suicide-prevention-2019/blob/d72ee51834ab48ab84547e20a6109a13aa88d2a2/data-public/derived/9-population-suicide.rds">FL Suicides</a> and <a href="https://github.com/dss-hmi/suicide-prevention-2019/blob/d72ee51834ab48ab84547e20a6109a13aa88d2a2/data-public/derived/9-population-suicide-2.rds">FL Population Estimates</a>.</p>
+<p>The observation unit is defined by the first 6 variables: <code>county</code>, <code>year</code>, <code>sex</code>, <code>race</code>, <code>ethnicity</code>, <code>age_group</code>. For each unit, there are two measures: the number of people (<code>n_population</code>) and the number of observed suicide events (<code>n_suicides</code>). The latter is broken down by means of suicide.</p>
+<pre><code>Rows: 19,296
+Columns: 16
+$ county                                &lt;fct&gt; Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Alachu...
+$ year                                  &lt;int&gt; 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2006, 200...
+$ sex                                   &lt;fct&gt; Female, Female, Female, Female, Female, Female, Female, Female, Femal...
+$ age_group                             &lt;fct&gt; 10-14, 15-19, 20-24, 10-14, 15-19, 20-24, 10-14, 15-19, 20-24, 10-14,...
+$ race                                  &lt;fct&gt; Black &amp; Other, Black &amp; Other, Black &amp; Other, Black &amp; Other, Black &amp; O...
+$ ethnicity                             &lt;fct&gt; Hispanic, Hispanic, Hispanic, Non-Hispanic, Non-Hispanic, Non-Hispani...
+$ n_population                          &lt;int&gt; 50, 125, 250, 2410, 3763, 4695, 390, 1038, 2060, 3215, 6993, 14660, 5...
+$ n_suicides                            &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Drugs &amp; Biological Substances`       &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Other Gases &amp; Vapors`                &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Hanging, Strangulation, Suffocation` &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Firearms Discharge`                  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Jump From High Place`                &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Other &amp; Unspec &amp; Sequelae`           &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ `Other &amp; Unspec Sol/Liq &amp; Vapor`      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ race_ethnicity                        &lt;fct&gt; Black &amp; Other + Hispanic, Black &amp; Other + Hispanic, Black &amp; Other + H...</code></pre>
+<pre><code>Rows: 875,824
+Columns: 11
+$ county         &lt;fct&gt; Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Alachua, Al...
+$ year           &lt;int&gt; 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 20...
+$ sex            &lt;fct&gt; Female, Female, Female, Female, Female, Female, Female, Female, Female, Female, Female, Fema...
+$ age            &lt;int&gt; 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7,...
+$ race           &lt;fct&gt; Black &amp; Other, Black &amp; Other, White, White, Black &amp; Other, Black &amp; Other, White, White, Blac...
+$ ethnicity      &lt;fct&gt; Hispanic, Non-Hispanic, Hispanic, Non-Hispanic, Hispanic, Non-Hispanic, Hispanic, Non-Hispan...
+$ n_population   &lt;dbl&gt; 9, 413, 61, 672, 6, 368, 66, 602, 11, 401, 57, 655, 9, 364, 76, 629, 8, 363, 51, 633, 3, 383...
+$ n_suicides     &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
+$ n_firearms     &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
+$ n_other        &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
+$ race_ethnicity &lt;fct&gt; Black &amp; Other + Hispanic, Black &amp; Other + Non-Hispanic, White + Hispanic, White + Non-Hispan...</code></pre>
+<p>Another data set, <code>ds2</code>, augmented with CDC population estimates, has very similar structure, but differs from <code>ds1</code> in three respects:</p>
+<ol style="list-style-type: decimal">
+<li><p>Instead of <code>age_group</code> it features <code>age</code>, measured in whole years, providing higher resolution</p></li>
+<li><p>Mortality cause is grouped into two categories <code>fireamrs</code> and <code>other</code>, as opposed to a more granular, 7-category classification of mortality cause in <code>ds1</code></p></li>
+<li><p>Covers years <code>2000-2018</code> as opposed to <code>2006-2018</code> in <code>ds1</code></p></li>
+</ol>
+<div id="summary-of-differences-in-data-sets-used-in-the-report" class="section level4">
+<h4>Summary of differences in data sets used in the report:</h4>
+<table>
+<thead>
+<tr class="header">
+<th>data set</th>
+<th>suicide means</th>
+<th>age resolution</th>
+<th>years covered</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ds1</code></td>
+<td>7</td>
+<td>age group</td>
+<td>2006 - 2017</td>
+</tr>
+<tr class="even">
+<td><code>ds2</code></td>
+<td>2</td>
+<td>1 year</td>
+<td>2000 - 2018</td>
+</tr>
+</tbody>
+</table>
+<p>These differences arose from certain limitations in data procurement. We use <code>ds2</code> to explore age difference with higher resolution, at the expense of reducing resolution in mortality cause.</p>
+<p>The combined variable <code>race_ethinicity</code> is the product of the two respective components and was made to be idendical in both data sets:</p>
+<pre class="r numberLines"><code>ds1 %&gt;% distinct(race, ethnicity, race_ethnicity) </code></pre>
+<pre><code># A tibble: 4 x 3
+  race          ethnicity    race_ethnicity              
+  &lt;fct&gt;         &lt;fct&gt;        &lt;fct&gt;                       
+1 Black &amp; Other Hispanic     Black &amp; Other + Hispanic    
+2 Black &amp; Other Non-Hispanic Black &amp; Other + Non-Hispanic
+3 White         Hispanic     White + Hispanic            
+4 White         Non-Hispanic White + Non-Hispanic        </code></pre>
+<pre class="r numberLines"><code>all.equal(
+ds1 %&gt;% distinct(race, ethnicity, race_ethnicity) ,
+ds2 %&gt;% distinct(race, ethnicity, race_ethnicity) 
+)</code></pre>
+<pre><code>[1] &quot;Attributes: &lt; Component \&quot;class\&quot;: Lengths (4, 3) differ (string compare on first 3) &gt;&quot;
+[2] &quot;Attributes: &lt; Component \&quot;class\&quot;: 3 string mismatches &gt;&quot;                              </code></pre>
+</div>
+</div>
+<div id="q1---overall-trend" class="section level1">
+<h1>Q1 - Overall Trend</h1>
+<p>To begin, let us answer the most fundamental question:</p>
+<blockquote>
+<p>Q1 - What is the overall trajectory of youth suicides in FL between 2006 and 2017?</p>
+</blockquote>
+<p>To aid interpretation we have created an additional metric <code>1 out of</code>, which is a direct inverse of <code>Rate per 100K</code>, but offers a different perspective on the magnitude of the estimate. The numerical value of this metric answer the question <strong>“One in how many individuals commit suicide?”</strong></p>
+<p><img src="figure_rmd/q1-1-1.png" width="900px" /></p>
+<p>The number of youth suicides increased by <code>98</code> cases, rising from <code>203</code> in 2006 to <code>301</code> in 2017, constituting a 33% growth. If in <code>2006</code> one out every <code>17.5</code> thousands committed suicide, in <code>2017</code> one out of every <code>12</code> thousand individuals between age <code>10</code> and <code>24</code> took their own life. The demographic growth does not explain the increased number of suicide cases: the rate per <code>100,000</code> increased by 45% from <code>5.74</code> to <code>8.34</code>.</p>
+<p>Given these general trends for the entire <code>10 - 24</code> group, we would like to understand how trends in population growth, suicide count and suicide rate compare among age group:</p>
+<p><img src="figure_rmd/q1-2-1.png" width="900px" /></p>
+<p>The <code>10-14</code> age group exhibits quite a dramatic decrease in the <code>One out of</code> measure, dwarfing the scale for the other two age groups. We recreate it separately:</p>
+<p><img src="figure_rmd/q1-3-1.png" width="900px" /></p>
+<p>Demographic changes deserved to be examined seperately:</p>
+<p><img src="figure_rmd/q1-4-1.png" width="900px" />
+Note the sharp change in population count from <code>2011</code> to <code>2013</code>. The <code>15-19</code> group dropped, while the <code>20-24</code> group grew quite dramatically. A closer examination, shows that while this demographic growth was present in all racial groups, it was particularly pronounced among <code>Non-white + Non-Hispanic</code> youth. One possible explanation could be attributed to cohort effect: disproportionate amount of those in <code>15-19</code> group transitioned to <code>20-24</code> group during these years, but were not matched by the similar number of <code>10-14</code>year old transitioning into <code>15-19</code> group. Another possible explanation could reside in migration patterns.</p>
+</div>
+<div id="q2---suicide-across-lifespan" class="section level1">
+<h1>Q2 - Suicide across lifespan</h1>
+<blockquote>
+<p>Q2 - What ages are most vulnerable to suicide?</p>
+</blockquote>
+<p>To explore whether certain age transitions are associated with increased suicidality, we plot the distribution of suicide events within each year of age among the observed years (2006 - 2018).
+<img src="figure_rmd/q2-1-1.png" width="900px" /></p>
+<p>There appears to be two plateaux across the lifespan, each preceeded by sharp increase: the first from ages <code>25</code> to <code>40</code> and another from ages <code>45</code> to <code>60</code>, after which the frequency of suicide declines monotonically.</p>
+<p>We see a marked spike in deaths during the 17 to 18 transition.
+It appears the majority of deaths in 10-14 groups could be attributed to 13 and 14 year olds (vertial dashed line). The plateau following the age 25 makes theoretical sense: after the turmoils of coming out of age and young adulthood, there life acquires a more stable character.
+<img src="figure_rmd/q2-2-1.png" width="900px" />
+Also note, that when examining the trends within the <code>10-24</code> age group, the relationship between the age and the suicide mortality is very well summarized by a linear model (<span class="math inline">\(R^2 = .85\)</span>):
+<img src="figure_rmd/q2-3-1.png" width="900px" /></p>
+</div>
+<div id="q3---prevalent-methods" class="section level1">
+<h1>Q3 - Prevalent Methods</h1>
+<blockquote>
+<p>Q3 - What are the most prevalent methods of youth suicide?</p>
+</blockquote>
+<p>Florida Health Charts captures the causes of suicide mortality using <code>7</code> categories. We examine the raw event count and rates per <code>100,000</code> rates in the following two graphs:</p>
+<p><img src="figure_rmd/q3-1-1.png" width="900px" /></p>
+<p>Notice that two methods <code>gun</code> and <code>hanging</code> consistently explain the most cases of suicide in this age group. Going further, we will collapse the other <code>5</code> categories into a single <code>non-gun/hang</code>, so that we have sufficient <code>n</code> to compute reliable rates.</p>
+<p><img src="figure_rmd/q3-2-1.png" width="900px" /></p>
+</div>
+<div id="q4---methods-across-years" class="section level1">
+<h1>Q4 - Methods across Years</h1>
+<blockquote>
+<p>Q4 - How do trends compare across the methds of suicide?</p>
+</blockquote>
+<p><img src="figure_rmd/q4-1-1.png" width="900px" /></p>
+<p>When ignoring race and ethnicity, the average increase in the annual rate of suicide mortality from gun (+0.0996) is 1.5 times higher than that from Hanging (+.0672) and 2.6 times higher than other means (+.0377). Notice also, that mortality from firearms and hanging follow the trajectory closely described by a linear trend: <span class="math inline">\(R^2\)</span> = .7 and <span class="math inline">\(R^2\)</span> = .64, respectively.</p>
+<p><img src="figure_rmd/q4-2-1.png" width="900px" /></p>
+</div>
+<div id="q5---sex-and-ethnicity" class="section level1">
+<h1>Q5 - Sex and Ethnicity</h1>
+<blockquote>
+<p>Q5 - How do trends compare by race, sex, and means of means of suicide?</p>
+</blockquote>
+<p><img src="figure_rmd/q5-1-1.png" width="900px" /></p>
+<p>The most prominent increase, dwarfing others, is observed among White Non-Hispanic men, rising from 6.8 in 2006 to 11.3 in 2017, constituting a 65% growth. Between these years, the rate per 100,000 in this category was increasing on average by <code>.33</code> per year.</p>
+<p>Among white women of both Hispanic and Non-Hispanic origin, this growth was substantially smaller, about <code>+.06</code> per year, similar to the growth in the rate of suicide by means other than firearms or hanging. However, suicides by hanging was increasing by <code>+.09</code> per year.</p>
+<p>For Non-White Non-Hispanic women, the largest growth in suicide rates was observed from hanging (<code>+.1</code>), while suicides by other means barely increased.</p>
+<p><img src="figure_rmd/q5-2-1.png" width="900px" /></p>
+</div>
+<div id="session-information" class="section level1">
+<h1>session information</h1>
+<p>Click <strong><a href="https://raw.githack.com/dss-hmi/suicide-prevention-2019/570ca98ae20b2260a2bc9c25e5938ff3aebadac0/analysis/florida-suicide-10_24/fl-suicide-10_24.html">HERE</a></strong> to view report in its native environment of the <a href="https://github.com/dss-hmi/suicide-prevention-2019">suicide-prevention-2019</a> repository.</p>
+<p>For the sake of documentation and reproducibility, the current report was rendered in the following environment. Click the line below to expand.</p>
+<details>
+<p><summary>Environment <span class="glyphicon glyphicon-plus-sign"></span></summary></p>
+<pre><code>- Session info -------------------------------------------------------------------------------------------------------
+ setting  value                       
+ version  R version 4.0.2 (2020-06-22)
+ os       Windows 10 x64              
+ system   x86_64, mingw32             
+ ui       RTerm                       
+ language (EN)                        
+ collate  English_United States.1252  
+ ctype    English_United States.1252  
+ tz       America/New_York            
+ date     2020-08-30                  
+
+- Packages -----------------------------------------------------------------------------------------------------------
+ package     * version date       lib source        
+ assertthat    0.2.1   2019-03-21 [1] CRAN (R 4.0.2)
+ backports     1.1.7   2020-05-13 [1] CRAN (R 4.0.0)
+ blogdown      0.20    2020-06-23 [1] CRAN (R 4.0.2)
+ bookdown      0.20    2020-06-23 [1] CRAN (R 4.0.2)
+ callr         3.4.3   2020-03-28 [1] CRAN (R 4.0.2)
+ cli           2.0.2   2020-02-28 [1] CRAN (R 4.0.2)
+ colorspace    1.4-1   2019-03-18 [1] CRAN (R 4.0.2)
+ crayon        1.3.4   2017-09-16 [1] CRAN (R 4.0.2)
+ desc          1.2.0   2018-05-01 [1] CRAN (R 4.0.2)
+ devtools      2.3.1   2020-07-21 [1] CRAN (R 4.0.2)
+ digest        0.6.25  2020-02-23 [1] CRAN (R 4.0.2)
+ dplyr       * 1.0.1   2020-07-31 [1] CRAN (R 4.0.2)
+ ellipsis      0.3.1   2020-05-15 [1] CRAN (R 4.0.2)
+ evaluate      0.14    2019-05-28 [1] CRAN (R 4.0.2)
+ fansi         0.4.1   2020-01-08 [1] CRAN (R 4.0.2)
+ fs            1.5.0   2020-07-31 [1] CRAN (R 4.0.2)
+ generics      0.0.2   2018-11-29 [1] CRAN (R 4.0.2)
+ ggplot2     * 3.3.2   2020-06-19 [1] CRAN (R 4.0.2)
+ glue          1.4.1   2020-05-13 [1] CRAN (R 4.0.2)
+ gtable        0.3.0   2019-03-25 [1] CRAN (R 4.0.2)
+ htmltools     0.5.0   2020-06-16 [1] CRAN (R 4.0.2)
+ knitr       * 1.29    2020-06-23 [1] CRAN (R 4.0.2)
+ lifecycle     0.2.0   2020-03-06 [1] CRAN (R 4.0.2)
+ magrittr    * 1.5     2014-11-22 [1] CRAN (R 4.0.2)
+ memoise       1.1.0   2017-04-21 [1] CRAN (R 4.0.2)
+ munsell       0.5.0   2018-06-12 [1] CRAN (R 4.0.2)
+ pillar        1.4.6   2020-07-10 [1] CRAN (R 4.0.2)
+ pkgbuild      1.1.0   2020-07-13 [1] CRAN (R 4.0.2)
+ pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.0.2)
+ pkgload       1.1.0   2020-05-29 [1] CRAN (R 4.0.2)
+ prettyunits   1.1.1   2020-01-24 [1] CRAN (R 4.0.2)
+ processx      3.4.3   2020-07-05 [1] CRAN (R 4.0.2)
+ ps            1.3.4   2020-08-11 [1] CRAN (R 4.0.2)
+ purrr         0.3.4   2020-04-17 [1] CRAN (R 4.0.2)
+ R6            2.4.1   2019-11-12 [1] CRAN (R 4.0.2)
+ remotes       2.2.0   2020-07-21 [1] CRAN (R 4.0.2)
+ rlang         0.4.7   2020-07-09 [1] CRAN (R 4.0.2)
+ rmarkdown     2.3     2020-06-18 [1] CRAN (R 4.0.2)
+ rprojroot     1.3-2   2018-01-03 [1] CRAN (R 4.0.2)
+ scales        1.1.1   2020-05-11 [1] CRAN (R 4.0.2)
+ sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 4.0.2)
+ stringi       1.4.6   2020-02-17 [1] CRAN (R 4.0.0)
+ stringr       1.4.0   2019-02-10 [1] CRAN (R 4.0.2)
+ testthat      2.3.2   2020-03-02 [1] CRAN (R 4.0.2)
+ tibble        3.0.3   2020-07-10 [1] CRAN (R 4.0.2)
+ tidyr         1.1.1   2020-07-31 [1] CRAN (R 4.0.2)
+ tidyselect    1.1.0   2020-05-11 [1] CRAN (R 4.0.2)
+ usethis       1.6.1   2020-04-29 [1] CRAN (R 4.0.2)
+ utf8          1.1.4   2018-05-24 [1] CRAN (R 4.0.2)
+ vctrs         0.3.2   2020-07-15 [1] CRAN (R 4.0.2)
+ withr         2.2.0   2020-04-20 [1] CRAN (R 4.0.2)
+ xfun          0.16    2020-07-24 [1] CRAN (R 4.0.2)
+ yaml          2.2.1   2020-02-01 [1] CRAN (R 4.0.2)
+
+[1] C:/Users/an499583/OneDrive - University of Central Florida/Documents/R/win-library/4.0
+[2] C:/Program Files/R/R-4.0.2/library</code></pre>
+</div>
+
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/florida/">Florida</a>
+  
+  <a class="badge badge-light" href="/tags/suicide/">suicide</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/authors/andriy-koval/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/2020-04-26-florida-suicide-1/">Florida Suicides (1) - General Trends</a></li>
+          
+          <li><a href="/post/2020-03-27-florida-demographic-growth/">Florida Demographic Growth</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "andkov" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    &copy; 2019 Andriy Koval &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+    <script id="dsq-count-scr" src="//andkov.disqus.com/count.js" async></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-algolia-template" type="text/html">
+      <div class="search-hit">
+        <div class="search-hit-content">
+          <div class="search-hit-name">
+            <a href="{{relpermalink}}">{{{_highlightResult.title.value}}}</a>
+          </div>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{{_highlightResult.summary.value}}}</p>
+        </div>
+      </div>
+    </script>
+    
+
+    
+    
+
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/2.10.2/instantsearch.min.js" integrity="sha256-gFCtPk/sonctyfwYOgjrPoWApQ0rqB6ezBBZ7p32yGc=" crossorigin="anonymous"></script>
+    
+    <script>
+      const algoliaConfig = {
+        appId: "",
+        apiKey: "",
+        indexName: "",
+        poweredBy:  false 
+      };
+    </script>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.b6b30bae188747c18124c7d8d221e5f0.js"></script>
+
+  </body>
+</html>
+
