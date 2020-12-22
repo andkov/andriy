@@ -24,15 +24,21 @@ projects: []
 
 # Books
 
-- [R for Data Science](https://r4ds.had.co.nz/)  by Garrett Grolemund and Hadley Wickham   
+- [R for Data Science](https://r4ds.had.co.nz/)  by Garrett Grolemund and Hadley Wickham  
 - [Data Visualization with R](https://rkabacoff.github.io/datavis/) by Rob Kabacoff  
 - [R Graphics Cookbook](https://r-graphics.org/) by Winston Chang
-- [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com/index.html) by Carson Sievert  
-- [Statistical Inference via Data Science.A ModernDive into R and the tidyverse](https://moderndive.com/) by Chester Ismay and Albert Y. Kim
+- [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) by Claus O. Wilke  
+
 - [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/) by Roger Peng
-- [Hands-On Machine Learning with R](https://bradleyboehmke.github.io/HOML/) Bradley Boehmke & Brandon Greenwell  
+
+- [Statistical Inference via Data Science.A ModernDive into R and the tidyverse](https://moderndive.com/) by Chester Ismay and Albert Y. Kim
 - [An Introduction to Statistical Learning with Applications in R](http://faculty.marshall.usc.edu/gareth-james/ISL/) by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani  
-- [Learning Statistics with R](https://learningstatisticswithr.com/) by Danielle Navarro  
+- [Learning Statistics with R](https://learningstatisticswithr.com/) by Danielle Navarro
+
+- [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com/index.html) by Carson Sievert  
+- [Mastering Shiny](https://mastering-shiny.org/) by Hadley Wickham
+
+- [Hands-On Machine Learning with R](https://bradleyboehmke.github.io/HOML/) Bradley Boehmke & Brandon Greenwell  
 
 # Courses
 
