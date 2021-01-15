@@ -33,7 +33,7 @@ abstract: Vancouver Island Health Authority (VIHA, aka Island Health) is one of 
 url_code: "https://github.com/IHACRU/clinical-context-coding-scheme"
 url_dataset: ""
 url_pdf: ""
-url_poster: "poster.png"
+url_poster: "poster.pdf"
 url_project: ""
 url_slides: ""
 url_source: ""
