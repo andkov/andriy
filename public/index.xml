@@ -716,47 +716,6 @@ survived ~ sex + age + passenger_class + port_embarked
     
     <item>
       <title>Suppressing Small Counts for Public Release</title>
-      <link>/publication/koval-2018-severity-burden-mental-health/</link>
-      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/koval-2018-severity-burden-mental-health/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;Poster presented at the &lt;a href=&#34;https://www.cahspr.ca/en/conferences&#34;&gt;2019 conference of the Canadian Association for Health Services and Policy Research&lt;/a&gt;, Halifax, Nova Scotia.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;koval-2019-poster.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Note: The number in parentheses &lt;em&gt;(1)&lt;/em&gt; refers to the section of the poster.&lt;/p&gt;
-&lt;div id=&#34;take-away-points&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Take away points&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Reproducible pipelines are hard, but they pay off&lt;/li&gt;
-&lt;li&gt;Think of cognitive load first, computational load second&lt;/li&gt;
-&lt;li&gt;Invest into dependency maps for (re-)learning forms &amp;amp; functions&lt;/li&gt;
-&lt;li&gt;Invest into workflow maps for (re-)learning structures &amp;amp; processes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Background&lt;/h1&gt;
-&lt;p&gt;In 2016, the Observatory for Population &amp;amp; Public Health of British Columbia launched the &lt;a href=&#34;http://www.bccdc.ca/health-info/disease-system-statistics/chronic-disease-dashboard&#34;&gt;Chronic Disease Dashboard&lt;/a&gt;, an online reporting tool designed to address the gap in surveillance of chronic diseases. To protect against re-identification risks, the Ministry of Health required redacting small counts prior to releasing disease rates into public domain. These preparations, when conducted manually, have proven to be arduous, time consuming, and prone to human error.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;approach&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Approach&lt;/h1&gt;
-&lt;p&gt;While finding a “small” count (operationalized as “ &amp;lt; 5 ”) was straightforward, detecting conditions, in which suppressed values could be recalculated from related cells involved human judgement. As part of the embedded research by their &lt;a href=&#34;http://www.cihr-irsc.gc.ca/e/50660.html&#34;&gt;Health System Impact Fellow&lt;/a&gt; (2017), the Observatory set out to automate this task, designing a reproducible workflow ( see section 5 of the poster ) that split data into disease-by-year data frames of a specific form &lt;em&gt;( 1 )&lt;/em&gt;, applied a sequence of logical tests &lt;em&gt;( 2 )&lt;/em&gt; written to recognize conditions that made recalculation of suppressed values possible and printed a graph &lt;em&gt;( 6 )&lt;/em&gt; for each case of suggested automatic redaction to be confirmed by a human &lt;em&gt;( 7 )&lt;/em&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;results&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Results&lt;/h1&gt;
-&lt;p&gt;The automated suppression was successfully integrated into the Dashboard maintenance. Data preparation, application of logical tests, and production of visual evidence were implemented in R and published as a version-controlled RStudio project on Github &lt;a href=&#34;https://github.com/IHACRU/suppress-for-release&#34;&gt;github.com/ihacru/suppress-for-release&lt;/a&gt;. A fully reproducible example with fictional data was made available to demonstrate the current logic of suppression and to ensure the availability of documentation for the future staff of the Observatory charged with Dashboard maintenance. To assist with learning, we designed a map of dependencies among the custom functions used for suppression &lt;em&gt;( 4 )&lt;/em&gt; and illustrated their use in a simplified workflow &lt;em&gt;( 3 )&lt;/em&gt;, which allows studying the performance of logical tests before engaging the real data to applying the suppression logic &lt;em&gt;( 5 )&lt;/em&gt; and to document the redaction decisions &lt;em&gt;( 7 )&lt;/em&gt; Anticipating the evolution of suppression logic, we moduralized the logical tests &lt;em&gt;( 2 )&lt;/em&gt; responsible for redaction and provided several options to vary the degree of preserved information ( blue vs light blue ).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;conclusions&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Conclusions&lt;/h1&gt;
-&lt;p&gt;This case of embedded research demonstrates the benefits and feasibility of integrating practices of reproducible analytics into routine workflow of epidemiological surveillance. We make a strong case for employing such learning devices as workflow maps &lt;em&gt;( 5 )&lt;/em&gt; and function dependency trees &lt;em&gt;( 4 &lt;/em&gt;) for structuring applied projects and ensuring their reproducibility.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Suppressing Small Counts for Public Release</title>
       <link>/publication/koval-2019-suppress-for-release/</link>
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
@@ -910,6 +869,36 @@ survived ~ sex + age + passenger_class + port_embarked
       
       <guid>/privacy/</guid>
       <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Severity and Burden of Mental Health</title>
+      <link>/publication/koval-2018-severity-burden-mental-health/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/koval-2018-severity-burden-mental-health/</guid>
+      <description>
+
+
+&lt;p&gt;Poster presented at the &lt;a href=&#34;https://www.cahspr.ca/en/conferences&#34;&gt;2018 conference of the Canadian Association for Health Services and Policy Research&lt;/a&gt;, Montreal, Quebec.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;poster.png&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;objective&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Objective&lt;/h1&gt;
+&lt;p&gt;Using cross-continuum implementation of clinical records at Vancouver Island Health Authority we demonstrate a set of analytical techniques supporting empirical stratification of diagnostically homogeneous cohorts based on severity of condition and burden to the service system. We visualize the variability in clinical histories of patients with confirmed diagnosis of (1) schizophrenia and (2) bipolar disorders.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;approach&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Approach&lt;/h1&gt;
+&lt;p&gt;The linked data model includes three components. (1) The records of encounters with secondary and tertiary services provide a time-stamped tape of clinical events, in the context of which other clinical information can be interpreted. (2) Diagnostic profiles come from emergency and acute care administrative sources (National Ambulatory Care Reporting System (NACRS) and Diagnosis Abstract Database (DAD), respectively). (3) Substance use and psychiatric profiles come from the Ministry of Health’s Minimum Reporting Requirements (MRR) for Mental Health and Substance Use (MHSU) conditions. We train statistical models to detect consistent patterns of service use (PSU) forming the basis for stratification mechanism.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;results&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Results&lt;/h1&gt;
+&lt;p&gt;We organize our data methods according to the guidelines of reproducible research, a technical enabler of a learning healthcare system. We present a series of information displays demonstrating clinical heterogeneity of diagnostically homogeneous cohorts by describing the variability in their clinical histories. We demonstrate how we operationalize PSUs related to (1) the rate of emergency department encounters (2) number of days spent in acute care and (3) the rate of engaging laboratory services. We employ these quantifications of severity and burden to compare and contrast clinical journeys of two diagnostically homogeneous groups: patients with schizophrenia and patients with bipolar disorder.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Conclusions&lt;/h1&gt;
+&lt;p&gt;We can better understand the experiences of patients with chronic mental health conditions if we examine patients’ journeys through the healthcare system in the context of linked clinical history. Patterns of service use and clinical profiles are effective tools for empirical stratification of severity and burden among patients with schizophrenia and bipolar disorders.&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     

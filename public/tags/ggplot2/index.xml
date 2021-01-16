@@ -59,15 +59,6 @@
     
     <item>
       <title>Suppressing Small Counts for Public Release</title>
-      <link>/publication/koval-2018-severity-burden-mental-health/</link>
-      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/koval-2018-severity-burden-mental-health/</guid>
-      <description>Demonstrates the methods of suppressing small counts in a provincial surveillance system in preparation of data for public release.</description>
-    </item>
-    
-    <item>
-      <title>Suppressing Small Counts for Public Release</title>
       <link>/publication/koval-2019-suppress-for-release/</link>
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
@@ -92,6 +83,15 @@
       <guid>/talk/2018-10-31-when-notebooks-are-not-enough/</guid>
       <description>AbstractWhile computational notebooks offer scientists and engineers many helpful features, the limitations of this medium make it but a starting point in creating software - the practical goal of data science. Where do we go from computational notebooks if our projects require multiple interconnected scripts and dynamic documents? How do we ensure reproducibility amidst growing complexity of analyses and operations?
 I will use a concrete analytical example to demonstrate how constructing workflows for reproducible analyses can serve as the next step from computational notebooks towards creating an analytical software.</description>
+    </item>
+    
+    <item>
+      <title>Severity and Burden of Mental Health</title>
+      <link>/publication/koval-2018-severity-burden-mental-health/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/koval-2018-severity-burden-mental-health/</guid>
+      <description>Visualizing the variability in clinical histories of patients with confirmed diagnosis of (1) schizophrenia and (2) bipolar disorders using cross-continuum clinical records.</description>
     </item>
     
   </channel>

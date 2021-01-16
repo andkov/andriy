@@ -1,17 +1,21 @@
 ---
-title: Suppressing Small Counts for Public Release
-subtitle: Applications of Reproducible Analytics in Chronic Disease Surveillance
-author: Andriy Koval
+title: Severity and Burden of Mental Health 
+subtitle: Techniques for stratifying chronic conditions based on linked clinical history
+author: 
+- Andriy Koval
+- Kate Smolina
+- Ken Moselle
 
-date: '2019-05-29'
+date: '2018-03-11'
 
 slug: []
 categories:
-  - suppress-for-release
+  - MHSU
   
 tags:
-  - small cell suppression
+  - Mental Health and Substance Use
   - chronic disease surveillance
+  - big data analytics
   - public health
   - reproducible research
   - ggplot2
@@ -29,20 +33,15 @@ publication_types:
 - "1"
 
 
-summary: Demonstrates the methods of suppressing small counts in a provincial surveillance system in preparation of data for public release.
-
-abstract: When a surveillance agency intends to release incidence counts of some health conditions (like in BC [Chronic Disease Dashboard](http://www.bccdc.ca/health-info/disease-system-statistics/chronic-disease-dashboard)), one must take precaution NOT to disclose values considered "too small", which may present a privacy/re-identification risk. Howeever, redacted values sometimes can be re-calculated from the context, so an analyst must detect these patterns and redact more values in order to remove the possiblity of re-calculation. To avoid manual redaction, which is prone to human error and lacks transparency, [BC Observatory for Population and Public Health](http://www.bccdc.ca/our-services/programs/bc-observatory-for-pop-public-health) has developed a suite of R functions to arrive at recommendation for redaction automatically, based on logical tests developed for standard data forms.
-
-authors:
-- admin
-- Anthony Leamon
-- Kate Smolina
+summary: Visualizing the variability in clinical histories of patients with confirmed diagnosis of (1) schizophrenia and (2) bipolar disorders using cross-continuum clinical records. 
 
 
-url_code: "https://github.com/IHACRU/suppress-for-release"
+abstract: Using cross-continuum implementation of clinical records at Vancouver Island Health Authority we demonstrate a set of analytical techniques supporting empirical stratification of diagnostically homogeneous cohorts based on severity of condition and burden to the service system. We visualize the variability in clinical histories of patients with confirmed diagnosis of (1) schizophrenia and (2) bipolar disorders. 
+ 
+url_code: ""
 url_dataset: ""
-url_pdf: ""
-url_poster: "koval-2019-poster.png"
+url_pdf: "poster.pdf"
+url_poster: ""
 url_project: ""
 url_slides: ""
 url_source: ""
@@ -51,34 +50,23 @@ url_video: ""
 
 ---
 
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
-<p>Poster presented at the <a href="https://www.cahspr.ca/en/conferences">2019 conference of the Canadian Association for Health Services and Policy Research</a>, Halifax, Nova Scotia.</p>
-<p><img src="koval-2019-poster.png" /></p>
-<p>Note: The number in parentheses <em>(1)</em> refers to the section of the poster.</p>
-<div id="take-away-points" class="section level1">
-<h1>Take away points</h1>
-<ul>
-<li>Reproducible pipelines are hard, but they pay off</li>
-<li>Think of cognitive load first, computational load second</li>
-<li>Invest into dependency maps for (re-)learning forms &amp; functions</li>
-<li>Invest into workflow maps for (re-)learning structures &amp; processes</li>
-</ul>
-</div>
-<div id="background" class="section level1">
-<h1>Background</h1>
-<p>In 2016, the Observatory for Population &amp; Public Health of British Columbia launched the <a href="http://www.bccdc.ca/health-info/disease-system-statistics/chronic-disease-dashboard">Chronic Disease Dashboard</a>, an online reporting tool designed to address the gap in surveillance of chronic diseases. To protect against re-identification risks, the Ministry of Health required redacting small counts prior to releasing disease rates into public domain. These preparations, when conducted manually, have proven to be arduous, time consuming, and prone to human error.</p>
+<p>Poster presented at the <a href="https://www.cahspr.ca/en/conferences">2018 conference of the Canadian Association for Health Services and Policy Research</a>, Montreal, Quebec.</p>
+<p><img src="poster.png" /></p>
+<div id="objective" class="section level1">
+<h1>Objective</h1>
+<p>Using cross-continuum implementation of clinical records at Vancouver Island Health Authority we demonstrate a set of analytical techniques supporting empirical stratification of diagnostically homogeneous cohorts based on severity of condition and burden to the service system. We visualize the variability in clinical histories of patients with confirmed diagnosis of (1) schizophrenia and (2) bipolar disorders.</p>
 </div>
 <div id="approach" class="section level1">
 <h1>Approach</h1>
-<p>While finding a “small” count (operationalized as “ &lt; 5 ”) was straightforward, detecting conditions, in which suppressed values could be recalculated from related cells involved human judgement. As part of the embedded research by their <a href="http://www.cihr-irsc.gc.ca/e/50660.html">Health System Impact Fellow</a> (2017), the Observatory set out to automate this task, designing a reproducible workflow ( see section 5 of the poster ) that split data into disease-by-year data frames of a specific form <em>( 1 )</em>, applied a sequence of logical tests <em>( 2 )</em> written to recognize conditions that made recalculation of suppressed values possible and printed a graph <em>( 6 )</em> for each case of suggested automatic redaction to be confirmed by a human <em>( 7 )</em>.</p>
+<p>The linked data model includes three components. (1) The records of encounters with secondary and tertiary services provide a time-stamped tape of clinical events, in the context of which other clinical information can be interpreted. (2) Diagnostic profiles come from emergency and acute care administrative sources (National Ambulatory Care Reporting System (NACRS) and Diagnosis Abstract Database (DAD), respectively). (3) Substance use and psychiatric profiles come from the Ministry of Health’s Minimum Reporting Requirements (MRR) for Mental Health and Substance Use (MHSU) conditions. We train statistical models to detect consistent patterns of service use (PSU) forming the basis for stratification mechanism.</p>
 </div>
 <div id="results" class="section level1">
 <h1>Results</h1>
-<p>The automated suppression was successfully integrated into the Dashboard maintenance. Data preparation, application of logical tests, and production of visual evidence were implemented in R and published as a version-controlled RStudio project on Github <a href="https://github.com/IHACRU/suppress-for-release">github.com/ihacru/suppress-for-release</a>. A fully reproducible example with fictional data was made available to demonstrate the current logic of suppression and to ensure the availability of documentation for the future staff of the Observatory charged with Dashboard maintenance. To assist with learning, we designed a map of dependencies among the custom functions used for suppression <em>( 4 )</em> and illustrated their use in a simplified workflow <em>( 3 )</em>, which allows studying the performance of logical tests before engaging the real data to applying the suppression logic <em>( 5 )</em> and to document the redaction decisions <em>( 7 )</em> Anticipating the evolution of suppression logic, we moduralized the logical tests <em>( 2 )</em> responsible for redaction and provided several options to vary the degree of preserved information ( blue vs light blue ).</p>
+<p>We organize our data methods according to the guidelines of reproducible research, a technical enabler of a learning healthcare system. We present a series of information displays demonstrating clinical heterogeneity of diagnostically homogeneous cohorts by describing the variability in their clinical histories. We demonstrate how we operationalize PSUs related to (1) the rate of emergency department encounters (2) number of days spent in acute care and (3) the rate of engaging laboratory services. We employ these quantifications of severity and burden to compare and contrast clinical journeys of two diagnostically homogeneous groups: patients with schizophrenia and patients with bipolar disorder.</p>
 </div>
 <div id="conclusions" class="section level1">
 <h1>Conclusions</h1>
-<p>This case of embedded research demonstrates the benefits and feasibility of integrating practices of reproducible analytics into routine workflow of epidemiological surveillance. We make a strong case for employing such learning devices as workflow maps <em>( 5 )</em> and function dependency trees <em>( 4 </em>) for structuring applied projects and ensuring their reproducibility.</p>
+<p>We can better understand the experiences of patients with chronic mental health conditions if we examine patients’ journeys through the healthcare system in the context of linked clinical history. Patterns of service use and clinical profiles are effective tools for empirical stratification of severity and burden among patients with schizophrenia and bipolar disorders.</p>
 </div>

@@ -307,11 +307,6 @@
   </url>
   
   <url>
-    <loc>/publication/koval-2018-severity-burden-mental-health/</loc>
-    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/publication/koval-2019-suppress-for-release/</loc>
     <lastmod>2019-05-29T00:00:00+00:00</lastmod>
   </url>
@@ -558,18 +553,35 @@
   </url>
   
   <url>
+    <loc>/categories/mhsu/</loc>
+    <lastmod>2018-03-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mental-health-and-substance-use/</loc>
+    <lastmod>2018-03-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/koval-2018-severity-burden-mental-health/</loc>
+    <lastmod>2018-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/big-data-analytics/</loc>
+    <lastmod>2018-03-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/publication/koval-2018-blueprints-for-learning/</loc>
     <lastmod>2018-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/health-services-research/</loc>
-    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/mhsu/</loc>
     <lastmod>2018-03-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
