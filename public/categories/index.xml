@@ -130,11 +130,29 @@
     </item>
     
     <item>
+      <title>Island Health</title>
+      <link>/categories/island-health/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/island-health/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>MHSU</title>
       <link>/categories/mhsu/</link>
-      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/mhsu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>transactional data</title>
+      <link>/categories/transactional-data/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/transactional-data/</guid>
       <description></description>
     </item>
     

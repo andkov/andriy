@@ -792,6 +792,19 @@ survived ~ sex + age + passenger_class + port_embarked
     </item>
     
     <item>
+      <title>Transactional Data of Island Health</title>
+      <link>/talk/2018-11-28-how-patients-vote-with-feet/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2018-11-28-how-patients-vote-with-feet/</guid>
+      <description>
+
+
+&lt;p&gt;The talk was presented at &lt;a href=&#34;https://github.com/dss-ialh/displaying-health-data&#34;&gt;&lt;em&gt;Displaying Heath Data&lt;/em&gt; colloquium&lt;/a&gt;, organized by the Institute of Aging and Lifelong Health at the University of Victoria in November of 2018.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Visualizing Logistic Regression</title>
       <link>/talk/2018-11-01-visualizing-logistic-regression/</link>
       <pubDate>Thu, 01 Nov 2018 16:00:00 -0700</pubDate>

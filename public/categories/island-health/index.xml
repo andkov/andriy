@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Island Health on Andriy Koval</title>
+    <link>/categories/island-health/</link>
+    <description>Recent content in Island Health on Andriy Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Andriy Koval</copyright>
+    <lastBuildDate>Wed, 28 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/island-health/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Transactional Data of Island Health</title>
+      <link>/talk/2018-11-28-how-patients-vote-with-feet/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2018-11-28-how-patients-vote-with-feet/</guid>
+      <description>Describing the application of Clinical Context Coding Scheme to stratification of Mental Health and Substance Use services on Vancouver Island from 2007 to 2017</description>
+    </item>
+    
+  </channel>
+</rss>
