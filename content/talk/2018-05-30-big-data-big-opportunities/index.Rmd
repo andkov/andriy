@@ -1,0 +1,39 @@
+---
+title: "How can big health data make an impact on health(care) system(s)?"
+subtitle: "Exploring carees in population data"
+authors: 
+- Andriy Koval
+date: '2018-05-30'
+event: ""
+slug: []
+categories:
+  - Island Health
+  - transactional data
+  - MHSU
+tags:
+  - big data
+  - clinical informatics
+  - reproducible research
+  - data visualization
+  
+summary: "Presenting a current example of how big data can improve mental health and augment surveillance in the province of B.C. through developing a framework for 'messy' transactional electronic health record (EHR) data from secondary and tertiary health services"
+lastmod: '2021-01-17'
+featured: no
+image:
+  caption: ''
+  focal_point: 'Center'
+  preview_only: no
+projects: []
+url_code: ""
+url_dataset: ""
+url_pdf: ""
+url_poster: ""
+url_project: ""
+url_slides: "slides.pdf"
+url_source: ""
+url_video: ""
+---
+
+
+
+The talk was delivered at the panel [Big data, big opportunities: exploring careers in population data science](https://cahspr.ca/wp-content/uploads/2020/11/Book-of-Abstracts-CAHSPR-2018.pdf), at the annual conference of Canadian Association for Health Services and Policy Research, Montreal, QC. May 30, 2018. 
