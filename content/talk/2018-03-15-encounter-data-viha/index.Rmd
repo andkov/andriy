@@ -1,6 +1,6 @@
 ---
 title: Encounter Data of Vancouver Island Health Authority
-subtitle: And its Emering Role in surveillance of Meantal Health and Substance Use
+subtitle: And its Emerging Role in surveillance of Mental Health and Substance Use
 authors: 
 - Andriy Koval
 - Anthony Leamon
