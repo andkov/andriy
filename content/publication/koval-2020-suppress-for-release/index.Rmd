@@ -44,13 +44,13 @@ url_pdf: ""
 url_poster: ""
 url_project: ""
 url_slides: "koval-2020-suppress-for-release.pdf"
-url_source: ""
+url_source: "https://ijpds.org/article/view/1540"
 url_video: ""
 
 
 ---
 
-Paper presented at the [2020 conference of the 'International Population Data Linkage Network Conference](https://www.cahspr.ca/en/conferences), Adelaide, Australia. November 2020. 
+Paper presented at the [2020 conference of the 'International Population Data Linkage Network Conference](https://www.cahspr.ca/en/conferences), Adelaide, Australia. November 2020. ([Link](https://ijpds.org/article/view/1540))
 
 
 ![](workflow-illustration.png)
