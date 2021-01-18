@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/authors/andriy-koval/</loc>
-    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <loc>/publication_types/1/</loc>
+    <lastmod>2020-11-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -15,13 +15,77 @@
   </url>
   
   <url>
-    <loc>/authors/</loc>
+    <loc>/categories/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>/publication_types/</loc>
+    <lastmod>2020-11-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2020-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/koval-2020-suppress-for-release/</loc>
+    <lastmod>2020-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/chronic-disease-surveillance/</loc>
+    <lastmod>2020-11-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ggplot2/</loc>
+    <lastmod>2020-11-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/public-health/</loc>
+    <lastmod>2020-11-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/reproducible-research/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/small-cell-suppression/</loc>
+    <lastmod>2020-11-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/suppress-for-release/</loc>
+    <lastmod>2020-11-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/andriy-koval/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -46,12 +110,6 @@
   <url>
     <loc>/post/</loc>
     <lastmod>2020-08-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -90,19 +148,7 @@
   </url>
   
   <url>
-    <loc>/tags/ggplot2/</loc>
-    <lastmod>2020-06-22T12:30:30-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/longitudinal-analysis/</loc>
-    <lastmod>2020-06-22T12:30:30-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/public-health/</loc>
     <lastmod>2020-06-22T12:30:30-04:00</lastmod>
     <priority>0</priority>
   </url>
@@ -233,12 +279,6 @@
   </url>
   
   <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/post/2019-08-01-what-lies-beyond-acute-care/</loc>
     <lastmod>2019-08-02T00:00:00+00:00</lastmod>
   </url>
@@ -284,12 +324,6 @@
   </url>
   
   <url>
-    <loc>/publication_types/1/</loc>
-    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/authors/anthony-leamon/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -302,37 +336,8 @@
   </url>
   
   <url>
-    <loc>/publication/</loc>
-    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/publication/koval-2019-suppress-for-release/</loc>
     <lastmod>2019-05-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/chronic-disease-surveillance/</loc>
-    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/reproducible-research/</loc>
-    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/small-cell-suppression/</loc>
-    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/suppress-for-release/</loc>
-    <lastmod>2019-05-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

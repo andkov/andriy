@@ -7,10 +7,40 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using Reproducible Data Visualisations to Augment Decision-Making During Suppression of Small Counts</title>
+      <link>/publication/koval-2020-suppress-for-release/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/koval-2020-suppress-for-release/</guid>
+      <description>
+
+
+&lt;p&gt;Paper presented at the &lt;a href=&#34;https://www.cahspr.ca/en/conferences&#34;&gt;2020 conference of the ’International Population Data Linkage Network Conference&lt;/a&gt;, Adelaide, Australia. November 2020.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;workflow-illustration.png&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;When reporting disease rates to the public, a health system must take precaution to protect released data from re-identification risks. While specific guidelines and methods vary across data systems and governances1, redaction of cells with small values is a key component in any approach for preparing data for public release. These preparations, when conducted manually, have proven to be arduous, time consuming, and prone to human error. Although finding a “small” value (e.g. “&amp;lt; 5” ) is straightforward, detecting conditions in which suppressed values could be recalculated from related cells involves human judgment.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;objectives-and-approach&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Objectives and Approach&lt;/h1&gt;
+&lt;p&gt;Guided by the real-world objective to reports the rates of chronic diseases in British Columbia, we aimed to design a reproducible workflow that would augment human decision-making and offer a nimble quality control tool, approachable by epidemiologists without technical background. Our workflow (1) splits data into disease-by-year data frames of a specific form, (2) applies a sequence of algorithms trained to recognize conditions that made recalculation of suppressed values possible and (3) prints a graph for each case of suggested automatic redaction to be confirmed by a human.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;results&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Results&lt;/h1&gt;
+&lt;p&gt;The augmented suppression system was successfully integrated into the maintenance of Chronic Disease Dashboard, an online reporting tool of the Observatory for Population and Public Health designed to address the gap in surveillance of chronic diseases in British Columbia. Anticipating the evolution of suppression logic, we isolated the logical tests responsible for redaction and provided several options to vary the degree of preserved information.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusion-implications&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Conclusion &amp;amp; Implications&lt;/h1&gt;
+&lt;p&gt;Instead of employing a complex generalizable solution, we make a case for organizing the procedure for small cell redaction as a data visualization task, allowing for straightforward quality control of suppression decision and thus more approachable to a non-technical audience, as well as for employing such learning devices as workflow maps and function dependency trees for structuring applied projects and ensuring their reproducibility.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Florida Suicides (2) - Youth Trends</title>
