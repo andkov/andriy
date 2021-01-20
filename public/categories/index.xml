@@ -174,5 +174,32 @@
       <description></description>
     </item>
     
+    <item>
+      <title>EMOSA</title>
+      <link>/categories/emosa/</link>
+      <pubDate>Fri, 14 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/emosa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>epidemiology</title>
+      <link>/categories/epidemiology/</link>
+      <pubDate>Fri, 14 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/epidemiology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>statistical modeling</title>
+      <link>/categories/statistical-modeling/</link>
+      <pubDate>Fri, 14 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/statistical-modeling/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

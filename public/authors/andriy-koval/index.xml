@@ -139,5 +139,14 @@ I will use a concrete analytical example to demonstrate how constructing workflo
       <description>The lecture introduces reproducible research and demonstrates digital self-publishing with RStudio and Git (Hub). The skills described and emphasized in this workflow include data manipulation, graph production, statistical modeling, and dynamic reporting. A series of four talks discusses each skill and gives examples of possible implementations in R.</description>
     </item>
     
+    <item>
+      <title>Epidemic Modeling of the Onset of Social Activities (EMOSA Models)</title>
+      <link>/talk/2011-10-11-emosa-smep/</link>
+      <pubDate>Fri, 14 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2011-10-11-emosa-smep/</guid>
+      <description>Epidemic Models of the Onset of Social Activities (EMOSA Models) are applied to religious participation of emerging adults, evaluating whether such behaviour as attending church services a better explained by diffusive or contagious mechanisms of spread</description>
+    </item>
+    
   </channel>
 </rss>

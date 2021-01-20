@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>contagion on Andriy Koval</title>
+    <link>/tags/contagion/</link>
+    <description>Recent content in contagion on Andriy Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Andriy Koval</copyright>
+    <lastBuildDate>Fri, 14 Oct 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/contagion/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Epidemic Modeling of the Onset of Social Activities (EMOSA Models)</title>
+      <link>/talk/2011-10-11-emosa-smep/</link>
+      <pubDate>Fri, 14 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2011-10-11-emosa-smep/</guid>
+      <description>Epidemic Models of the Onset of Social Activities (EMOSA Models) are applied to religious participation of emerging adults, evaluating whether such behaviour as attending church services a better explained by diffusive or contagious mechanisms of spread</description>
+    </item>
+    
+  </channel>
+</rss>

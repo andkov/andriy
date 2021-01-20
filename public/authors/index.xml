@@ -321,5 +321,23 @@ Download my CV</description>
       <description></description>
     </item>
     
+    <item>
+      <title>Joe Rodgers</title>
+      <link>/authors/joe-rodgers/</link>
+      <pubDate>Fri, 14 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/joe-rodgers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oleksandra Hararuk</title>
+      <link>/authors/oleksandra-hararuk/</link>
+      <pubDate>Fri, 14 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/oleksandra-hararuk/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
