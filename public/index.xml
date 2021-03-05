@@ -390,26 +390,31 @@ Also note, that when examining the trends within the &lt;code&gt;10-24&lt;/code&
 
 &lt;h1 id=&#34;books&#34;&gt;Books&lt;/h1&gt;
 
+&lt;h2 id=&#34;all-purpose&#34;&gt;All-purpose&lt;/h2&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/&#34; target=&#34;_blank&#34;&gt;R for Data Science&lt;/a&gt;  by Garrett Grolemund and Hadley Wickham&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://argoshare.is.ed.ac.uk/healthyr_book/&#34; target=&#34;_blank&#34;&gt;R for Health Data Science&lt;/a&gt; - by Ewen Harrison and Riinu Pius&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://moderndive.com/&#34; target=&#34;_blank&#34;&gt;Statistical Inference via Data Science.A ModernDive into R and the tidyverse&lt;/a&gt; by Chester Ismay and Albert Y. Kim&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learningstatisticswithr.com/&#34; target=&#34;_blank&#34;&gt;Learning Statistics with R&lt;/a&gt; by Danielle Navarro&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bookdown.org/rdpeng/rprogdatascience/&#34; target=&#34;_blank&#34;&gt;R Programming for Data Science&lt;/a&gt; by Roger Peng&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;visualization&#34;&gt;Visualization&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://r-graphics.org/&#34; target=&#34;_blank&#34;&gt;R Graphics Cookbook&lt;/a&gt; by Winston Chang&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://rkabacoff.github.io/datavis/&#34; target=&#34;_blank&#34;&gt;Data Visualization with R&lt;/a&gt; by Rob Kabacoff&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://r-graphics.org/&#34; target=&#34;_blank&#34;&gt;R Graphics Cookbook&lt;/a&gt; by Winston Chang&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://clauswilke.com/dataviz/&#34; target=&#34;_blank&#34;&gt;Fundamentals of Data Visualization&lt;/a&gt; by Claus O. Wilke&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mastering-shiny.org/&#34; target=&#34;_blank&#34;&gt;Mastering Shiny&lt;/a&gt; by Hadley Wickham&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://plotly-r.com/index.html&#34; target=&#34;_blank&#34;&gt;Interactive web-based data visualization with R, plotly, and shiny&lt;/a&gt; by Carson Sievert&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://clauswilke.com/dataviz/&#34; target=&#34;_blank&#34;&gt;Fundamentals of Data Visualization&lt;/a&gt; by Claus O. Wilke&lt;/p&gt;&lt;/li&gt;
+&lt;h2 id=&#34;statistical-and-machine-learning&#34;&gt;Statistical and Machine Learning&lt;/h2&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://bookdown.org/rdpeng/rprogdatascience/&#34; target=&#34;_blank&#34;&gt;R Programming for Data Science&lt;/a&gt; by Roger Peng&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://moderndive.com/&#34; target=&#34;_blank&#34;&gt;Statistical Inference via Data Science.A ModernDive into R and the tidyverse&lt;/a&gt; by Chester Ismay and Albert Y. Kim&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://faculty.marshall.usc.edu/gareth-james/ISL/&#34; target=&#34;_blank&#34;&gt;An Introduction to Statistical Learning with Applications in R&lt;/a&gt; by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://learningstatisticswithr.com/&#34; target=&#34;_blank&#34;&gt;Learning Statistics with R&lt;/a&gt; by Danielle Navarro&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://plotly-r.com/index.html&#34; target=&#34;_blank&#34;&gt;Interactive web-based data visualization with R, plotly, and shiny&lt;/a&gt; by Carson Sievert&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://mastering-shiny.org/&#34; target=&#34;_blank&#34;&gt;Mastering Shiny&lt;/a&gt; by Hadley Wickham&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://bradleyboehmke.github.io/HOML/&#34; target=&#34;_blank&#34;&gt;Hands-On Machine Learning with R&lt;/a&gt; Bradley Boehmke &amp;amp; Brandon Greenwell&lt;/p&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://faculty.marshall.usc.edu/gareth-james/ISL/&#34; target=&#34;_blank&#34;&gt;An Introduction to Statistical Learning with Applications in R&lt;/a&gt; by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bradleyboehmke.github.io/HOML/&#34; target=&#34;_blank&#34;&gt;Hands-On Machine Learning with R&lt;/a&gt; Bradley Boehmke &amp;amp; Brandon Greenwell&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;courses&#34;&gt;Courses&lt;/h1&gt;
@@ -419,6 +424,13 @@ Also note, that when examining the trends within the &lt;code&gt;10-24&lt;/code&
 &lt;li&gt;&lt;a href=&#34;https://datavizm20.classes.andrewheiss.com/&#34; target=&#34;_blank&#34;&gt;Data Visualization&lt;/a&gt; by Andrew Heiss&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.discoveringstatistics.com/&#34; target=&#34;_blank&#34;&gt;Discovering Statistics&lt;/a&gt; by Andy Field&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://datavis.ca/courses/RGraphics/&#34; target=&#34;_blank&#34;&gt;Data Visualization in R&lt;/a&gt; by Michael Friendly&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;miscelaneous-resources&#34;&gt;Miscelaneous Resources&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://rstudio.cloud/learn/primers&#34; target=&#34;_blank&#34;&gt;RStudio Cloud Primers&lt;/a&gt; by RStudio&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://swcarpentry.github.io/r-novice-inflammation/&#34; target=&#34;_blank&#34;&gt;Programming with R&lt;/a&gt; - by Carpentries&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

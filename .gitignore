@@ -31,3 +31,7 @@ public/img/photos/*
 .Rhistory
 .Rhistory
 *.pper
+.Rhistory
+.Rproj.user/FE4B4E91/pcs/source-pane.pper
+*.pper
+.Rproj.user/FE4B4E91/sources/prop/INDEX
