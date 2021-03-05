@@ -412,6 +412,12 @@ Also note, that when examining the trends within the &lt;code&gt;10-24&lt;/code&
 &lt;li&gt;&lt;a href=&#34;https://r-graphics.org/&#34; target=&#34;_blank&#34;&gt;R Graphics Cookbook&lt;/a&gt; by Winston Chang&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://rkabacoff.github.io/datavis/&#34; target=&#34;_blank&#34;&gt;Data Visualization with R&lt;/a&gt; by Rob Kabacoff&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://clauswilke.com/dataviz/&#34; target=&#34;_blank&#34;&gt;Fundamentals of Data Visualization&lt;/a&gt; by Claus O. Wilke&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;reporting&#34;&gt;Reporting&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://bookdown.org/yihui/rmarkdown-cookbook/&#34; target=&#34;_blank&#34;&gt;R Markdown Cookbook&lt;/a&gt; by Yihui Xie, Christophe Dervieux, Emily Riederer&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://plotly-r.com/index.html&#34; target=&#34;_blank&#34;&gt;Interactive web-based data visualization with R, plotly, and shiny&lt;/a&gt; by Carson Sievert&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://mastering-shiny.org/&#34; target=&#34;_blank&#34;&gt;Mastering Shiny&lt;/a&gt; by Hadley Wickham&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;

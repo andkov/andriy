@@ -40,6 +40,9 @@ projects: []
 - [R Graphics Cookbook](https://r-graphics.org/) by Winston Chang  
 - [Data Visualization with R](https://rkabacoff.github.io/datavis/) by Rob Kabacoff    
 - [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) by Claus O. Wilke    
+
+## Reporting
+- [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/) by Yihui Xie, Christophe Dervieux, Emily Riederer  
 - [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com/index.html) by Carson Sievert     
 - [Mastering Shiny](https://mastering-shiny.org/) by Hadley Wickham   
 
