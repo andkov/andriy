@@ -1,0 +1,66 @@
+---
+title: "United States Response to the COVID-19 Pandemic, January-November 2020"
+subtitle: 
+author:
+- Matthew Alexander
+- Lynn Unruh
+- admin
+- William Belanger
+
+date: '2021-03-05'
+
+slug: []
+categories:
+  - epidemiology
+  
+tags:
+  - COVID-19
+  - pandemic response
+  - policy analysis
+
+doi: "10.1017/S1744133121000116"
+featured: yes
+image: 
+  caption: ''
+  focal_point: "Center"
+  preview_only: no
+projects: [COVID19]
+publication: 'Health Economics, Policy and Law'
+publication_short: "HEPL"
+publication_types:
+- "2"
+summary: The paper tracks the response of US government to the unfolding pandemi of COVID-19
+abstract: Focusing on the states of New York, Wisconsin, and Florida, the paper tracks the unfloding of COVID-19  in the United States and reflects on the governmental response to the pademic
+url_code: "https://www.cambridge.org/core/journals/health-economics-policy-and-law/article/united-states-response-to-the-covid19-pandemic-januarynovember-2020/CB5A8855D670AB488975FFAEAE6C2A43"
+url_dataset: ""
+url_pdf: ""
+url_poster: ""
+url_project: ""
+url_slides: ""
+url_source: ""
+url_video: ""
+
+
+---
+ 
+
+# Figures
+
+![Figure 1](01-us-cases-deaths.jpg)
+![Figure 2](02-covid-by-regions.jpg)
+![Figure 3](03-NY-FL-WI.jpg)
+
+
+# Reflections on US response
+
+1. Initial containment measures (shutting borders, locking down) were delayed and were not mandated nationally.   
+2. Testing got off to a slow start, never reached consistent sufficient capacity, and testing times remained too long, thereby impeding contact tracing.   
+3. Initial physical and human resources were insufficient for a pandemic response and there were challenges building them up  
+4. National leadership abdicated, and leadership fell to the states.  
+5. Some states may have reopened too early and quickly.  
+6. Noncompliance with mandates/guidelines may also have contributed to all three surges.  
+7. Lack of entitlements to care may have affected access to testing, treatment and outcomes.  
+8. The Trump Administration marginalised public health and scientific leaders, and contradicted and interfered with scientific guidelines and advice.  
+9. The healthcare workforce was not protected   
+10. Containment measures were politicised, and behaviour had a partisan basis.  
+

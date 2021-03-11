@@ -7,10 +7,52 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Tue, 10 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>United States Response to the COVID-19 Pandemic, January-November 2020</title>
+      <link>/publication/alexander-2021-covid-usa/</link>
+      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/alexander-2021-covid-usa/</guid>
+      <description>
+
+
+&lt;div id=&#34;figures&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Figures&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;01-us-cases-deaths.jpg&#34; alt=&#34;Figure 1&#34; /&gt;
+&lt;img src=&#34;02-covid-by-regions.jpg&#34; alt=&#34;Figure 2&#34; /&gt;
+&lt;img src=&#34;03-NY-FL-WI.jpg&#34; alt=&#34;Figure 3&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reflections-on-us-response&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Reflections on US response&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Initial containment measures (shutting borders, locking down) were delayed and were not mandated nationally.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Testing got off to a slow start, never reached consistent sufficient capacity, and testing times remained too long, thereby impeding contact tracing.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Initial physical and human resources were insufficient for a pandemic response and there were challenges building them up&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;National leadership abdicated, and leadership fell to the states.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Some states may have reopened too early and quickly.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Noncompliance with mandates/guidelines may also have contributed to all three surges.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Lack of entitlements to care may have affected access to testing, treatment and outcomes.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Trump Administration marginalised public health and scientific leaders, and contradicted and interfered with scientific guidelines and advice.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The healthcare workforce was not protected&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Containment measures were politicised, and behaviour had a partisan basis.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Using Reproducible Data Visualisations to Augment Decision-Making During Suppression of Small Counts</title>
