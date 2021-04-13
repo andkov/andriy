@@ -48,7 +48,8 @@ projects: []
 
 ## Statistical and Machine Learning
 - [An Introduction to Statistical Learning with Applications in R](http://faculty.marshall.usc.edu/gareth-james/ISL/) by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani   
-- [Hands-On Machine Learning with R](https://bradleyboehmke.github.io/HOML/) Bradley Boehmke & Brandon Greenwell     
+- [Hands-On Machine Learning with R](https://bradleyboehmke.github.io/HOML/) Bradley Boehmke & Brandon Greenwell   
+- [Forecasting: Principles and Practice](https://otexts.com/fpp2/) by Rob Hyndman and George Athanasopoulos  
 
 # Courses
 - [Introductory Data Science using R](https://dereksonderegger.github.io/444/index.html) by Derek L. Sonderegger   
