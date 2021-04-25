@@ -1,0 +1,814 @@
+---
+title: Income Assistance in Alberta
+subtitle: Basic Trends and Data Issues
+author: 
+- admin
+- Kyle Belanger
+date: '2021-04-25'
+categories:
+  - Community and Social Services
+  - functional graphing
+  - graph making
+  - reproducible research
+tags:
+  - Alberta
+  - income assistance
+authors:
+  - Andriy Koval
+  - Kyle Belanger
+slug:
+  - alberta-aish-basic-trends
+summary: Graphing the trends of assured income for severely handicapped (AISH)
+lastmod: '2021-04-25'
+featured: no
+image:
+  caption: ''
+  focal_point: Center
+  preview_only: no
+url_code: https://github.com/andkov/alberta-aish-caseload
+output:
+  blogdown::html_page:
+    toc: yes
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+
+<div id="TOC">
+<ul>
+<li><a href="#goal">Goal</a></li>
+<li><a href="#data">Data</a></li>
+<li><a href="#visualization">Visualization</a></li>
+<li><a href="#essential-automation">Essential Automation</a></li>
+<li><a href="#enhanced-automation">Enhanced Automation</a></li>
+<li><a href="#application">Application</a></li>
+</ul>
+</div>
+
+<p>In this post we :</p>
+<ul>
+<li><ol style="list-style-type: decimal">
+<li>give a(nother) demonstration of developing customizable functions for exploring data with <code>ggplot2</code> graphs</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: decimal">
+<li>take a look at the trends of providing income support to people with disabilities in the province of Alberta, Canada.</li>
+</ol></li>
+</ul>
+<p>This report explores data on Assured Income for the Severely Handicapped (AISH) taken from the <a href="https://open.alberta.ca/opendata/assured-income-for-the-severely-handicapped-aish-caseload-alberta">open.alberta.ca</a> portal. Please inspect <a href="https://raw.githack.com/andkov/alberta-aish-caseload/e886615a4a93131cfed4f9f5ee3f4ecc823e50f5/analysis/01-basic-trends/01-basic-trends.html">01-basic-trends</a> report to view the application of this function. Refer to <a href="https://github.com/andkov/alberta-aish-caseload" class="uri">https://github.com/andkov/alberta-aish-caseload</a> for the full context and scripts.</p>
+<div id="goal" class="section level1">
+<h1>Goal</h1>
+<p>In this post we will work through creating a function to create the following graph, in which one would be able to customize the type of measure in focus:</p>
+<pre class="r"><code>draw_trends &lt;- function(d, selected_measure_type){ 
+  target_date &lt;-as.Date(&quot;2020-04-15&quot;)
+  d %&gt;% 
+    filter(measure_type == selected_measure_type) %&gt;%  
+    { 
+    ggplot( ., aes(x = date, y = value, color = measure))+
+    geom_line(size=4, alpha = .1, color = &quot;black&quot; )+   # new
+    geom_line(size=.5)+                                # new
+    geom_point( 
+      x      = target_date
+      ,shape = 21, fill = NA,size = 2, color = &quot;black&quot; # new
+      ,data  = . %&gt;% filter(date == target_date))+    
+    facet_wrap(facets = &quot;measure&quot;, scales = &quot;free&quot;)+
+        labs(
+        title    = paste0(&quot;AISH Caseload by &quot;, selected_measure_type)
+        ,color   = &quot;Metric&quot;
+        ,x       = &quot;Date&quot;
+        ,y       = &quot;Number of cases&quot;
+        ,caption = &quot;Temporal resolution: 1 month&quot;
+      )
+    }
+}
+ds1 %&gt;% draw_trends(selected_measure_type = &quot;Family Composition&quot;)</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-3-1.png" width="1200" /></p>
+</div>
+<div id="data" class="section level1">
+<h1>Data</h1>
+<p>The data for this exercise is taken from the <a href="https://open.alberta.ca/opendata/assured-income-for-the-severely-handicapped-aish-caseload-alberta">open.alberta.ca</a> portal, provided by the Ministry of Community and Social Services of Alberta. We focus on caseload counts of the Assured Income for the Severely Handicapped (AISH). For reproducibility, a copy of the data access in April 2021 has been stored in a dedicated repository <a href="https://github.com/andkov/alberta-aish-caseload">https://github.com/andkov/alberta-aish-caseload</a>.</p>
+<p><strong>NOTE:</strong> This section is aimed at individuals interested in concrete examples of data grooming. If you are more interested in graphing and analysis, please feel free to skim or to skip.</p>
+<pre class="r"><code>path_file &lt;- &quot;https://raw.githubusercontent.com/andkov/alberta-aish-caseload/ec847235fb94f455ba65622550781118acde04dc/data-public/raw/open-alberta/2021-04/goasharedcssspqpqara_research-strategiesopen-data00-open-data-asset-packages-2021aish-monthlyais.csv&quot;
+ds0 &lt;- readr::read_csv(path_file) %&gt;% janitor::clean_names()</code></pre>
+<p>The data set comes in well groomed and has the following form:</p>
+<pre class="r"><code>ds0 %&gt;% glimpse()</code></pre>
+<pre><code>Rows: 2,241
+Columns: 5
+$ ref_date     &lt;chr&gt; &quot;2008/04&quot;, &quot;2008/04&quot;, &quot;2008/04&quot;, &quot;2008/04&quot;, &quot;2008/04&quot;, &quot;2008/05&quot;, &quot;2008/05...
+$ geography    &lt;chr&gt; &quot;Alberta&quot;, &quot;Alberta&quot;, &quot;Alberta&quot;, &quot;Alberta&quot;, &quot;Alberta&quot;, &quot;Alberta&quot;, &quot;Alberta...
+$ measure_type &lt;chr&gt; &quot;Family Composition&quot;, &quot;Family Composition&quot;, &quot;Family Composition&quot;, &quot;Family ...
+$ measure      &lt;chr&gt; &quot;Single Total&quot;, &quot;Single Parent Total&quot;, &quot;Childless Couples Total&quot;, &quot;Couples...
+$ value        &lt;dbl&gt; 32948, 1836, 1421, 700, 36905, 33039, 1832, 1424, 702, 36997, 33075, 1849,...</code></pre>
+<pre class="r"><code>ds0 %&gt;% slice(1:10) </code></pre>
+<pre><code># A tibble: 10 x 5
+   ref_date geography measure_type       measure                     value
+   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;              &lt;chr&gt;                       &lt;dbl&gt;
+ 1 2008/04  Alberta   Family Composition Single Total                32948
+ 2 2008/04  Alberta   Family Composition Single Parent Total          1836
+ 3 2008/04  Alberta   Family Composition Childless Couples Total      1421
+ 4 2008/04  Alberta   Family Composition Couples with Children Total   700
+ 5 2008/04  Alberta   Family Composition All Types Total             36905
+ 6 2008/05  Alberta   Family Composition Single Total                33039
+ 7 2008/05  Alberta   Family Composition Single Parent Total          1832
+ 8 2008/05  Alberta   Family Composition Childless Couples Total      1424
+ 9 2008/05  Alberta   Family Composition Couples with Children Total   702
+10 2008/05  Alberta   Family Composition All Types Total             36997</code></pre>
+<p>The only apparent tweak needed is conversion of the <code>ref_date</code> variable to date, so it’s easier to handle in graphs.</p>
+<pre class="r"><code>ds1 &lt;- ds0 %&gt;%
+  mutate(
+    date = parse_date_time(ref_date,&quot;Y%m%&quot;) %&gt;% as_date() + 14 # middle of the month
+  )</code></pre>
+<p>Each of the 7 distinct values of <code>measure_type</code> has its own set of measures</p>
+<pre class="r"><code>ds0 %&gt;% distinct(geography, measure_type, measure) %&gt;% arrange(measure_type) %&gt;% neat()</code></pre>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+geography
+</th>
+<th style="text-align:left;">
+measure_type
+</th>
+<th style="text-align:left;">
+measure
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Average Age
+</td>
+<td style="text-align:left;">
+Age 18 - 19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Average Age
+</td>
+<td style="text-align:left;">
+Age 20 - 24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Average Age
+</td>
+<td style="text-align:left;">
+Age 25 - 29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Average Age
+</td>
+<td style="text-align:left;">
+Age 30 - 34
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Average Age
+</td>
+<td style="text-align:left;">
+Age 35 - 39
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Average Age
+</td>
+<td style="text-align:left;">
+Age 40 - 44
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Average Age
+</td>
+<td style="text-align:left;">
+Age 45 - 49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Average Age
+</td>
+<td style="text-align:left;">
+Age 50 - 54
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Average Age
+</td>
+<td style="text-align:left;">
+Age 55 - 59
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Average Age
+</td>
+<td style="text-align:left;">
+Age 60 - 64
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Average Age
+</td>
+<td style="text-align:left;">
+Age 65 +
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Average Age
+</td>
+<td style="text-align:left;">
+All Ages Total
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Caseload
+</td>
+<td style="text-align:left;">
+Straight AISH
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Caseload
+</td>
+<td style="text-align:left;">
+Modified AISH
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Caseload
+</td>
+<td style="text-align:left;">
+Com. Residence
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Caseload
+</td>
+<td style="text-align:left;">
+Client Caseload Total
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Gender
+</td>
+<td style="text-align:left;">
+Female
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Gender
+</td>
+<td style="text-align:left;">
+Male
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Gender
+</td>
+<td style="text-align:left;">
+All Gender Total
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Income Type Snapshots
+</td>
+<td style="text-align:left;">
+Employment Participation
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Income Type Snapshots
+</td>
+<td style="text-align:left;">
+CPP(D) income
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Primary Medical Condition
+</td>
+<td style="text-align:left;">
+Physical Disabilities
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Primary Medical Condition
+</td>
+<td style="text-align:left;">
+Mental Illness Disorders
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Primary Medical Condition
+</td>
+<td style="text-align:left;">
+Cognitive Disorders
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Primary Medical Condition
+</td>
+<td style="text-align:left;">
+Unknown
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+AISH Client Primary Medical Condition
+</td>
+<td style="text-align:left;">
+All Primary Medical Total
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+CSS Regions
+</td>
+<td style="text-align:left;">
+Calgary
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+CSS Regions
+</td>
+<td style="text-align:left;">
+Central
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+CSS Regions
+</td>
+<td style="text-align:left;">
+Edmonton
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+CSS Regions
+</td>
+<td style="text-align:left;">
+North Central
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+CSS Regions
+</td>
+<td style="text-align:left;">
+North East
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+CSS Regions
+</td>
+<td style="text-align:left;">
+North West
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+CSS Regions
+</td>
+<td style="text-align:left;">
+South
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+CSS Regions
+</td>
+<td style="text-align:left;">
+All Regions Total
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+Family Composition
+</td>
+<td style="text-align:left;">
+Single Total
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+Family Composition
+</td>
+<td style="text-align:left;">
+Single Parent Total
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+Family Composition
+</td>
+<td style="text-align:left;">
+Childless Couples Total
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+Family Composition
+</td>
+<td style="text-align:left;">
+Couples with Children Total
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alberta
+</td>
+<td style="text-align:left;">
+Family Composition
+</td>
+<td style="text-align:left;">
+All Types Total
+</td>
+</tr>
+</tbody>
+</table>
+<p>so it does not make sense to convert <code>measure</code> to a factor</p>
+</div>
+<div id="visualization" class="section level1">
+<h1>Visualization</h1>
+<p>Our goal in this report is to examine longitudinal trends in each <code>measure_type</code>. However, we would like to do it as efficiently as possible, that is with the minimum number of lines of code. To understand our challenge better, let’s try out some basic graphs that should help us scope the parameters of functionalization.</p>
+<pre class="r"><code>ds1 %&gt;% 
+  ggplot(aes(x = date, y = value, color = measure))+
+  geom_line()</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-7-1.png" width="1200" /></p>
+<p>Not a terrifically useful graph to study the patterns, but it is quite helpful in making the following observations about the data:</p>
+<ol style="list-style-type: decimal">
+<li><p>Some trends run longer than others, so we need <code>x</code> axis to be flexible</p></li>
+<li><p>The scale of values range from ~<code>70,000</code> to <code>100</code> so, including them on the same canvas will cause problems for interpretation</p></li>
+</ol>
+<p>Let’s see if we can address some of these issues by spreading <code>measure_type</code> across facets:</p>
+<pre class="r"><code>ds1 %&gt;% 
+  ggplot(aes(x = date, y = value, color = measure))+
+  geom_line()+
+  facet_wrap(facets = &quot;measure_type&quot;) # new</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-8-1.png" width="1200" /></p>
+<p>This helps, especially if we allow the axes to adjust to the available data in each facet:</p>
+<pre class="r"><code>ds1 %&gt;% 
+  ggplot(aes(x = date, y = value, color = measure))+
+  geom_line()+
+  facet_wrap(facets = &quot;measure_type&quot;, scales = &quot;free&quot;) # new</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-9-1.png" width="1200" /></p>
+<p>Remaining problems:</p>
+<ol style="list-style-type: decimal">
+<li><p>There are too many values of <code>measure</code>: it makes no sense to represent them with individual colors</p></li>
+<li><p>The scales are still vary drastically within each facet (i.e. each <code>measure_type</code>), making patterns on smaller scale illegible</p></li>
+</ol>
+<p>It does not look like we’ll be able to fit everything onto the same graph, so let’s consider a system that deals with each level of <code>measure_type</code> individually. Let’s take <code>Family Composition</code> as a guinea pig:</p>
+<pre class="r"><code>ds1 %&gt;% 
+  filter(measure_type == &quot;Family Composition&quot;) %&gt;% 
+  ggplot(aes(x = date, y = value, color = measure))+
+  geom_line()</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-10-1.png" width="1200" /></p>
+<p>It looks like of the of the measures is actually a sum of all others. Let’s verify this:</p>
+<pre class="r"><code>given_month &lt;- as.Date(&quot;2020-01-15&quot;) # any time point, really
+ds1 %&gt;% 
+  filter(measure_type == &quot;Family Composition&quot;) %&gt;% 
+  filter(date == given_month) </code></pre>
+<pre><code># A tibble: 5 x 6
+  ref_date geography measure_type       measure                     value date      
+  &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;              &lt;chr&gt;                       &lt;dbl&gt; &lt;date&gt;    
+1 2020/01  Alberta   Family Composition Single Total                58935 2020-01-15
+2 2020/01  Alberta   Family Composition Single Parent Total          4117 2020-01-15
+3 2020/01  Alberta   Family Composition Childless Couples Total      3423 2020-01-15
+4 2020/01  Alberta   Family Composition Couples with Children Total  1880 2020-01-15
+5 2020/01  Alberta   Family Composition All Types Total             68355 2020-01-15</code></pre>
+<pre class="r"><code>ds1 %&gt;% 
+  filter(measure_type == &quot;Family Composition&quot;) %&gt;% 
+  filter(date == given_month) %&gt;% 
+  filter(!measure == &quot;All Types Total&quot;) %&gt;% 
+  summarize(sum_without_all_types_total = sum(value))</code></pre>
+<pre><code># A tibble: 1 x 1
+  sum_without_all_types_total
+                        &lt;dbl&gt;
+1                       68355</code></pre>
+<p>Yes, it is. But even if it were stored in a separate column (which would present other difficulties), we still would have the outlier <code>Single Total</code>, which dwarfs other trend lines, making them ineligible. If the goal of the visualization is to understand the shape of the longitudinal patterns (as it is, in this case), we should view each line on its own, with scale adjustments that optimize the display of information:</p>
+<pre class="r"><code>ds1 %&gt;% 
+  filter(measure_type == &quot;Family Composition&quot;) %&gt;% 
+  ggplot(aes(x = date, y = value, color = measure))+
+  geom_line()+
+  facet_wrap(facets = &quot;measure&quot;, scales = &quot;free&quot;)</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-12-1.png" width="1200" /></p>
+<p>Yes, that’s what we want: the shape of each trend is clearly visible, regardless of the scale on which the values are recorded.</p>
+<p>It appears that what we need is to build such display for each level of <code>measure_type</code></p>
+</div>
+<div id="essential-automation" class="section level1">
+<h1>Essential Automation</h1>
+<p>Now that we have articulated our technical objective</p>
+<blockquote>
+<p>Create a graph for each level of <code>measure_type</code> with a single value of <code>measure</code> on each facet</p>
+</blockquote>
+<p>we can proceed to implementing the automation.</p>
+<p>Yes, we can simply copy-paste the code and replace <code>Family Composition</code> with another level, for example:</p>
+<pre class="r"><code>ds1 %&gt;% 
+  filter(measure_type == &quot;AISH Client Primary Medical Condition&quot;) %&gt;%  # new
+  ggplot(aes(x = date, y = value, color = measure))+
+  geom_line()+
+  facet_wrap(facets = &quot;measure&quot;, scales = &quot;free&quot;)</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-13-1.png" width="1200" /></p>
+<p>and, in certain cases, this would be advisable: for example, when there are just a handful of levels to go through and adjusting the display of each is hard to generalize. In our case, however, we’d like to take advantage of this relatively simple scenario to go through the process of developing graphing functions.</p>
+<p>Let’s start by creating the simplest possible function without any movable parts:</p>
+<pre class="r"><code>draw_trends &lt;- function(d){
+  d %&gt;% 
+    filter(measure_type == &quot;Family Composition&quot;) %&gt;% 
+    ggplot(aes(x = date, y = value, color = measure))+
+    geom_line()+
+    facet_wrap(facets = &quot;measure&quot;, scales = &quot;free&quot;)
+}
+ds1 %&gt;% draw_trends()</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-14-1.png" width="1200" />
+The first argument ( according to <code>tidyverse</code> convention ) should always be the object containing the data (e.g. vector, tibble, list). Notice that all decisions about what the graph would look like are hard-coded within the function. This is very inefficient, but a good start. Next, let’s adjust the function so that we can pass different level of <code>measure_type</code></p>
+<pre class="r"><code>draw_trends &lt;- function(d, selected_measure_type){     # new
+  d %&gt;% 
+    filter(measure_type == selected_measure_type) %&gt;%  # new
+    ggplot(aes(x = date, y = value, color = measure))+
+    geom_line()+
+    facet_wrap(facets = &quot;measure&quot;, scales = &quot;free&quot;)
+}
+ds1 %&gt;% draw_trends(selected_measure_type = &quot;AISH Client Caseload&quot;)</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-15-1.png" width="1200" /></p>
+<p>With respect to the essential utility of our graphing function, we are done: you can pass any of the values of <code>measure_type</code></p>
+<pre class="r"><code>ds1 %&gt;% distinct(measure_type)</code></pre>
+<pre><code># A tibble: 7 x 1
+  measure_type                         
+  &lt;chr&gt;                                
+1 Family Composition                   
+2 AISH Client Caseload                 
+3 AISH Client Primary Medical Condition
+4 AISH Client Average Age              
+5 AISH Client Income Type Snapshots    
+6 AISH Client Gender                   
+7 CSS Regions                          </code></pre>
+<p>to the <code>selected_measure_type</code> argument of the <code>draw_trends</code> function to create a display of the desired focus. However, there are some enhancement that would be quite useful to have (e.g. title, labels, data highlights), which may be a trickier to accomplish in a function compared to regular <code>ggplot2</code> script. We turn to them next.</p>
+</div>
+<div id="enhanced-automation" class="section level1">
+<h1>Enhanced Automation</h1>
+<p>Let’s take care of the enhancement that do not require much finesse:</p>
+<pre class="r"><code>draw_trends &lt;- function(d, selected_measure_type){     
+  d %&gt;% 
+    filter(measure_type == selected_measure_type) %&gt;%  
+    ggplot(aes(x = date, y = value, color = measure))+
+    geom_line()+
+    facet_wrap(facets = &quot;measure&quot;, scales = &quot;free&quot;)+
+    labs(                                                              # new
+        title    = paste0(&quot;AISH Caseload by &quot;, selected_measure_type)  # new
+        ,color   = &quot;Metric&quot;                                            # new
+        ,x       = &quot;Date&quot;                                              # new
+        ,y       = &quot;Number of cases&quot;                                   # new
+        ,caption = &quot;Temporal resolution: 1 month&quot;                      # new
+      )
+}
+ds1 %&gt;% draw_trends(selected_measure_type = &quot;Family Composition&quot;)</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-17-1.png" width="1200" />
+These options will apply equally to all conditions, except for <code>title</code>, which we can assembled with a common prefex <code>AISH Caseload by</code> and the value of the argument <code>selected_measure_type</code>.</p>
+<p>As you have probably noticed, there is some anomaly in the early <code>2020</code>, visible in <code>Childless Couples Total</code> and <code>Couples with Children Total</code>. In fact, this anomaly ( probably related to the onset of COVID-19 pandemic) is present in other <code>measure_type</code>s, so it would help us if we could highlight that particular month in each trajectory. Let’s do it with a hollow circle:</p>
+<pre class="r"><code>draw_trends &lt;- function(d, selected_measure_type){     
+  d %&gt;% 
+    filter(measure_type == selected_measure_type) %&gt;%  
+    ggplot(aes(x = date, y = value, color = measure))+
+    geom_line()+
+    # start new
+    geom_point(
+      x      = as.Date(&quot;2020-04-15&quot;)
+      ,shape = 21
+    )+ 
+    # end new
+    facet_wrap(facets = &quot;measure&quot;, scales = &quot;free&quot;)+
+    labs(title = paste0(&quot;AISH Caseload by &quot;, selected_measure_type))
+    # we&#39;ll omit other lab() options to have less to read during development
+}
+ds1 %&gt;% draw_trends(selected_measure_type = &quot;Family Composition&quot;)</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-18-1.png" width="1200" /></p>
+<p>We just printed the circles for ALL rows for this data, regardless of the <code>measure_type</code> and <code>measure</code>, so we must filter the data that is passed to this specific geom:</p>
+<pre class="r"><code>draw_trends &lt;- function(d, selected_measure_type){     
+  d %&gt;% 
+    filter(measure_type == selected_measure_type) %&gt;%  
+    ggplot(aes(x = date, y = value, color = measure))+
+    geom_line()+
+    geom_point(
+      x      = as.Date(&quot;2020-04-15&quot;)
+      ,shape = 21
+      ,color = &quot;black&quot;                                     # new
+      ,data  = d %&gt;%                                       # new
+        filter(measure_type == selected_measure_type) %&gt;%  # new
+        filter(date == as.Date(&quot;2020-04-15&quot;))              # new
+    )+ 
+    facet_wrap(facets = &quot;measure&quot;, scales = &quot;free&quot;)+
+    labs(title = paste0(&quot;AISH Caseload by &quot;, selected_measure_type))
+}
+ds1 %&gt;% draw_trends(selected_measure_type = &quot;Family Composition&quot;)</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-19-1.png" width="1200" /></p>
+<p>Notice, that we must repeat the <code>filter</code> applied to data prior to passing it to <code>ggplot</code> function. It’s not a big deal, but if more elaborate transformation are needed within the graphing function, we are best to use the <code>{}</code> solution, available past <code>ggplot2 3.0.0</code>, which we described elsewhere (see <a href="https://dss-ialh.rbind.io/post/2020-11-power-tips/">DSS Power Tips - November 2020</a>):</p>
+<pre class="r"><code>draw_trends &lt;- function(d, selected_measure_type){ 
+  d %&gt;% 
+    filter(measure_type == selected_measure_type) %&gt;%  
+    { # new ! notice the dot below the exclamation mark
+    ggplot( ., aes(x = date, y = value, color = measure))+
+    geom_line()+
+    geom_point(
+      x      = as.Date(&quot;2020-04-15&quot;)
+      ,shape = 21
+      ,color = &quot;black&quot;                                     
+      ,data  = . %&gt;% # new 
+        # filter(measure_type == selected_measure_type) %&gt;% # no longer needed
+        filter(date == as.Date(&quot;2020-04-15&quot;))               
+    )+ 
+    facet_wrap(facets = &quot;measure&quot;, scales = &quot;free&quot;)+
+    labs(title = paste0(&quot;AISH Caseload by &quot;, selected_measure_type))
+    } # new
+}
+ds1 %&gt;% draw_trends(selected_measure_type = &quot;Family Composition&quot;)</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-20-1.png" width="1200" /></p>
+<p>The date of interests is a hard-coded (twice!), so let’s pull it out into a common area, which would help us turn it into another movable part of the graphing function (if we choose to do so):</p>
+<pre class="r"><code>draw_trends &lt;- function(d, selected_measure_type){ 
+  target_date &lt;-as.Date(&quot;2020-04-15&quot;)
+  d %&gt;% 
+    filter(measure_type == selected_measure_type) %&gt;%  
+    { 
+    ggplot( ., aes(x = date, y = value, color = measure))+
+    geom_line()+
+    geom_point(
+      x      = target_date            # new
+      ,shape = 21
+      ,color = &quot;black&quot;                                     
+      ,data  = . %&gt;% 
+        filter(date == target_date)  # new             
+    )+ 
+    facet_wrap(facets = &quot;measure&quot;, scales = &quot;free&quot;)+
+    labs(title = paste0(&quot;AISH Caseload by &quot;, selected_measure_type))
+    }
+}</code></pre>
+<p>Finally, let’s add some aesthetic enhancements to make the graphs a bit more visually appealing and patterns more discernible:</p>
+<pre class="r"><code>draw_trends &lt;- function(d, selected_measure_type){ 
+  target_date &lt;-as.Date(&quot;2020-04-15&quot;)
+  d %&gt;% 
+    filter(measure_type == selected_measure_type) %&gt;%  
+    { 
+    ggplot( ., aes(x = date, y = value, color = measure))+
+    geom_line(size=4, alpha = .1, color = &quot;black&quot; )+   # new
+    geom_line(size=.5)+                                # new
+    geom_point( 
+      x      = target_date
+      ,shape = 21, fill = NA,size = 2, color = &quot;black&quot; # new
+      ,data  = . %&gt;% filter(date == target_date))+    
+    facet_wrap(facets = &quot;measure&quot;, scales = &quot;free&quot;)+
+        labs(
+        title    = paste0(&quot;AISH Caseload by &quot;, selected_measure_type)
+        ,color   = &quot;Metric&quot;
+        ,x       = &quot;Date&quot;
+        ,y       = &quot;Number of cases&quot;
+        ,caption = &quot;Temporal resolution: 1 month&quot;
+      )
+    }
+}
+ds1 %&gt;% draw_trends(selected_measure_type = &quot;Family Composition&quot;)</code></pre>
+<p><img src="figure-png-com/unnamed-chunk-22-1.png" width="1200" /></p>
+</div>
+<div id="application" class="section level1">
+<h1>Application</h1>
+<p>We are now ready to cycle through the levels of <code>measure_type</code>, creating a faceted graph for each. Please inspect <a href="https://raw.githack.com/andkov/alberta-aish-caseload/e886615a4a93131cfed4f9f5ee3f4ecc823e50f5/analysis/01-basic-trends/01-basic-trends.html">01-basic-trends</a> report to view the application of this function. Refer to <a href="https://github.com/andkov/alberta-aish-caseload" class="uri">https://github.com/andkov/alberta-aish-caseload</a> for the full context and scripts.</p>
+</div>

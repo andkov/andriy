@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Andriy Koval</copyright>
-    <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/graph-making/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Income Assistance in Alberta</title>
+      <link>/post/2021-04-25-alberta-aish-caseload/</link>
+      <pubDate>Sun, 25 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021-04-25-alberta-aish-caseload/</guid>
+      <description>Graphing the trends of assured income for severely handicapped (AISH)</description>
+    </item>
     
     <item>
       <title>Florida Suicides (2) - Youth Trends</title>

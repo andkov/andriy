@@ -1,0 +1,488 @@
+---
+title: Income Assistance in Alberta
+subtitle: Basic Trends and Data Issues
+author: 
+- admin
+- Kyle Belanger
+date: '2021-04-25'
+categories:
+  - Community and Social Services
+  - functional graphing
+  - graph making
+  - reproducible research
+tags:
+  - Alberta
+  - income assistance
+authors:
+  - Andriy Koval
+  - Kyle Belanger
+slug:
+  - alberta-aish-basic-trends
+summary: Graphing the trends of assured income for severely handicapped (AISH)
+lastmod: '2021-04-25'
+featured: no
+image:
+  caption: ''
+  focal_point: Center
+  preview_only: no
+url_code: https://github.com/andkov/alberta-aish-caseload
+output:
+  blogdown::html_page:
+    toc: yes
+editor_options: 
+  chunk_output_type: console
+---
+
+
+In this post we :  
+
+- 1. give a(nother) demonstration of developing customizable functions for exploring data with `ggplot2` graphs  
+
+- 2. take a look at the trends of providing income support to people with disabilities in the province of Alberta, Canada.  
+
+
+This report explores data on Assured Income for the Severely Handicapped (AISH) taken from the [open.alberta.ca](https://open.alberta.ca/opendata/assured-income-for-the-severely-handicapped-aish-caseload-alberta) portal. Please inspect [01-basic-trends](https://raw.githack.com/andkov/alberta-aish-caseload/e886615a4a93131cfed4f9f5ee3f4ecc823e50f5/analysis/01-basic-trends/01-basic-trends.html) report to view the application of this function. Refer to https://github.com/andkov/alberta-aish-caseload for the full context and scripts.
+
+```{r, echo=F, message=F, results = 'hide'}
+```
+
+```{r set_options, echo=F}
+# cat("Working directory: ", getwd()) # turn on to test the location
+report_render_start_time <- Sys.time()
+# set options shared by all chunks
+knitr::opts_chunk$set(
+  results      = 'show',
+  message      = FALSE,
+  warning      = FALSE,
+  comment      = NA,
+  tidy         = FALSE,
+  dpi        = 400, # dots per inch,
+  out.width  = "900px", # pixels, this affects only the markdown, not the underlying png file.  The height will be scaled appropriately.
+  fig.width    = 11, # inches
+  fig.height   = 6, # inches
+  out.width    = 1200,
+  fig.path     = 'figure-png-com/' # where figures are stored
+)
+echo_chunks    <- FALSE #Toggle for debugging.
+message_chunks <- FALSE #Toggle for debugging.
+options(width=100) # number of characters to display in the output (dflt = 80)
+ggplot2::theme_set(ggplot2::theme_bw()) # common theme for all graphs
+```
+
+```{r load-sources, echo=echo_chunks, message=FALSE, warning = FALSE}
+```
+
+```{r load-packages, echo=echo_chunks, message=FALSE, warning = FALSE}
+library(magrittr)  # pipes
+library(dplyr)     # data wrangling
+library(ggplot2)   # graphs
+library(janitor)   # tidy data
+library(tidyr)     # data wrangling
+library(forcats)   # factors
+library(stringr)   # strings
+library(lubridate) # dates
+```
+
+```{r declare-globals, echo=echo_chunks, results='show', message=FALSE}
+```
+
+```{r declare-functions, echo=echo_chunks, results='show', message=FALSE}
+# custom function for HTML tables
+neat <- function(x, output_format = "html"){ 
+  # knitr.table.format = output_format
+  if(output_format == "pandoc"){
+    x_t <- knitr::kable(x, format = "pandoc")
+  }else{
+    x_t <- x %>%
+      # x %>%
+      # neat() %>%
+      knitr::kable(format=output_format) %>%
+      kableExtra::kable_styling(
+        bootstrap_options = c("striped", "hover", "condensed","responsive"),
+        # bootstrap_options = c( "condensed"),
+        full_width = F,
+        position = "left"
+      )
+  } 
+  return(x_t)
+}
+# Note: when printing to Word or PDF use `neat(output_format =  "pandoc")`
+
+# functionalize
+draw_trends <- function(
+  d
+  ,selected_measure
+){
+   target_date <- as.Date("2020-04-15")
+  d1 <- d %>%
+    filter(measure_type == selected_measure)
+  g1 <- d1 %>%
+    {
+    ggplot(., aes(x=date, y=value, color = measure, group = measure))+
+    geom_line(size=4, alpha = .1, color = "black" )+
+    geom_line(size=.5)+
+    geom_point(aes(x=target_date), shape = 21, fill = NA,size = 2, color = "black",
+               data = . %>% filter(date == target_date))+
+    # geom_vline(xintercept = as.Date("2020-03-11"), linetype="dashed")+
+    facet_wrap(vars(!!rlang::sym("measure")), scales = "free_y")+
+    scale_y_continuous(labels = scales::comma)+
+    labs(
+      title = paste0("AISH Caseload by ", selected_measure)
+      ,color = "Metric"
+      ,x = "Date"
+      ,y = "Number of cases"
+      ,caption = "Temporal resolution: 1 month       Hollow circle = April 2020"
+    )
+    }
+  g1
+}
+# Test and Dev
+# ds1 %>% draw_trends("Family Composition") 
+```
+
+
+# Goal
+
+In this post we will work through creating a function to create the following graph, in which one would be able to customize the type of measure in focus: 
+```{r echo=F}
+path_file <- "https://raw.githubusercontent.com/andkov/alberta-aish-caseload/ec847235fb94f455ba65622550781118acde04dc/data-public/raw/open-alberta/2021-04/goasharedcssspqpqara_research-strategiesopen-data00-open-data-asset-packages-2021aish-monthlyais.csv"
+ds0 <- readr::read_csv(path_file) %>% janitor::clean_names()
+ds1 <- ds0 %>%
+  mutate(
+    date = parse_date_time(ref_date,"Y%m%") %>% as_date() + 14 # middle of the month
+  )
+```
+
+```{r }
+draw_trends <- function(d, selected_measure_type){ 
+  target_date <-as.Date("2020-04-15")
+  d %>% 
+    filter(measure_type == selected_measure_type) %>%  
+    { 
+    ggplot( ., aes(x = date, y = value, color = measure))+
+    geom_line(size=4, alpha = .1, color = "black" )+   # new
+    geom_line(size=.5)+                                # new
+    geom_point( 
+      x      = target_date
+      ,shape = 21, fill = NA,size = 2, color = "black" # new
+      ,data  = . %>% filter(date == target_date))+    
+    facet_wrap(facets = "measure", scales = "free")+
+        labs(
+        title    = paste0("AISH Caseload by ", selected_measure_type)
+        ,color   = "Metric"
+        ,x       = "Date"
+        ,y       = "Number of cases"
+        ,caption = "Temporal resolution: 1 month"
+      )
+    }
+}
+ds1 %>% draw_trends(selected_measure_type = "Family Composition")
+```
+
+
+# Data  
+
+The data for this exercise is taken from the [open.alberta.ca](https://open.alberta.ca/opendata/assured-income-for-the-severely-handicapped-aish-caseload-alberta) portal, provided by the Ministry of Community and Social Services of Alberta. We focus on caseload counts of the Assured Income for the Severely Handicapped (AISH). For reproducibility, a copy of the data access in April 2021 has been stored in a dedicated repository [https://github.com/andkov/alberta-aish-caseload](https://github.com/andkov/alberta-aish-caseload).
+
+__NOTE:__ This section is aimed at individuals interested in concrete examples of data grooming. If you are more interested in graphing and analysis, please feel free to skim or to skip. 
+
+```{r load-data, echo=T, results='hide', message=FALSE, cache = TRUE}
+path_file <- "https://raw.githubusercontent.com/andkov/alberta-aish-caseload/ec847235fb94f455ba65622550781118acde04dc/data-public/raw/open-alberta/2021-04/goasharedcssspqpqara_research-strategiesopen-data00-open-data-asset-packages-2021aish-monthlyais.csv"
+ds0 <- readr::read_csv(path_file) %>% janitor::clean_names()
+```
+
+The data set comes in well groomed and has the following form:
+```{r echo=T, results='show', message=FALSE, warning=F, cache=TRUE}
+ds0 %>% glimpse()
+ds0 %>% slice(1:10) 
+```
+
+The only apparent tweak needed is conversion of the `ref_date` variable to date, so it's easier to handle in graphs. 
+
+```{r}
+ds1 <- ds0 %>%
+  mutate(
+    date = parse_date_time(ref_date,"Y%m%") %>% as_date() + 14 # middle of the month
+  )
+```
+
+Each of the `r ds1 %>% distinct(measure_type) %>% nrow()` distinct values of `measure_type` has its own set of measures
+```{r}
+ds0 %>% distinct(geography, measure_type, measure) %>% arrange(measure_type) %>% neat()
+```
+so it does not make sense to convert `measure` to a factor
+
+# Visualization
+
+Our goal in this report is to examine longitudinal trends in each `measure_type`. However, we would like to do it as efficiently as possible, that is with the minimum number of lines of code. To understand our challenge better, let's try out some basic graphs that should help us scope the parameters of functionalization. 
+
+
+
+```{r}
+ds1 %>% 
+  ggplot(aes(x = date, y = value, color = measure))+
+  geom_line()
+```
+
+Not a terrifically useful graph to study the patterns, but it is quite helpful in making the following observations about the data:   
+
+1. Some trends run longer than others, so we need `x` axis to be flexible    
+
+2. The scale of values range from ~`70,000` to `100` so, including them on the same canvas will cause problems for interpretation   
+
+Let's see if we can address some of these issues by spreading `measure_type` across facets:  
+```{r}
+ds1 %>% 
+  ggplot(aes(x = date, y = value, color = measure))+
+  geom_line()+
+  facet_wrap(facets = "measure_type") # new
+```
+
+This helps, especially if we allow the axes to adjust to the available data in each facet: 
+```{r}
+ds1 %>% 
+  ggplot(aes(x = date, y = value, color = measure))+
+  geom_line()+
+  facet_wrap(facets = "measure_type", scales = "free") # new
+```
+
+Remaining problems:  
+
+1. There are too many values of `measure`: it makes no sense to represent them with individual colors  
+
+2. The scales are still vary drastically within each facet (i.e. each `measure_type`), making patterns on smaller scale illegible
+
+It does not look like we'll be able to fit everything onto the same graph, so let's consider a system that deals with each level of `measure_type` individually. Let's take `Family Composition` as a guinea pig: 
+
+```{r}
+ds1 %>% 
+  filter(measure_type == "Family Composition") %>% 
+  ggplot(aes(x = date, y = value, color = measure))+
+  geom_line()
+```
+
+It looks like of the of the measures is actually a sum of all others. Let's verify this:  
+```{r}
+given_month <- as.Date("2020-01-15") # any time point, really
+ds1 %>% 
+  filter(measure_type == "Family Composition") %>% 
+  filter(date == given_month) 
+
+ds1 %>% 
+  filter(measure_type == "Family Composition") %>% 
+  filter(date == given_month) %>% 
+  filter(!measure == "All Types Total") %>% 
+  summarize(sum_without_all_types_total = sum(value))
+```
+
+Yes, it is. But even if it were stored in a separate column (which would present other difficulties), we still would have the outlier `Single Total`, which dwarfs other trend lines, making them ineligible.  If the goal of the visualization is to understand  the shape of the longitudinal patterns (as it is, in this case), we should view each line on its own, with scale adjustments that optimize the display of information:
+
+```{r}
+ds1 %>% 
+  filter(measure_type == "Family Composition") %>% 
+  ggplot(aes(x = date, y = value, color = measure))+
+  geom_line()+
+  facet_wrap(facets = "measure", scales = "free")
+```
+
+Yes, that's what we want: the shape of each trend is clearly visible, regardless of the scale on which the values are recorded. 
+
+It appears that what we need is to build such display for each level of `measure_type`
+
+# Essential Automation
+
+Now that we have articulated our technical objective
+
+> Create a graph for each level of `measure_type` with a single value of `measure` on each facet
+
+we can proceed to implementing the automation. 
+
+Yes, we can simply copy-paste the code and replace `Family Composition` with another level, for example:
+
+```{r}
+ds1 %>% 
+  filter(measure_type == "AISH Client Primary Medical Condition") %>%  # new
+  ggplot(aes(x = date, y = value, color = measure))+
+  geom_line()+
+  facet_wrap(facets = "measure", scales = "free")
+```
+
+and, in certain cases, this would be advisable: for example, when there are just a handful of levels to go through and adjusting the display of each is hard to generalize. In our case, however, we'd like to take advantage of this relatively simple scenario to go through the process of developing graphing functions.
+
+Let's start by creating the simplest possible function without any movable parts:
+
+```{r}
+draw_trends <- function(d){
+  d %>% 
+    filter(measure_type == "Family Composition") %>% 
+    ggplot(aes(x = date, y = value, color = measure))+
+    geom_line()+
+    facet_wrap(facets = "measure", scales = "free")
+}
+ds1 %>% draw_trends()
+```
+The first argument ( according to `tidyverse` convention ) should always be the object containing the data (e.g. vector, tibble, list). Notice that all decisions about what the graph would look like are hard-coded within the function. This is very inefficient, but a good start. Next, let's adjust the function so that we can pass different level of `measure_type`
+
+```{r}
+draw_trends <- function(d, selected_measure_type){     # new
+  d %>% 
+    filter(measure_type == selected_measure_type) %>%  # new
+    ggplot(aes(x = date, y = value, color = measure))+
+    geom_line()+
+    facet_wrap(facets = "measure", scales = "free")
+}
+ds1 %>% draw_trends(selected_measure_type = "AISH Client Caseload")
+```
+
+With respect to the essential utility of our graphing function, we are done: you can pass any of the values of `measure_type`
+```{r}
+ds1 %>% distinct(measure_type)
+```
+
+to the `selected_measure_type` argument of the `draw_trends` function to create a display of the desired focus. However, there are some enhancement that would be quite useful to have (e.g. title, labels, data highlights), which may be a trickier to accomplish in a function compared to regular `ggplot2` script. We turn to them next. 
+
+
+# Enhanced Automation
+
+Let's take care of the enhancement that do not require much finesse:  
+
+```{r}
+draw_trends <- function(d, selected_measure_type){     
+  d %>% 
+    filter(measure_type == selected_measure_type) %>%  
+    ggplot(aes(x = date, y = value, color = measure))+
+    geom_line()+
+    facet_wrap(facets = "measure", scales = "free")+
+    labs(                                                              # new
+        title    = paste0("AISH Caseload by ", selected_measure_type)  # new
+        ,color   = "Metric"                                            # new
+        ,x       = "Date"                                              # new
+        ,y       = "Number of cases"                                   # new
+        ,caption = "Temporal resolution: 1 month"                      # new
+      )
+}
+ds1 %>% draw_trends(selected_measure_type = "Family Composition")
+```
+These options will apply equally to all conditions, except for `title`, which we can assembled with a common prefex `AISH Caseload by` and the value of the argument `selected_measure_type`. 
+
+As you have probably noticed, there is some anomaly in the early `2020`,  visible in `Childless Couples Total` and `Couples with Children Total`. In fact, this anomaly ( probably related to the onset of COVID-19 pandemic) is present in other `measure_type`s, so it would help us if we could highlight that particular month in each trajectory. Let's do it with a hollow circle: 
+
+```{r}
+draw_trends <- function(d, selected_measure_type){     
+  d %>% 
+    filter(measure_type == selected_measure_type) %>%  
+    ggplot(aes(x = date, y = value, color = measure))+
+    geom_line()+
+    # start new
+    geom_point(
+      x      = as.Date("2020-04-15")
+      ,shape = 21
+    )+ 
+    # end new
+    facet_wrap(facets = "measure", scales = "free")+
+    labs(title = paste0("AISH Caseload by ", selected_measure_type))
+    # we'll omit other lab() options to have less to read during development
+}
+ds1 %>% draw_trends(selected_measure_type = "Family Composition")
+```
+
+We just printed the circles for ALL rows for this data, regardless of the `measure_type` and `measure`, so we must filter the data that is passed to this specific geom:
+
+```{r}
+draw_trends <- function(d, selected_measure_type){     
+  d %>% 
+    filter(measure_type == selected_measure_type) %>%  
+    ggplot(aes(x = date, y = value, color = measure))+
+    geom_line()+
+    geom_point(
+      x      = as.Date("2020-04-15")
+      ,shape = 21
+      ,color = "black"                                     # new
+      ,data  = d %>%                                       # new
+        filter(measure_type == selected_measure_type) %>%  # new
+        filter(date == as.Date("2020-04-15"))              # new
+    )+ 
+    facet_wrap(facets = "measure", scales = "free")+
+    labs(title = paste0("AISH Caseload by ", selected_measure_type))
+}
+ds1 %>% draw_trends(selected_measure_type = "Family Composition")
+```
+
+Notice, that we must repeat the `filter` applied to data prior to passing it to `ggplot` function. It's not a big deal, but if more elaborate transformation are needed within the graphing function, we are best to use the `{}` solution, available past `ggplot2 3.0.0`, which we described elsewhere (see  [DSS Power Tips - November 2020](https://dss-ialh.rbind.io/post/2020-11-power-tips/)):
+
+```{r}
+draw_trends <- function(d, selected_measure_type){ 
+  d %>% 
+    filter(measure_type == selected_measure_type) %>%  
+    { # new ! notice the dot below the exclamation mark
+    ggplot( ., aes(x = date, y = value, color = measure))+
+    geom_line()+
+    geom_point(
+      x      = as.Date("2020-04-15")
+      ,shape = 21
+      ,color = "black"                                     
+      ,data  = . %>% # new 
+        # filter(measure_type == selected_measure_type) %>% # no longer needed
+        filter(date == as.Date("2020-04-15"))               
+    )+ 
+    facet_wrap(facets = "measure", scales = "free")+
+    labs(title = paste0("AISH Caseload by ", selected_measure_type))
+    } # new
+}
+ds1 %>% draw_trends(selected_measure_type = "Family Composition")
+```
+
+The date of interests is a hard-coded (twice!), so let's pull it out into a common area, which would help us turn it into another movable part of the graphing function (if we choose to do so): 
+
+```{r}
+draw_trends <- function(d, selected_measure_type){ 
+  target_date <-as.Date("2020-04-15")
+  d %>% 
+    filter(measure_type == selected_measure_type) %>%  
+    { 
+    ggplot( ., aes(x = date, y = value, color = measure))+
+    geom_line()+
+    geom_point(
+      x      = target_date            # new
+      ,shape = 21
+      ,color = "black"                                     
+      ,data  = . %>% 
+        filter(date == target_date)  # new             
+    )+ 
+    facet_wrap(facets = "measure", scales = "free")+
+    labs(title = paste0("AISH Caseload by ", selected_measure_type))
+    }
+}
+```
+
+Finally, let's add some aesthetic enhancements to make the graphs a bit more visually appealing and patterns more discernible:  
+
+```{r}
+draw_trends <- function(d, selected_measure_type){ 
+  target_date <-as.Date("2020-04-15")
+  d %>% 
+    filter(measure_type == selected_measure_type) %>%  
+    { 
+    ggplot( ., aes(x = date, y = value, color = measure))+
+    geom_line(size=4, alpha = .1, color = "black" )+   # new
+    geom_line(size=.5)+                                # new
+    geom_point( 
+      x      = target_date
+      ,shape = 21, fill = NA,size = 2, color = "black" # new
+      ,data  = . %>% filter(date == target_date))+    
+    facet_wrap(facets = "measure", scales = "free")+
+        labs(
+        title    = paste0("AISH Caseload by ", selected_measure_type)
+        ,color   = "Metric"
+        ,x       = "Date"
+        ,y       = "Number of cases"
+        ,caption = "Temporal resolution: 1 month"
+      )
+    }
+}
+ds1 %>% draw_trends(selected_measure_type = "Family Composition")
+```
+
+# Application
+
+We are now ready to cycle through the levels of `measure_type`, creating a faceted graph for each. Please inspect [01-basic-trends](https://raw.githack.com/andkov/alberta-aish-caseload/e886615a4a93131cfed4f9f5ee3f4ecc823e50f5/analysis/01-basic-trends/01-basic-trends.html) report to view the application of this function. Refer to https://github.com/andkov/alberta-aish-caseload for the full context and scripts. 

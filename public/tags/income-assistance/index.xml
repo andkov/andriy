@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>income assistance on Andriy Koval</title>
+    <link>/tags/income-assistance/</link>
+    <description>Recent content in income assistance on Andriy Koval</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Andriy Koval</copyright>
+    <lastBuildDate>Sun, 25 Apr 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/income-assistance/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Income Assistance in Alberta</title>
+      <link>/post/2021-04-25-alberta-aish-caseload/</link>
+      <pubDate>Sun, 25 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021-04-25-alberta-aish-caseload/</guid>
+      <description>Graphing the trends of assured income for severely handicapped (AISH)</description>
+    </item>
+    
+  </channel>
+</rss>
