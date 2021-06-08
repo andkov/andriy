@@ -29,6 +29,7 @@ projects: []
 - [R for Health Data Science](https://argoshare.is.ed.ac.uk/healthyr_book/) - by Ewen Harrison and Riinu Pius    
 - [Statistical Inference via Data Science.A ModernDive into R and the tidyverse](https://moderndive.com/) by Chester Ismay and Albert Y. Kim  
 - [Learning Statistics with R](https://learningstatisticswithr.com/book/) by Danielle Navarro   
+- [Data Science for Psychologists](https://bookdown.org/hneth/ds4psy/) by Hansjorg Neth
 
 
 ## R Programming  
